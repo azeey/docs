@@ -1,0 +1,516 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="keywords" content="Gazebo Math">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gazebo Math: Pose3.hh Source File</title>
+    <script type="text/javascript" src="https://gazebosim.org/assets/doxygen/dynsections.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://gazebosim.org/assets/icon/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_orange-blue.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+    <link href="https://gazebosim.org/assets/doxygen/doxygen.css" rel="stylesheet" type="text/css">
+  </head>
+    <script type="text/javascript">
+      /* Replace all the "permalink" &#9670;&nbsp; icons with a unicode link
+        symbol.*/
+      $(document).ready(function() {
+        var elems = document.getElementsByClassName("permalink");
+        for (var i = 0; i < elems.length; ++i) {
+          elems[i].firstChild.innerHTML="&#x1f517;";
+          elems[i].firstChild.style.fontSize="18px";
+        }
+      });
+    </script>
+  </head>
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+    <div class="mdl-layout__drawer mdl-color--grey-100 mdl-color-text--blue-grey-50">
+      <header class="mdl-color--grey-100">
+        <a href="index.html"><img width="60px" src="https://gazebosim.org/assets/doxygen/gazebo_logo.svg"/></a>
+        <h1 class="project_title">Gazebo Math</h1>
+        <h2>API Reference</h2>
+        <div class="version">
+        7.5.0
+        </div>
+      </header>
+      <!-- NOTE: If you add a link to a doxygen generated page, then make
+                 sure to update the required_html_fils list in
+                 GzCreateDocs.cmake -->
+      <nav class="gz-navigation mdl-navigation">
+        <a class="mdl-navigation__link" href="tutorials.html">
+          <i class="mdl-color-text--grey-400 material-icons"
+             role="presentation">insert_drive_file</i>Tutorials</a>
+        <a id="class_menu" class="mdl-navigation__link" href="#">
+          <i class="mdl-color-text--grey-400 material-icons"
+             role="presentation">library_books</i>Classes</a>
+        <a id="namespaces_menu"class="mdl-navigation__link" href="#">
+          <i class="mdl-color-text--grey-400 material-icons"
+             role="presentation">toc</i>Namespaces</a>
+        <a class="mdl-navigation__link" href="files.html">
+          <i class="mdl-color-text--grey-400 material-icons"
+             role="presentation">insert_drive_file</i>Files</a>
+        <a class="mdl-navigation__link" target="_blank"
+           href="http://gazebosim.org">
+          <i class="mdl-color-text--grey-400 material-icons"
+             role="presentation">launch</i>Gazebo Website</a>
+      </nav>
+      <!-- classes sub menu -->
+      <ul for="class_menu" class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect mdl-navigation">
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link" href="classes.html">Index</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+            href="annotated.html">List</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+             href="hierarchy.html">Hierarchy</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+             href="functions.html">Members: All</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+             href="functions_func.html">Members: Functions</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+             href="functions_vars.html">Members: Variables</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+             href="functions_type.html">Members: Typedefs</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+             href="functions_enum.html">Members: Enumerations</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+             href="functions_eval.html">Members: Enumerator</a>
+        </li>
+      </ul>
+      <!-- namespaces sub menu -->
+      <ul for="namespaces_menu" class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect mdl-navigation">
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+            href="namespaces.html">List</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+            href="namespacemembers.html">Members</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+            href="namespacemembers_func.html">Functions</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+            href="namespacemembers_type.html">Typedefs</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+            href="namespacemembers_vars.html">Variables</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+            href="namespacemembers_enum.html">Enumerations</a>
+        </li>
+        <li class="mdl-menu__item">
+          <a class="mdl-navigation__link"
+            href="namespacemembers_eval.html">Enumerator</a>
+        </li>
+      </ul>
+    </div>
+    <main class="mdl-layout__content mdl-color--white">
+    <div id="top">
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5f70b597a8f3cb7e191c654fdc4ac806.html">gz-math</a></li><li class="navelem"><a class="el" href="dir_078c05cd486cbf4f25c108ac6a855843.html">include</a></li><li class="navelem"><a class="el" href="dir_cb23e0bbad0208f30fc2b464607664c0.html">gz</a></li><li class="navelem"><a class="el" href="dir_0f196ca5b9fd4ac373b7623d3ec837c2.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">gz/math/Pose3.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="gz_2math_2Pose3_8hh.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2012 Open Source Robotics Foundation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * You may obtain a copy of the License at</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *     http://www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * limitations under the License.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef GZ_MATH_POSE_HH_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define GZ_MATH_POSE_HH_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gz_2math_2Quaternion_8hh.html">gz/math/Quaternion.hh</a>&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gz_2math_2Vector3_8hh.html">gz/math/Vector3.hh</a>&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;gz/math/config.hh&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegz.html">gz</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">namespace </span>math</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// Inline bracket to help doxygen filtering.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">inline</span> <span class="keyword">namespace </span>GZ_MATH_VERSION_NAMESPACE {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html">   73</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a43ba1fd640409a9fea457125f728d7bb">   77</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;<a class="code" href="classgz_1_1math_1_1Pose3.html#a43ba1fd640409a9fea457125f728d7bb" title="A Pose3 initialized to zero. This is equivalent to math::Pose3&lt;T&gt;(0, 0, 0, 0, 0, 0).">Zero</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#adf6179720f0bfc137ea8e267138a0dd0">   86</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Pose3.html#adf6179720f0bfc137ea8e267138a0dd0" title="Create a Pose3 based on a position and rotation.">Pose3</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> &amp;_pos, <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> &amp;_rot)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      : p(_pos), q(_rot)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a5ea1e4964204621ea36f5b1ac5ddd1d6">   99</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Pose3.html#a5ea1e4964204621ea36f5b1ac5ddd1d6" title="Create a Pose3 using a 6-tuple consisting of x, y, z, roll, pitch, and yaw.">Pose3</a>(T _x, T _y, T _z, T _roll, T _pitch, T _yaw)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      : p(_x, _y, _z), q(_roll, _pitch, _yaw)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a8686041d1e3deea78cd79a61a5354f08">  114</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Pose3.html#a8686041d1e3deea78cd79a61a5354f08" title="Create a Pose3 using a 7-tuple consisting of x, y, z, qw, qx, qy, qz. The first three values are the ...">Pose3</a>(T _x, T _y, T _z, T _qw, T _qx, T _qy, T _qz)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      : p(_x, _y, _z), q(_qw, _qx, _qy, _qz)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;_pose) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keyword">public</span>: ~<a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#ad36fb4bd467572b0230f959f997cea4d">  129</a></span>&#160;      <span class="keyword">public</span>: <span class="keywordtype">void</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#ad36fb4bd467572b0230f959f997cea4d" title="Set the pose from a Vector3&lt;T&gt; and a Quaternion&lt;T&gt;">Set</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> &amp;_pos, <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> &amp;_rot)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        this-&gt;p = _pos;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        this-&gt;q = _rot;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a8db3fe96243e6ef4cce36449639da01d">  138</a></span>&#160;      <span class="keyword">public</span>: <span class="keywordtype">void</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#a8db3fe96243e6ef4cce36449639da01d" title="Set the pose from a position and Euler angles.">Set</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> &amp;_pos, <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> &amp;_rpy)</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        this-&gt;p = _pos;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        this-&gt;q.SetFromEuler(_rpy);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#ae48638debd35f120d91ba0979c26b2b5">  152</a></span>&#160;      <span class="keyword">public</span>: <span class="keywordtype">void</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#ae48638debd35f120d91ba0979c26b2b5" title="Set the pose from a six tuple consisting of x, y, z, roll, pitch, and yaw.">Set</a>(T _x, T _y, T _z, T _roll, T _pitch, T _yaw)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        this-&gt;p.Set(_x, _y, _z);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        this-&gt;q.SetFromEuler(<a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">math::Vector3&lt;T&gt;</a>(_roll, _pitch, _yaw));</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a33b7dcc502aae627fbc56bcfecf33af1">  160</a></span>&#160;      <span class="keyword">public</span>: <span class="keywordtype">bool</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#a33b7dcc502aae627fbc56bcfecf33af1" title="See if a pose is finite (e.g., not nan)">IsFinite</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">return</span> this-&gt;p.IsFinite() &amp;&amp; this-&gt;q.IsFinite();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#abf887ed78b744f226099205075e157a0">  166</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#abf887ed78b744f226099205075e157a0" title="Fix any nan values.">Correct</a>()</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        this-&gt;p.Correct();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        this-&gt;q.Correct();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#ae9e598cc9fda620f445ca66eb8124e73">  174</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> <a class="code" href="classgz_1_1math_1_1Pose3.html#ae9e598cc9fda620f445ca66eb8124e73" title="Get the inverse of this pose.">Inverse</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> inv = this-&gt;q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a724dd60575e5faeb80563af1710c0c0e" title="Get the inverse of this quaternion.">Inverse</a>();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a>(inv * (this-&gt;p*-1), inv);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a186d6e66d102a0742ac3e44de027ef8d">  186</a></span>&#160;      <span class="keyword">public</span>: GZ_DEPRECATED(7) <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>&lt;T&gt; operator+(const <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>&lt;T&gt; &amp;_pose)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> result;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        result.p = this-&gt;CoordPositionAdd(_pose);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        result.q = this-&gt;CoordRotationAdd(_pose.q);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keyword">public</span>: GZ_DEPRECATED(7) const <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>&lt;T&gt; &amp;</div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a23bc1e65279931a4b6733e5e64cf781d">  201</a></span>&#160;              operator+=(const <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>&lt;T&gt; &amp;_pose)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        this-&gt;p = this-&gt;CoordPositionAdd(_pose);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        this-&gt;q = this-&gt;CoordRotationAdd(_pose.q);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a694771615b71bcf5fe00867e70bbb89d">  213</a></span>&#160;      <span class="keyword">public</span>: GZ_DEPRECATED(7) <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>&lt;T&gt; operator-()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">return</span> this-&gt;Inverse();</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a43088027e301cdbfc4478db2cced8153">  224</a></span>&#160;      <span class="keyword">public</span>: GZ_DEPRECATED(7) <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>&lt;T&gt; operator-(const <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>&lt;T&gt; &amp;_pose)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a>(this-&gt;CoordPositionSub(_pose),</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;          this-&gt;CoordRotationSub(_pose.q));</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keyword">public</span>: GZ_DEPRECATED(7) const <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>&lt;T&gt; &amp;</div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a6fec4922f53e0b0d86559dd896ba3396">  235</a></span>&#160;              operator-=(const <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a>&lt;T&gt; &amp;_pose)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        this-&gt;p = this-&gt;CoordPositionSub(_pose);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        this-&gt;q = this-&gt;CoordRotationSub(_pose.q);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#ae49a71622e2ba3ebf39433708cdc17ca">  246</a></span>&#160;      <span class="keyword">public</span>: <span class="keywordtype">bool</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#ae49a71622e2ba3ebf39433708cdc17ca" title="Equality operator.">operator==</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;_pose)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordflow">return</span> this-&gt;p == _pose.p &amp;&amp; this-&gt;q == _pose.q;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a1442946de86760d9fd3315b4216b0021">  254</a></span>&#160;      <span class="keyword">public</span>: <span class="keywordtype">bool</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#a1442946de86760d9fd3315b4216b0021" title="Inequality operator.">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;_pose)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordflow">return</span> this-&gt;p != _pose.p || this-&gt;q != _pose.q;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a818ec46936a464634eb89a8d75938e3c">  264</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> <a class="code" href="classgz_1_1math_1_1Pose3.html#a818ec46936a464634eb89a8d75938e3c" title="Multiplication operator. Given X_OP (frame P relative to O) and X_PQ (frame Q relative to P) then X_O...">operator*</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;_pose)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a>(_pose.<a class="code" href="classgz_1_1math_1_1Pose3.html#aacfddf9ba77a892073e1886ddb71a644" title="Add one point to a vector: result = this + pos.">CoordPositionAdd</a>(*<span class="keyword">this</span>),  this-&gt;q * _pose.q);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#ae245de207584a2c30c47091ae4f3881a">  274</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;<a class="code" href="classgz_1_1math_1_1Pose3.html#ae245de207584a2c30c47091ae4f3881a" title="Multiplication assignment operator. This pose will become equal to this * _pose.">operator*=</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;_pose)</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        *<span class="keyword">this</span> = *<span class="keyword">this</span> * _pose;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;operator=(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;_pose) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#aacfddf9ba77a892073e1886ddb71a644">  287</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> <a class="code" href="classgz_1_1math_1_1Pose3.html#aacfddf9ba77a892073e1886ddb71a644" title="Add one point to a vector: result = this + pos.">CoordPositionAdd</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> &amp;_pos)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> tmp(0.0, _pos.<a class="code" href="classgz_1_1math_1_1Vector3.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x value.">X</a>(), _pos.<a class="code" href="classgz_1_1math_1_1Vector3.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y value.">Y</a>(), _pos.<a class="code" href="classgz_1_1math_1_1Vector3.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z value.">Z</a>());</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="comment">// result = pose.q + pose.q * this-&gt;p * pose.q!</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        tmp = this-&gt;q * (tmp * this-&gt;q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a724dd60575e5faeb80563af1710c0c0e" title="Get the inverse of this quaternion.">Inverse</a>());</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a>(this-&gt;p.X() + tmp.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>(),</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                          this-&gt;p.Y() + tmp.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>(),</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                          this-&gt;p.Z() + tmp.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>());</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a2a29560e28a216c014bb61efa8fa3b56">  302</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> <a class="code" href="classgz_1_1math_1_1Pose3.html#a2a29560e28a216c014bb61efa8fa3b56" title="Add one pose to another: result = this + pose.">CoordPositionAdd</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;_pose)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> tmp(<span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(0),</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            this-&gt;p.X(), this-&gt;p.Y(), this-&gt;p.Z());</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="comment">// result = _pose.q + _pose.q * this-&gt;p * _pose.q!</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        tmp = _pose.q * (tmp * _pose.q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a724dd60575e5faeb80563af1710c0c0e" title="Get the inverse of this quaternion.">Inverse</a>());</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a>(_pose.p.X() + tmp.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>(),</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                          _pose.p.Y() + tmp.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>(),</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                          _pose.p.Z() + tmp.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>());</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;      }</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#adac734c8eee3deb333ce158dc2c35317">  318</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> <a class="code" href="classgz_1_1math_1_1Pose3.html#adac734c8eee3deb333ce158dc2c35317" title="Subtract one position from another: result = this - pose.">CoordPositionSub</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;_pose)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> tmp(0,</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            this-&gt;p.X() - _pose.p.X(),</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            this-&gt;p.Y() - _pose.p.Y(),</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            this-&gt;p.Z() - _pose.p.Z());</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        tmp = _pose.q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a724dd60575e5faeb80563af1710c0c0e" title="Get the inverse of this quaternion.">Inverse</a>() * (tmp * _pose.q);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a>(tmp.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>(), tmp.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>(), tmp.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>());</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a729a6ab684fb74aa2c7c14c94916ce3e">  332</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> <a class="code" href="classgz_1_1math_1_1Pose3.html#a729a6ab684fb74aa2c7c14c94916ce3e" title="Add one rotation to another: result = this-&gt;q + rot.">CoordRotationAdd</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> &amp;_rot)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a>(_rot * this-&gt;q);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#aab9197bc6ee2aec55fae22f6d248be64">  340</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> <a class="code" href="classgz_1_1math_1_1Pose3.html#aab9197bc6ee2aec55fae22f6d248be64" title="Subtract one rotation from another: result = this-&gt;q - rot.">CoordRotationSub</a>(</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                  <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> &amp;_rot)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> result(_rot.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a724dd60575e5faeb80563af1710c0c0e" title="Get the inverse of this quaternion.">Inverse</a>() * this-&gt;q);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        result.<a class="code" href="classgz_1_1math_1_1Quaternion.html#af279e0f0ff720ee54d6733674dfda50a" title="Normalize the quaternion.">Normalize</a>();</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      <span class="comment">// \return The inverse pose.</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a38e014375059c8c0d813b7b921a6c08e">  352</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> <a class="code" href="classgz_1_1math_1_1Pose3.html#a38e014375059c8c0d813b7b921a6c08e" title="Find the inverse of a pose; i.e., if b = this + a, given b and this, find a.">CoordPoseSolve</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> &amp;_b)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> qt;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> a;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        a.q = this-&gt;q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a724dd60575e5faeb80563af1710c0c0e" title="Get the inverse of this quaternion.">Inverse</a>() * _b.q;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        qt = a.q * <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a>(0, this-&gt;p.X(), this-&gt;p.Y(), this-&gt;p.Z());</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        qt = qt * a.q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a724dd60575e5faeb80563af1710c0c0e" title="Get the inverse of this quaternion.">Inverse</a>();</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        a.p = _b.p - <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a>(qt.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>(), qt.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>(), qt.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>());</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a372de693ad40b3f42839c8ec6ac845f4">  367</a></span>&#160;      <span class="keyword">public</span>: <span class="keywordtype">void</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#a372de693ad40b3f42839c8ec6ac845f4" title="Reset the pose. This sets the position to zero and the rotation to identify.">Reset</a>()</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="comment">// set the position to zero</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        this-&gt;p.Set();</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        this-&gt;q = <a class="code" href="classgz_1_1math_1_1Quaternion.html" title="A quaternion class that represents 3D rotations and orientations. Four scalar values,...">Quaternion&lt;T&gt;::Identity</a>;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a4e86c3f0d795570c6aec5de6d0e3b7a8">  377</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> <a class="code" href="classgz_1_1math_1_1Pose3.html#a4e86c3f0d795570c6aec5de6d0e3b7a8" title="Rotate the vector part of a pose about the origin.">RotatePositionAboutOrigin</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> &amp;_q)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;T&gt;</a> a = *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        a.p.X((1.0 - 2.0*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>() - 2.0*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>()) * this-&gt;p.X()</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                +(2.0*(_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>()+_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ada2d68910c85b5a3cab09d6979f27c85" title="Get the w component.">W</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>())) * this-&gt;p.Y()</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                +(2.0*(_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>()-_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ada2d68910c85b5a3cab09d6979f27c85" title="Get the w component.">W</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>())) * this-&gt;p.Z());</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        a.p.Y((2.0*(_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>()-_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ada2d68910c85b5a3cab09d6979f27c85" title="Get the w component.">W</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>())) * this-&gt;p.X()</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                +(1.0 - 2.0*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>() - 2.0*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>()) * this-&gt;p.Y()</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                +(2.0*(_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>()+_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ada2d68910c85b5a3cab09d6979f27c85" title="Get the w component.">W</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>())) * this-&gt;p.Z());</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        a.p.Z((2.0*(_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>()+_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ada2d68910c85b5a3cab09d6979f27c85" title="Get the w component.">W</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>())) * this-&gt;p.X()</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                +(2.0*(_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#a253c4659f98e0cffd70ae20bbada9c48" title="Get the z component.">Z</a>()-_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ada2d68910c85b5a3cab09d6979f27c85" title="Get the w component.">W</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>())) * this-&gt;p.Y()</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                +(1.0 - 2.0*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#ae6b656e82256821b0ef79462ca0079b8" title="Get the x component.">X</a>() - 2.0*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>()*_q.<a class="code" href="classgz_1_1math_1_1Quaternion.html#aecdad7e976b3ed74a1828eac4d958db6" title="Get the y component.">Y</a>()) * this-&gt;p.Z());</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
+<div class="line"><a name="l00394"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#aeae08385b749c5d457a69c879617423c">  394</a></span>&#160;      <span class="keyword">public</span>: <span class="keywordtype">void</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#aeae08385b749c5d457a69c879617423c" title="Round all values to _precision decimal places.">Round</a>(<span class="keywordtype">int</span> _precision)</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;      {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        this-&gt;q.Round(_precision);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        this-&gt;p.Round(_precision);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;      }</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
+<div class="line"><a name="l00402"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a10c1c1f70fc56eb827faa6d36c58ce9e">  402</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> &amp;<a class="code" href="classgz_1_1math_1_1Pose3.html#a10c1c1f70fc56eb827faa6d36c58ce9e" title="Get the position.">Pos</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="keywordflow">return</span> this-&gt;p;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;      }</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a421679346c9da0b6271f43fc76308d49">  409</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> &amp;<a class="code" href="classgz_1_1math_1_1Pose3.html#a421679346c9da0b6271f43fc76308d49" title="Get a mutable reference to the position.">Pos</a>()</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      {</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keywordflow">return</span> this-&gt;p;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;      }</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00418"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#ab33c2197bd1dd98cc104ba166a6af422">  418</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keyword">const</span> T <a class="code" href="classgz_1_1math_1_1Pose3.html#ab33c2197bd1dd98cc104ba166a6af422" title="Get the X value of the position.">X</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keywordflow">return</span> this-&gt;p.X();</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;      }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#ab359a87d3a45ad0054db8d1270edb0d5">  424</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#ab359a87d3a45ad0054db8d1270edb0d5" title="Set X value of the position.">SetX</a>(T x)</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;      {</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;       this-&gt;p.X() = x;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;      }</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
+<div class="line"><a name="l00433"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a8fb40fc7b1777235ed5188839ad2dcc2">  433</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keyword">const</span> T <a class="code" href="classgz_1_1math_1_1Pose3.html#a8fb40fc7b1777235ed5188839ad2dcc2" title="Get the Y value of the position.">Y</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="keywordflow">return</span> this-&gt;p.Y();</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;      }</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
+<div class="line"><a name="l00439"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a4f175ff482a481e7f6e85fb976790736">  439</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#a4f175ff482a481e7f6e85fb976790736" title="Set the Y value of the position.">SetY</a>(T y)</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;      {</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        this-&gt;p.Y() = y;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;      }</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
+<div class="line"><a name="l00448"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#aca8b8755bbe6e37079978eecd2be1e03">  448</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keyword">const</span> T <a class="code" href="classgz_1_1math_1_1Pose3.html#aca8b8755bbe6e37079978eecd2be1e03" title="Get the Z value of the position.">Z</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        <span class="keywordflow">return</span> this-&gt;p.Z();</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;      }</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
+<div class="line"><a name="l00454"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#aee8e9346214543e7330dd730ea47ce0b">  454</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#aee8e9346214543e7330dd730ea47ce0b" title="Set the Z value of the position.">SetZ</a>(T z)</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;      {</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        this-&gt;p.Z() = z;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;      }</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160; </div>
+<div class="line"><a name="l00461"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a0e1ba27eeb9ad5ac022a5bfe60634b07">  461</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> &amp;<a class="code" href="classgz_1_1math_1_1Pose3.html#a0e1ba27eeb9ad5ac022a5bfe60634b07" title="Get the rotation.">Rot</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        <span class="keywordflow">return</span> this-&gt;q;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;      }</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160; </div>
+<div class="line"><a name="l00468"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a08a46aadf6b4011d64cce9020fdb68b7">  468</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> &amp;<a class="code" href="classgz_1_1math_1_1Pose3.html#a08a46aadf6b4011d64cce9020fdb68b7" title="Get a mutable reference to the rotation.">Rot</a>()</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;      {</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="keywordflow">return</span> this-&gt;q;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;      }</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160; </div>
+<div class="line"><a name="l00477"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#af3dd6656e5f9bdb59ac93834429e1de1">  477</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keyword">const</span> T <a class="code" href="classgz_1_1math_1_1Pose3.html#af3dd6656e5f9bdb59ac93834429e1de1" title="Get the Roll value of the rotation.">Roll</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        <span class="keywordflow">return</span> this-&gt;q.Roll();</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;      }</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160; </div>
+<div class="line"><a name="l00486"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a7f8b6967f53a4ade41805f23d0d9f594">  486</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keyword">const</span> T <a class="code" href="classgz_1_1math_1_1Pose3.html#a7f8b6967f53a4ade41805f23d0d9f594" title="Get the Pitch value of the rotation.">Pitch</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        <span class="keywordflow">return</span> this-&gt;q.Pitch();</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;      }</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160; </div>
+<div class="line"><a name="l00495"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a3c83258cb558031aed020fbb414c5dee">  495</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">inline</span> <span class="keyword">const</span> T <a class="code" href="classgz_1_1math_1_1Pose3.html#a3c83258cb558031aed020fbb414c5dee" title="Get the Yaw value of the rotation.">Yaw</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        <span class="keywordflow">return</span> this-&gt;q.Yaw();</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;      }</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160; </div>
+<div class="line"><a name="l00504"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a353bc924da1b931c29cf89bf3632553e">  504</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">friend</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html" title="STL class.">std::ostream</a> &amp;<a class="code" href="classgz_1_1math_1_1Pose3.html#a353bc924da1b931c29cf89bf3632553e" title="Stream insertion operator.">operator&lt;&lt;</a>(</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;                  <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html" title="STL class.">std::ostream</a> &amp;_out, <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">gz::math::Pose3&lt;T&gt;</a> &amp;_pose)</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;      {</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        _out &lt;&lt; _pose.<a class="code" href="classgz_1_1math_1_1Pose3.html#a10c1c1f70fc56eb827faa6d36c58ce9e" title="Get the position.">Pos</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; _pose.<a class="code" href="classgz_1_1math_1_1Pose3.html#a0e1ba27eeb9ad5ac022a5bfe60634b07" title="Get the rotation.">Rot</a>();</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <span class="keywordflow">return</span> _out;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;      }</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160; </div>
+<div class="line"><a name="l00515"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#adfa50cf18ed5b553a0f0d245b1d1b7e3">  515</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">friend</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_istream.html" title="STL class.">std::istream</a> &amp;<a class="code" href="classgz_1_1math_1_1Pose3.html#adfa50cf18ed5b553a0f0d245b1d1b7e3" title="Stream extraction operator.">operator&gt;&gt;</a>(</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                  <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_istream.html" title="STL class.">std::istream</a> &amp;_in, <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">gz::math::Pose3&lt;T&gt;</a> &amp;_pose)</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;      {</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        <span class="comment">// Skip white spaces</span></div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        _in.<a class="codeRef" href="http://en.cppreference.com/w/cpp/io/ios_base/setf.html">setf</a>(std::ios_base::skipws);</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> pos;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> rot;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        _in &gt;&gt; pos &gt;&gt; rot;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        _pose.<a class="code" href="classgz_1_1math_1_1Pose3.html#ad36fb4bd467572b0230f959f997cea4d" title="Set the pose from a Vector3&lt;T&gt; and a Quaternion&lt;T&gt;">Set</a>(pos, rot);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        <span class="keywordflow">return</span> _in;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;      }</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160; </div>
+<div class="line"><a name="l00533"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Pose3.html#a4f76bdc6a0a9e2be456f57647581243e">  533</a></span>&#160;      <span class="keyword">public</span>: <span class="keywordtype">bool</span> <a class="code" href="classgz_1_1math_1_1Pose3.html#a4f76bdc6a0a9e2be456f57647581243e" title="Equality test with tolerance.">Equal</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3</a> &amp;_p, <span class="keyword">const</span> T &amp;_tol)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        <span class="keywordflow">return</span> this-&gt;p.Equal(_p.p, _tol) &amp;&amp; this-&gt;q.Equal(_p.q, _tol);</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;      }</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160; </div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;      <span class="keyword">private</span>: <a class="code" href="classgz_1_1math_1_1Vector3.html" title="The Vector3 class represents the generic vector containing 3 elements. Since it&#39;s commonly used to ke...">Vector3&lt;T&gt;</a> p;</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160; </div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;      <span class="keyword">private</span>: <a class="code" href="classgz_1_1math_1_1Quaternion.html">Quaternion&lt;T&gt;</a> q;</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    };</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160; </div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160; </div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;      <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; constexpr Pose3&lt;T&gt; gPose3Zero{};</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160; </div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    }  <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160; </div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">const</span> Pose3&lt;T&gt; &amp;<a class="code" href="classgz_1_1math_1_1Pose3.html#a43ba1fd640409a9fea457125f728d7bb" title="A Pose3 initialized to zero. This is equivalent to math::Pose3&lt;T&gt;(0, 0, 0, 0, 0, 0).">Pose3&lt;T&gt;::Zero</a> = detail::gPose3Zero&lt;T&gt;;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160; </div>
+<div class="line"><a name="l00554"></a><span class="lineno"><a class="line" href="namespacegz_1_1math.html#a507d73d4a494a03691fb87691dd07215">  554</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;double&gt;</a> <a class="code" href="namespacegz_1_1math.html#a507d73d4a494a03691fb87691dd07215" title="typedef Pose3&lt;double&gt; as Pose3d.">Pose3d</a>;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160; </div>
+<div class="line"><a name="l00557"></a><span class="lineno"><a class="line" href="namespacegz_1_1math.html#a2c56b19af5770aece4d7db8867f734cc">  557</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;float&gt;</a> <a class="code" href="namespacegz_1_1math.html#a2c56b19af5770aece4d7db8867f734cc" title="typedef Pose3&lt;float&gt; as Pose3f.">Pose3f</a>;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    }</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;  }</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;}</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+      </div>
+    </main>
+  </div>
+</body>
+160; </div>
+<div class="line"><a name="l00554"></a><span class="lineno"><a class="line" href="namespacegz_1_1math.html#a507d73d4a494a03691fb87691dd07215">  554</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;double&gt;</a> <a class="code" href="namespacegz_1_1math.html#a507d73d4a494a03691fb87691dd07215" title="typedef Pose3&lt;double&gt; as Pose3d.">Pose3d</a>;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160; </div>
+<div class="line"><a name="l00557"></a><span class="lineno"><a class="line" href="namespacegz_1_1math.html#a2c56b19af5770aece4d7db8867f734cc">  557</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classgz_1_1math_1_1Pose3.html" title="The Pose3 class represents a 3D position and rotation. The position component is a Vector3,...">Pose3&lt;float&gt;</a> <a class="code" href="namespacegz_1_1math.html#a2c56b19af5770aece4d7db8867f734cc" title="typedef Pose3&lt;float&gt; as Pose3f.">Pose3f</a>;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    }</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;  }</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;}</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+      </div>
+    </main>
+  </div>
+</body>
