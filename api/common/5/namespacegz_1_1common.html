@@ -456,7 +456,7 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacegz_1_1common.html#a18ae24a143a8cca4587c3b3928d6079fa74108a89672c573afee1fae6de8e4e0b">METAL</a> = 1, 
 <a class="el" href="namespacegz_1_1common.html#a18ae24a143a8cca4587c3b3928d6079fa0df54c320628149300093da5e2ff693d">SPECULAR</a> = 2
  }</td></tr>
-<tr class="memdesc:a18ae24a143a8cca4587c3b3928d6079f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of PBR woe of PBR workflow.  <a href="namespacegz_1_1common.html#a18ae24a143a8cca4587c3b3928d6079f">More...</a><br /></td></tr>
+<tr class="memdesc:a18ae24a143a8cca4587c3b3928d6079f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of PBR workflow.  <a href="namespacegz_1_1common.html#a18ae24a143a8cca4587c3b3928d6079f">More...</a><br /></td></tr>
 <tr class="separator:a18ae24a143a8cca4587c3b3928d6079f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -494,7 +494,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:aa301f2e0464ffb10f108527a8e13a783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the preferred directory separator of the current operating system with a forward-slash '/'. On Windows, this will turn backslashes into forward-slashes.  <a href="namespacegz_1_1common.html#aa301f2e0464ffb10f108527a8e13a783">More...</a><br /></td></tr>
 <tr class="separator:aa301f2e0464ffb10f108527a8e13a783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a479791d0d35d3ef532779902f4aea106"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegz_1_1common.html#a479791d0d35d3ef532779902f4aea106">chdir</a> (const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_dir)</td></tr>
-<tr class="memdesc:a479791d0d35d3ef532779902f4aea106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change current working direct.  <a href="namespacegz_1_1common.html#a479791d0d35d3ef532779902f4aea106">More...</a><br /></td></tr>
+<tr class="memdesc:a479791d0d35d3ef532779902f4aea106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change current working directory to _dir.  <a href="namespacegz_1_1common.html#a479791d0d35d3ef532779902f4aea106">More...</a><br /></td></tr>
 <tr class="separator:a479791d0d35d3ef532779902f4aea106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c0907cba0740d1b6b1ad408b525ee5f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegz_1_1common.html#a1c0907cba0740d1b6b1ad408b525ee5f">copyDirectory</a> (const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_existingDirname, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_newDirname, const <a class="el" href="namespacegz_1_1common.html#a218e06376463f78726114f003071fef0">FilesystemWarningOp</a> _warningOp=<a class="el" href="namespacegz_1_1common.html#a218e06376463f78726114f003071fef0abaf00f20f89e7d7ac71c1ce4d278c0c0">FSWO_LOG_WARNINGS</a>)</td></tr>
 <tr class="memdesc:a1c0907cba0740d1b6b1ad408b525ee5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a directory, overwrite the destination directory if exists.  <a href="namespacegz_1_1common.html#a1c0907cba0740d1b6b1ad408b525ee5f">More...</a><br /></td></tr>
@@ -2400,7 +2400,7 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">_existingFilename</td><td>Full path to an existing file. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">_newFilename</td><td>Full path of the new file. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">_warningOp</td><tdsuppress warnings that may occur. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_warningOp</td><td>Log or suppress warnings that may occur. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2796,7 +2796,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The new string that has had _key replaced with _replacement. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd>void <a class="el" href="namespacegz_1_1common.html#aa610e5621cfad5e16e545abaf4cbc7ea" title="Replace all occurances of _key with _replacement.">common::replaceAll</a>(<a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_result, const <a class="elRef" hr, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html" title="STL class.">std::string</a> &amp;_orig, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html" title="STL class.">std::string</a> &amp;_key, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html" title="STL class.">std::string</a> &amp;_replacement) </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>void <a class="el" href="namespacegz_1_1common.html#aa610e5621cfad5e16e545abaf4cbc7ea" title="Replace all occurances of _key with _replacement.">common::replaceAll</a>(<a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html" title="STL class.">std::string</a> &amp;_result, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html" title="STL class.">std::string</a> &amp;_orig, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html" title="STL class.">std::string</a> &amp;_key, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html" title="STL class.">std::string</a> &amp;_replacement) </dd></dl>
 
 </div>
 </div>

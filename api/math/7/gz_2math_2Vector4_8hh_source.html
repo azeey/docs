@@ -258,7 +258,9 @@
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;          this-&gt;data[3] = 0;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      }</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class50"></a><span class="lineno">  150</span>&#160;        T d = this-&gt;Length();</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Vector4.html#af279e0f0ff720ee54d6733674dfda50a">  148</a></span>&#160;      <span class="keyword">public</span>: <span class="keywordtype">void</span> <a class="code" href="classgz_1_1math_1_1Vector4.html#af279e0f0ff720ee54d6733674dfda50a" title="Normalize the vector length.">Normalize</a>()</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        T d = this-&gt;Length();</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">if</span> (!equal&lt;T&gt;(d, <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(0.0)))</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        {</div>
@@ -339,7 +341,7 @@
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">return</span> this-&gt;data[0] + this-&gt;data[1] + this-&gt;data[2] + this-&gt;data[3];</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      }</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4&lt;T&gt;</a> &amp;operator=(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4&lt;T&gt;</a> &amp;_v) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Vector4.html#aa7c53b779f96304af8b4ba4ab9053c3e">  266</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4&lt;T&gt;</a> &amp;<a class="code" href="classgz_1_1math_1_1Vector4.html#aa7c53b779f96304af8b4ba4ab9053c3e" title="Assignment operator.">operator=</a>(<span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4&lt;T&gt;</a> &amp;_v) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
 <div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Vector4.html#a40dc474997dc6cade5510b26cbeb2b52">  270</a></span>&#160;      <span class="keyword">public</span>: <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4&lt;T&gt;</a> &amp;<a class="code" href="classgz_1_1math_1_1Vector4.html#a40dc474997dc6cade5510b26cbeb2b52" title="Assignment operator.">operator=</a>(T _value)</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      {</div>
@@ -512,7 +514,7 @@
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;            this-&gt;data[2] * _v, this-&gt;data[3] * _v);</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;      }</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160; </div>
-<div class="line"><a name="l00513"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Vector4.html#ada3485fe9e6741a678533eb52c8cd56d">  513</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">friend</span> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4</a> <a class="code" href="classgz_1_1math_1_1Vector4.html#ada3485fe9e6741a678533eb52c8cd56d" title="Scalar left multiplication operators.">operator*</a>(<span class="keyword">const</span> T _s,</div>
+<div class="line"><a name="l00513"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Vector4.html#aebd861cde49a85fc7596f140fcbdff7b">  513</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">friend</span> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4</a> <a class="code" href="classgz_1_1math_1_1Vector4.html#aebd861cde49a85fc7596f140fcbdff7b" title="Scalar left multiplication operators.">operator*</a>(<span class="keyword">const</span> T _s,</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                                                    <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4</a> &amp;_v)</div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;      {</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4</a>(_v * _s);</div>
@@ -632,8 +634,8 @@
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;               this-&gt;data[2] &lt; _pt[2] || this-&gt;data[3] &lt; _pt[3];</div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;      }</div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160; </div>
-<div class="line"><a name="l00691"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Vector4.html#acfc48db24e89ade93f05dc765382faa8">  691</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">friend</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html" title="STL class.">std::ostream</a> &amp;<a class="code" href="classgz_1_1math_1_1Vector4.html#acfc48db24e89ade93f05dc765382faa8" title="Stream insertion operator.">operator&lt;&lt;</a>(</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;                  <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html" title="STL class.">std::ostream</a> &amp;_out, <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">gz::math::Vector4&lt;T&gt;</a> &amp;_pt)</div>
+<div class="line"><a name="l00691"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Vector4.html#acfc48db24e89ade93f05dc765382faa8">  691</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">friend</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;<a class="code" href="classgz_1_1math_1_1Vector4.html#acfc48db24e89ade93f05dc765382faa8" title="Stream insertion operator.">operator&lt;&lt;</a>(</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;                  <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;_out, <span class="keyword">const</span> <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">gz::math::Vector4&lt;T&gt;</a> &amp;_pt)</div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;      {</div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : {0, 1, 2, 3})</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        {</div>
@@ -645,8 +647,8 @@
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        <span class="keywordflow">return</span> _out;</div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;      }</div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160; </div>
-<div class="line"><a name="l00708"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Vector4.html#ab7c37fa7a57b7711d51f7a93382aacdc">  708</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">friend</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_istream.html" title="STL class.">std::istream</a> &amp;<a class="code" href="classgz_1_1math_1_1Vector4.html#ab7c37fa7a57b7711d51f7a93382aacdc" title="Stream extraction operator.">operator&gt;&gt;</a>(</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;                  <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_istream.html" title="STL class.">std::istream</a> &amp;_in, <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">gz::math::Vector4&lt;T&gt;</a> &amp;_pt)</div>
+<div class="line"><a name="l00708"></a><span class="lineno"><a class="line" href="classgz_1_1math_1_1Vector4.html#ab7c37fa7a57b7711d51f7a93382aacdc">  708</a></span>&#160;      <span class="keyword">public</span>: <span class="keyword">friend</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_istream.html">std::istream</a> &amp;<a class="code" href="classgz_1_1math_1_1Vector4.html#ab7c37fa7a57b7711d51f7a93382aacdc" title="Stream extraction operator.">operator&gt;&gt;</a>(</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;                  <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_istream.html">std::istream</a> &amp;_in, <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">gz::math::Vector4&lt;T&gt;</a> &amp;_pt)</div>
 <div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;      {</div>
 <div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        T x, y, z, w;</div>
 <div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160; </div>
@@ -692,16 +694,6 @@
 <div class="line"><a name="l00753"></a><span class="lineno"><a class="line" href="namespacegz_1_1math.html#a270bbc7b96b874207992bb5456218a48">  753</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4&lt;int&gt;</a> <a class="code" href="namespacegz_1_1math.html#a270bbc7b96b874207992bb5456218a48">Vector4i</a>;</div>
 <div class="line"><a name="l00754"></a><span class="lineno"><a class="line" href="namespacegz_1_1math.html#ad0b18996675624521849970fa6bf09c3">  754</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4&lt;double&gt;</a> <a class="code" href="namespacegz_1_1math.html#ad0b18996675624521849970fa6bf09c3">Vector4d</a>;</div>
 <div class="line"><a name="l00755"></a><span class="lineno"><a class="line" href="namespacegz_1_1math.html#a2e950d4be17eed0a7d6f24353b04c8f5">  755</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classgz_1_1math_1_1Vector4.html" title="T Generic x, y, z, w vector.">Vector4&lt;float&gt;</a> <a class="code" href="namespacegz_1_1math.html#a2e950d4be17eed0a7d6f24353b04c8f5">Vector4f</a>;</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    }</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;  }</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;}</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="preprocessor">#endif</span></div>
-</div><!-- fragment --></div><!-- contents -->
-      </div>
-    </main>
-  </div>
-</body>
-or4.html" title="T Generic x, y, z, w vector.">Vector4&lt;float&gt;</a> <a class="code" href="namespacegz_1_1math.html#a2e950d4be17eed0a7d6f24353b04c8f5">Vector4f</a>;</div>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    }</div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;  }</div>
 <div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;}</div>
