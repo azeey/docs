@@ -165,51 +165,48 @@
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;gz/math/Export.hh&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;gz/math/config.hh&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegz.html">gz</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegz_1_1math.html">gz::math</a></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">namespace </span>math</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Inline bracket to help doxygen filtering.</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">inline</span> <span class="keyword">namespace </span>GZ_MATH_VERSION_NAMESPACE {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span>    <span class="comment">// Developer Note: When modifying this enum, make sure to also modify</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// the kMaterials map in src/MaterialTypes.hh.</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32a">   37</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32a" title="This enum lists the supported material types. A value can be used to create a Material instance....">MaterialType</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa03cf2eb9621cbaaafabe697afdfb6375" title="Styrofoam, density = 75.0 kg/m^3 String name = &quot;styrofoam&quot;.">STYROFOAM</a> = 0,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa2db03366902cf464d05d82980948d322" title="Pine, density = 373.0 kg/m^3 String name = &quot;pine&quot;.">PINE</a>,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa8029fbd172f8364c78bd96ba415014d5" title="Wood, density = 700.0 kg/m^3 String name = &quot;wood&quot;.">WOOD</a>,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aacd890ff50d3ade7ee866656ad0bf25cf" title="Oak, density = 710.0 kg/m^3 String name = &quot;oak&quot;.">OAK</a>,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aabf9228207c66fe40a4752a15edcdce96" title="Plastic, density = 1175.0 kg/m^3 String name = &quot;plastic&quot;.">PLASTIC</a>,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aaef4e7445ec9bbbfc8d25d92a16042f88" title="Concrete, density = 2000.0 kg/m^3 String name = &quot;concrete&quot;.">CONCRETE</a>,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa509a7e8b32bf0fe1a8b6ea7a333a1321" title="Aluminum, density = 2700.0 kg/m^3 String name = &quot;aluminum&quot;.">ALUMINUM</a>,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa5b5c07ad92b411b256984041247eadfb" title="Steel alloy, density = 7600.0 kg/m^3 String name = &quot;steel_alloy&quot;.">STEEL_ALLOY</a>,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aafff61c6a41815953e3528247ee2f9440" title="Stainless steel, density = 7800.0 kg/m^3 String name = &quot;steel_stainless&quot;.">STEEL_STAINLESS</a>,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa72cfeced8656bc799e87bdc6b1aa7ddf" title="Iron, density = 7870.0 kg/m^3 String name = &quot;iron&quot;.">IRON</a>,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aaf8c23b538d2b40948387f9b4c4881586" title="Brass, density = 8600.0 kg/m^3 String name = &quot;brass&quot;.">BRASS</a>,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aae82f11ed94b39e8aa648d2099336865d" title="Copper, density = 8940.0 kg/m^3 String name = &quot;copper&quot;.">COPPER</a>,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa378c7da1b501ec2b405db1c6fe886ffc" title="Tungsten, density = 19300.0 kg/m^3 String name = &quot;tungsten&quot;.">TUNGSTEN</a>,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="comment">// This value should always be last in the enum; it is used in</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="comment">// MaterialDensity_TEST.</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa65482c66c74b4da9e95b03089cb59770" title="Represents an invalid or unknown material.">UNKNOWN_MATERIAL</a></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    };</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">// Inline bracket to help doxygen filtering.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">inline</span> <span class="keyword">namespace </span>GZ_MATH_VERSION_NAMESPACE {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span>  <span class="comment">// Developer Note: When modifying this enum, make sure to also modify</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// the kMaterials map in src/MaterialTypes.hh.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32a">   35</a></span>&#160;  <span class="keyword">enum class</span> <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32a" title="This enum lists the supported material types. A value can be used to create a Material instance....">MaterialType</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa03cf2eb9621cbaaafabe697afdfb6375" title="Styrofoam, density = 75.0 kg/m^3 String name = &quot;styrofoam&quot;.">STYROFOAM</a> = 0,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa2db03366902cf464d05d82980948d322" title="Pine, density = 373.0 kg/m^3 String name = &quot;pine&quot;.">PINE</a>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa8029fbd172f8364c78bd96ba415014d5" title="Wood, density = 700.0 kg/m^3 String name = &quot;wood&quot;.">WOOD</a>,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aacd890ff50d3ade7ee866656ad0bf25cf" title="Oak, density = 710.0 kg/m^3 String name = &quot;oak&quot;.">OAK</a>,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aabf9228207c66fe40a4752a15edcdce96" title="Plastic, density = 1175.0 kg/m^3 String name = &quot;plastic&quot;.">PLASTIC</a>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aaef4e7445ec9bbbfc8d25d92a16042f88" title="Concrete, density = 2000.0 kg/m^3 String name = &quot;concrete&quot;.">CONCRETE</a>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa509a7e8b32bf0fe1a8b6ea7a333a1321" title="Aluminum, density = 2700.0 kg/m^3 String name = &quot;aluminum&quot;.">ALUMINUM</a>,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa5b5c07ad92b411b256984041247eadfb" title="Steel alloy, density = 7600.0 kg/m^3 String name = &quot;steel_alloy&quot;.">STEEL_ALLOY</a>,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aafff61c6a41815953e3528247ee2f9440" title="Stainless steel, density = 7800.0 kg/m^3 String name = &quot;steel_stainless&quot;.">STEEL_STAINLESS</a>,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa72cfeced8656bc799e87bdc6b1aa7ddf" title="Iron, density = 7870.0 kg/m^3 String name = &quot;iron&quot;.">IRON</a>,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aaf8c23b538d2b40948387f9b4c4881586" title="Brass, density = 8600.0 kg/m^3 String name = &quot;brass&quot;.">BRASS</a>,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aae82f11ed94b39e8aa648d2099336865d" title="Copper, density = 8940.0 kg/m^3 String name = &quot;copper&quot;.">COPPER</a>,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa378c7da1b501ec2b405db1c6fe886ffc" title="Tungsten, density = 19300.0 kg/m^3 String name = &quot;tungsten&quot;.">TUNGSTEN</a>,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// This value should always be last in the enum; it is used in</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// MaterialDensity_TEST.</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="namespacegz_1_1math.html#ace55764233310da429c994a8c334b32aa65482c66c74b4da9e95b03089cb59770" title="Represents an invalid or unknown material.">UNKNOWN_MATERIAL</a></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  };</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }  <span class="comment">// namespace GZ_MATH_VERSION_NAMESPACE</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}  <span class="comment">// namespace gz::math</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif  </span></div>
 </div><!-- fragment --></div><!-- contents -->
       </div>
     </main>

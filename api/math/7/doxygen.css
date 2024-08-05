@@ -1011,7 +1011,41 @@ table.fieldtable {
 }
 
 .fieldtable td.fieldtype, .fieldtable td.fieldname {
-        white-space:        padding-top: 5px;
+        white-space: nowrap;
+        border-right: 1px solid #D3B6AE;
+        border-bottom: 1px solid #D3B6AE;
+        vertical-align: top;
+}
+
+.fieldtable td.fieldname {
+        padding-top: 3px;
+}
+
+.fieldtable td.fielddoc {
+        border-bottom: 1px solid #D3B6AE;
+        /*width: 100%;*/
+}
+
+.fieldtable td.fielddoc p:first-child {
+        margin-top: 0px;
+}       
+        
+.fieldtable td.fielddoc p:last-child {
+        margin-bottom: 2px;
+}
+
+.fieldtable tr:last-child td {
+        border-bottom: none;
+}
+
+.fieldtable th {
+        background-image:url('nav_f.png');
+        background-repeat:repeat-x;
+        background-color: #F0E7E4;
+        font-size: 90%;
+        color: #4F332B;
+        padding-bottom: 4px;
+        padding-top: 5px;
         text-align:left;
         font-weight: 400;
         -moz-border-radius-topleft: 4px;
@@ -1379,10 +1413,12 @@ dl.citelist dt {
         font-weight:bold;
         margin-right:10px;
         padding:5px;
+        text-align:right;
+        width:52px;
 }
 
 dl.citelist dd {
-        margin:2px 0;
+        margin:2px 0 2px 72px;
         padding:5px 0;
 }
 
@@ -1443,6 +1479,12 @@ div.toc li.level3 {
 
 div.toc li.level4 {
         margin-left: 45px;
+}
+
+span.emoji {
+        /* font family used at the site: https://unicode.org/emoji/charts/full-emoji-list.html
+         * font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;
+         */
 }
 
 .PageDocRTL-title div.toc li.level1 {
@@ -1682,47 +1724,6 @@ tr.heading h2 {
 
 /* @group Markdown */
 
-/*
-table.markdownTable {
-	border-collapse:collapse;
-        margin-top: 4px;
-        margin-bottom: 4px;
-}
-
-table.markdownTable td, table.markdownTable th {
-	border: 1px solid #613E34;
-	padding: 3px 7px 2px;
-}
-
-table.markdownTableHead tr {
-}
-
-table.markdownTableBodyLeft td, table.markdownTable th {
-	border: 1px solid #613E34;
-	padding: 3px 7px 2px;
-}
-
-th.markdownTableHeadLeft th.markdownTableHeadRight th.markdownTableHeadCenter th.markdownTableHeadNone {
-	background-color: #774C40;
-	color: #FFFFFF;
-	font-size: 110%;
-	padding-bottom: 4px;
-	padding-top: 5px;
-}
-
-th.markdownTableHeadLeft {
-	text-align: left
-}
-
-th.markdownTableHeadRight {
-	text-align: right
-}
-
-th.markdownTableHeadCenter {
-	text-align: center
-}
-*/
-
 table.markdownTable {
 	border-collapse:collapse;
         margin-top: 4px;
@@ -1763,34 +1764,6 @@ th.markdownTableHeadCenter, td.markdownTableBodyCenter {
 }
 
 .DocNodeLTR {
-  text-align: left;
-  direction: ltr;
-}
-
-table.DocNodeRTL {
-   width: auto;
-   margin-right: 0;
-   margin-left: auto;
-}
-
-table.DocNodeLTR {
-   width: auto;
-   margin-right: auto;
-   margin-left: 0;
-}
-
-tt, code, kbd, samp
-{
-  display: inline-block;
-  direction:ltr; 
-}
-/* @end */
-
-u {
-	text-decoration: underline;
-}
-
-odeLTR {
   text-align: left;
   direction: ltr;
 }
