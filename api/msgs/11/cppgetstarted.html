@@ -36,7 +36,7 @@
         <h1 class="project_title">Gazebo Msgs</h1>
         <h2>API Reference</h2>
         <div class="version">
-        11.0.0
+        11.1.0
         </div>
       </header>
       <!-- NOTE: If you add a link to a doxygen generated page, then make
@@ -138,7 +138,7 @@
   <div class="headertitle"><div class="title">C++ Get Started</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md2"></a>
+<div class="textblock"><h2><a class="anchor" id="overview"></a>
 Overview</h2>
 <p>This tutorial describes how to get started using Gazebo Msgs with C++.</p>
 <p>We will run through a simple example that populates a message and prints it. Start by creating a bare-bones main file using the editor of your choice.</p>
@@ -176,6 +176,7 @@ Overview</h2>
 <div class="line">}</div>
 </div><!-- fragment --><p>To compile the code create a <code>CMakeLists.txt</code>:</p>
 <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.22.1 FATAL_ERROR)</div>
+<div class="line">project(gz-msgs-example)</div>
 <div class="line"> </div>
 <div class="line"># Find the Gazebo msgs library</div>
 <div class="line">find_package(gz-msgs11 QUIET REQUIRED)</div>

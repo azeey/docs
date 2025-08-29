@@ -36,7 +36,7 @@
         <h1 class="project_title">Gazebo Math</h1>
         <h2>API Reference</h2>
         <div class="version">
-        8.0.0
+        8.2.0
         </div>
       </header>
       <!-- NOTE: If you add a link to a doxygen generated page, then make
@@ -148,13 +148,15 @@
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;cassert&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;set&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;gz/math/config.hh&gt;</code><br />
+<code>#include &quot;gz/math/detail/Error.hh&quot;</code><br />
 <code>#include &quot;<a class="el" href="Edge_8hh_source.html">gz/math/graph/Edge.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Vertex_8hh_source.html">gz/math/graph/Vertex.hh</a>&quot;</code><br />
 </div>
@@ -163,7 +165,7 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgz_1_1math_1_1graph_1_1Graph.html">Graph&lt; V, E, EdgeType &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic graph class. Both vertices and edges can store user information. A vertex could be created passing a custom Id if needed, otherwise it will be choosen internally. The vertices also have a name that could be reused among other vertices if needed. This class supports the use of different edge types (e.g. directed or undirected edges).  <a href="classgz_1_1math_1_1graph_1_1Graph.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic graph class. Both vertices and edges can store user information. A vertex could be created passing a custom Id if needed, otherwise it will be chosen internally. The vertices also have a name that could be reused among other vertices if needed. This class supports the use of different edge types (e.g. directed or undirected edges).  <a href="classgz_1_1math_1_1graph_1_1Graph.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>

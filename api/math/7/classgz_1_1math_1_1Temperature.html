@@ -36,7 +36,7 @@
         <h1 class="project_title">Gazebo Math</h1>
         <h2>API Reference</h2>
         <div class="version">
-        7.5.0
+        7.5.2
         </div>
       </header>
       <!-- NOTE: If you add a link to a doxygen generated page, then make
@@ -295,7 +295,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A class that stores temperature information, and allows conversion between different units. </p>
 <p>This class is mostly for convenience. It can be used to easily convert between temperature units and encapsulate temperature values.</p>
 <p>The default unit is Kelvin. Most functions that accept a double value will assume the double is Kelvin. The exceptions are a few of the conversion functions, such as CelsiusToFahrenheit. Similarly, most doubles that are returned will be in Kelvin.</p>
-<h2><a class="anchor" id="autotoc_md66"></a>
+<h2><a class="anchor" id="autotoc_md68"></a>
 Examples</h2>
 <ul>
 <li>C++ <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
@@ -342,7 +342,7 @@ Examples</h2>
 <div class="line"> </div>
 <div class="line">newTemp = Gz::Math::<a class="code" href="classgz_1_1math_1_1Temperature.html#aaccae841732389a407e40ae10eb4a97c" title="Default constructor.">Temperature</a>.new(temp.<a class="code" href="classgz_1_1math_1_1Temperature.html#a6a7be30e3f6ec05c073f6757fc9650e3" title="Get the temperature in Kelvin.">Kelvin</a>())</div>
 <div class="line">newTemp += temp + 23.5;</div>
-<div class="line">printf(&quot;Copied temp and added 23.5K. The new tempurature is %fF\n&quot;,</div>
+<div class="line">printf(&quot;Copied temp and added 23.5K. The new temperature is %fF\n&quot;,</div>
 <div class="line">    newTemp.<a class="code" href="classgz_1_1math_1_1Temperature.html#a434e8265d50d323e49e06f1b272fb780" title="Get the temperature in Fahrenheit.">Fahrenheit</a>());</div>
 </div><!-- fragment --> </li>
 </ul>
@@ -1553,4 +1553,3 @@ Examples</h2>
     </main>
   </div>
 </body>
-

@@ -36,7 +36,7 @@
         <h1 class="project_title">Gazebo Sim</h1>
         <h2>API Reference</h2>
         <div class="version">
-        9.0.0
+        9.3.0
         </div>
       </header>
       <!-- NOTE: If you add a link to a doxygen generated page, then make
@@ -188,7 +188,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classgz_1_1sim_1_1Joint.html" title="This class provides wrappers around entities and components which are more convenient and straight-fo...">Joint</a> controller which can be attached to a model with a reference to a single joint. Currently only the first axis of a joint is actuated. </p>
-<h2><a class="anchor" id="autotoc_md455"></a>
+<h2><a class="anchor" id="system-parameters-14"></a>
 System Parameters</h2>
 <ul>
 <li><code>&lt;joint_name&gt;</code> The name of the joint to control. Required parameter. Can also include multiple <code>&lt;joint_name&gt;</code> for identical joints.</li>
@@ -199,10 +199,10 @@ System Parameters</h2>
 <li><code>&lt;sub_topic&gt;</code> Sub topic to receive commands in. Defaults to "/model/&lt;model_name&gt;/&lt;sub_topic&gt;".</li>
 <li><code>&lt;initial_velocity&gt;</code> Velocity to start with.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md456"></a>
+<h3><a class="anchor" id="velocity-mode"></a>
 Velocity mode</h3>
 <p>No additional parameters are required.</p>
-<h3><a class="anchor" id="autotoc_md457"></a>
+<h3><a class="anchor" id="force-mode"></a>
 Force mode</h3>
 <p>The controller accepts the next optional parameters:</p>
 <ul>
@@ -213,7 +213,8 @@ Force mode</h3>
 <li><code>&lt;i_min&gt;</code> The integral lower limit of the PID. The default value is -1.</li>
 <li><code>&lt;cmd_max&gt;</code> Output max value of the PID. The default value is 1000.</li>
 <li><code>&lt;cmd_min&gt;</code> Output min value of the PID. The default value is -1000.</li>
-<li><code>&lt;cmd_offset&gt;</code> Command offset (feed-forward) of the PID. The default value is 0. </li>
+<li><code>&lt;cmd_offset&gt;</code> Command offset (feed-forward) of the PID. The default value is 0.</li>
+<li><code>&lt;disable_braking&gt;</code> Disable braking. Allows the joint to freewheel if the commanded velocity is below the actual velocity. The default value is 0. </li>
 </ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac9aa8af420b26f0439a2b01411d4f76d" name="ac9aa8af420b26f0439a2b01411d4f76d"></a>

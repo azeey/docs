@@ -36,7 +36,7 @@
         <h1 class="project_title">Gazebo Math</h1>
         <h2>API Reference</h2>
         <div class="version">
-        7.5.0
+        7.5.2
         </div>
       </header>
       <!-- NOTE: If you add a link to a doxygen generated page, then make
@@ -269,7 +269,7 @@ class gz::math::Matrix3&lt; T &gt;</h3>
 <li><a class="el" href="namespacegz_1_1math.html#ae5a673b3d27428dc13b294596cc53a5d">Matrix3f</a> : Equivalent to Matrix3&lt;float&gt;</li>
 <li><a class="el" href="namespacegz_1_1math.html#a86e6f4c9798f85f6b09c74b4b60d2376">Matrix3d</a> : Equivalent to Matrix3&lt;double&gt; </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md59"></a>
+<h2><a class="anchor" id="autotoc_md61"></a>
 Examples</h2>
 <ul>
 <li>C++</li>
@@ -697,7 +697,7 @@ Examples</h2>
 <p>Set a column. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">_c</td><td>The colum index [0, 1, 2]. _col is clamped to the range [0, 2]. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_c</td><td>The column index [0, 1, 2]. _col is clamped to the range [0, 2]. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">_v</td><td>The value to set in each row of the column. </td></tr>
   </table>
   </dd>
@@ -776,7 +776,7 @@ Examples</h2>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the elements of the matrices are equal within the tolerence specified by _tol. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the elements of the matrices are equal within the tolerance specified by _tol. </dd></dl>
 
 </div>
 </div>
@@ -1664,67 +1664,6 @@ Examples</h2>
 <dl class="section return"><dt>Returns</dt><dd>Transpose of this matrix. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="classgz_1_1math_1_1MassMatrix3.html#a2a541c32e7ee3f4db3d4b547a4b5914c">MassMatrix3&lt; T &gt;::SetFromBox()</a>, <a class="el" href="classgz_1_1math_1_1MassMatrix3.html#ae93b02e0516bf8648bf44f3f91571e2d">MassMatrix3&lt; T &gt;::SetFromConeZ()</a>, and <a class="el" href="classgz_1_1math_1_1MassMatrix3.html#a68fea0585eeb53f30b19b42c9b71170d">MassMatrix3&lt; T &gt;::SetFromCylinderZ()</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ae19fa41846cd971d1b9a4a848155b318"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae19fa41846cd971d1b9a4a848155b318">&#9670;&nbsp;</a></span>Identity</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classgz_1_1math_1_1Matrix3.html">Matrix3</a>&lt; T &gt; &amp; Identity = detail::gMatrix3Identity&lt;T&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>A <a class="el" href="classgz_1_1math_1_1Matrix3.html" title="A 3x3 matrix class.">Matrix3</a> initialized to identity. This is equivalent to math::Matrix3&lt;T&gt;(1, 0, 0, 0, 1, 0, 0, 0, 1). </p>
-
-</div>
-</div>
-<a id="a9eecbecbf8aeaf2af4a31cfdb93dd5fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9eecbecbf8aeaf2af4a31cfdb93dd5fc">&#9670;&nbsp;</a></span>Zero</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classgz_1_1math_1_1Matrix3.html">Matrix3</a>&lt; T &gt; &amp; Zero = detail::gMatrix3Zero&lt;T&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>A <a class="el" href="classgz_1_1math_1_1Matrix3.html" title="A 3x3 matrix class.">Matrix3</a> initialized to zero. This is equivalent to math::Matrix3&lt;T&gt;(0, 0, 0, 0, 0, 0, 0, 0, 0). </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="gz_2math_2Matrix3_8hh_source.html">gz/math/Matrix3.hh</a></li>
-</ul>
-</div><!-- contents -->
-      </div>
-    </main>
-  </div>
-</body>
-rence">Referenced by <a class="el" href="classgz_1_1math_1_1MassMatrix3.html#a2a541c32e7ee3f4db3d4b547a4b5914c">MassMatrix3&lt; T &gt;::SetFromBox()</a>, <a class="el" href="classgz_1_1math_1_1MassMatrix3.html#ae93b02e0516bf8648bf44f3f91571e2d">MassMatrix3&lt; T &gt;::SetFromConeZ()</a>, and <a class="el" href="classgz_1_1math_1_1MassMatrix3.html#a68fea0585eeb53f30b19b42c9b71170d">MassMatrix3&lt; T &gt;::SetFromCylinderZ()</a>.</p>
 
 </div>
 </div>

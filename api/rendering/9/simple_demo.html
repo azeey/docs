@@ -36,7 +36,7 @@
         <h1 class="project_title">Gazebo Rendering</h1>
         <h2>API Reference</h2>
         <div class="version">
-        9.0.0
+        9.3.0
         </div>
       </header>
       <!-- NOTE: If you add a link to a doxygen generated page, then make
@@ -139,7 +139,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This example shows how move the camera automatically.</p>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="compile-and-run-the-example-6"></a>
 Compile and run the example</h2>
 <p>Clone the source code, create a build directory and use <code>cmake</code> and <code>make</code> to compile the code:</p>
 <div class="fragment"><div class="line">git clone https://github.com/gazebosim/gz-rendering</div>
@@ -147,9 +147,16 @@ Compile and run the example</h2>
 <div class="line">mkdir build</div>
 <div class="line">cd build</div>
 <div class="line">cmake ..</div>
-<div class="line">make</div>
+<div class="line"># Linux</div>
+<div class="line">cmake --build .</div>
+<div class="line"># Windows</div>
+<div class="line">cmake --build . --config Release</div>
 </div><!-- fragment --><p> Execute the example:</p>
-<div class="fragment"><div class="line">./simple_demo</div>
+<div class="fragment"><div class="line"># Linux</div>
+<div class="line">./simple_demo</div>
+<div class="line"> </div>
+<div class="line"># Windows</div>
+<div class="line">.\Release\simple_demo</div>
 </div><!-- fragment --><p>You'll see:</p>
 <div class="fragment"><div class="line">[Msg] Loading plugin [gz-rendering9-ogre]</div>
 <div class="line">===============================</div>
@@ -159,7 +166,7 @@ Compile and run the example</h2>
 </div><!-- fragment --><div class="image">
 <img src="simple_demo.gif" alt=""/>
 </div>
-<h2><a class="anchor" id="autotoc_md43"></a>
+<h2><a class="anchor" id="code-6"></a>
 Code</h2>
 <p>The function <code>updateCameras()</code> is called each time the <code>DisplayCB</code> function runs. Using the method <code>SetLocalPosition</code> from the <code>Camera</code> class we can move the camera in the world:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> updateCameras()</div>

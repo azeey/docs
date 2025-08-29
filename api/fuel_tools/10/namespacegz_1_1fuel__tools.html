@@ -36,7 +36,7 @@
         <h1 class="project_title">Gazebo Fuel_tools</h1>
         <h2>API Reference</h2>
         <div class="version">
-        10.0.0
+        10.1.0
         </div>
       </header>
       <!-- NOTE: If you add a link to a doxygen generated page, then make
@@ -427,7 +427,7 @@ Functions</h2></td></tr>
 
 <p>Convert the authority portion of a URI to a string suitable to be used as a path on disk for all platforms. </p>
 <p>It encodes illegal characters on Windows and Linux filesystems with their corresponding URL-encoded values.</p>
-<p>This assumes an authority of the form: username@host:port "@" is encoded as %40 ":" is encoded as %3A</p>
+<p>This assumes an authority of the form: <code>username@host:port</code> "@" is encoded as %40 ":" is encoded as %3A</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">_uriAuthority</td><td>the authority section of the URI to convert. </td></tr>
@@ -462,14 +462,14 @@ Functions</h2></td></tr>
 </ol>
 <p>This function will determine the SDF file according to the following:</p><ol type="1">
 <li>Check for a metadata.pbtxt file, and return the SDF file specified within the metadata.pbtxt file.</li>
-<li>Check for a model.config file, and return the SDF file specified withing the model.config file.</li>
+<li>Check for a model.config file, and return the SDF file specified within the model.config file.</li>
 <li>Return the first file with an <code>.sdf</code> extension. <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">_path</td><td>Filesystem path to a Fuel model or world directory. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Full path to the model or world SDF file, or empty string if the SDF file coult not be determined. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Full path to the model or world SDF file, or empty string if the SDF file could not be determined. </dd></dl>
 </li>
 </ol>
 

@@ -36,7 +36,7 @@
         <h1 class="project_title">Gazebo Sim</h1>
         <h2>API Reference</h2>
         <div class="version">
-        9.0.0
+        9.3.0
         </div>
       </header>
       <!-- NOTE: If you add a link to a doxygen generated page, then make
@@ -138,20 +138,23 @@
   <div class="headertitle"><div class="title">Video Recorder</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md403"></a>
+<div class="textblock"><h2><a class="anchor" id="using-the-video-recorder-plugin"></a>
 Using the video recorder plugin</h2>
 <p>Gazebo offers a video recorder tool for recording videos from the 3D scene. The recorder tool is available as a GUI plugin. To open this plugin, first launch Gazebo and select the ellipsis menu on top right (3 dots menu), and scroll down to find the <code>Video Recorder</code> option. Click on the plugin to open the Video Recorder tool. Alternatively, launch the demo world in Gazebo that already has this plugin included in the GUI.</p>
 <div class="fragment"><div class="line">gz sim -v 4 video_record_dbl_pendulum.sdf</div>
-</div><!-- fragment --><p>In this demo world, you should see a video recorder icon positioned on the top. left area of the window along with other buttons. Clicking on the video recorder button gives you the video format options that are available.</p>
+</div><!-- fragment --><p>In this demo world, you should see a video recorder icon positioned on the top left area of the window along with other buttons. Clicking on the video recorder button gives you the video format options that are available.</p>
 <div class="image">
 <img src="video_recorder.png" alt=""/>
 </div>
+<blockquote class="doxtable">
+<p>&zwj;<b>NOTE</b> The OGV format might not be supported by the underlying libavcodec implementation. This is especially true on Windows with the conda-installed dependencies. There is no easy way to add the VP8 codec support except for building libavcodec manually and enabling the support. </p>
+</blockquote>
 <p>Once an option is selected, recording starts immediately as indicated by a flashing video recorder icon. At anytime that you wish to stop recording, click on the flashing icon and select <code>Stop</code>. A file dialog window should pop up and let you select the path to save the recorded video in.</p>
 <p>Playback the video you just saved and you should notice that the resolution of the video is based on the size of your 3D scene window. So if you wish to record the video in a different size, make sure to configure the GUI window prior to recording.</p>
 <div class="image">
 <img src="video_recorder.gif" alt=""/>
 </div>
-<h2><a class="anchor" id="autotoc_md404"></a>
+<h2><a class="anchor" id="video-recorder-configurations"></a>
 Video recorder configurations</h2>
 <p>A few video recorder parameters can be specified using GUI configurations, see the <a href="gui_config.html">GUI Configuration</a> tutorial for more information. If you launched Gazebo with the <code>video_record_dbl_pendulum.sdf</code> demo world, the GUI configurations are embedded in the world SDF file so you will need to download a copy of the <a href="https://raw.githubusercontent.com/gazebosim/gz-sim/main/examples/worlds/video_record_dbl_pendulum.sdf">sdf file</a>. and modify the GUI configuration in that file. On the other hand, if you launched Gazebo with a world file that does not have GUI configurations, you will need to specify the settings in <code>$HOME/.gz/sim/&lt;#&gt;/gui.config</code>.</p>
 <p>Here is an example of the video recorder plugin's settings:</p>
@@ -185,9 +188,9 @@ Video recorder configurations</h2>
 </div><!-- fragment --><ul>
 <li><b>bitrate</b>: Video encoding bitrate in bps. This affects the quality of the generated video. The default bitrate is 2Mbps.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md405"></a>
+<h2><a class="anchor" id="hardware-accelerated-encoding"></a>
 Hardware-accelerated encoding</h2>
-<p>Since Gazebo Common 3.10.2, there is support for utilizing the power of GPUs to speed up the video encoding process. See the <a href="https://gazebosim.org/api/common/5/hw-encoding.html">Hardware-accelerated Video Encoding tutorial</a> for more details. </p>
+<p>Since Gazebo Common 3.10.2, there is support for utilizing the power of GPUs to speed up the video encoding process. See the <a href="https://gazebosim.org/api/common/6/hw-encoding.html">Hardware-accelerated Video Encoding tutorial</a> for more details. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
       </div>

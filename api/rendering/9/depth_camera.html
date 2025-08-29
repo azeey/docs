@@ -36,7 +36,7 @@
         <h1 class="project_title">Gazebo Rendering</h1>
         <h2>API Reference</h2>
         <div class="version">
-        9.0.0
+        9.3.0
         </div>
       </header>
       <!-- NOTE: If you add a link to a doxygen generated page, then make
@@ -139,7 +139,15 @@
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This example shows how to use the depth camera.</p>
-<h2><a class="anchor" id="autotoc_md57"></a>
+<h2><a class="anchor" id="install-prerequisites-1"></a>
+Install prerequisites</h2>
+<p>In order to compile this tutorial, you need to install some prerequisites :</p>
+<div class="fragment"><div class="line"># Linux</div>
+<div class="line">sudo apt-get install build-essential freeglut3-dev libglew-dev</div>
+<div class="line"> </div>
+<div class="line"># Windows (via conda)</div>
+<div class="line">conda install glew --channel conda-forge</div>
+</div><!-- fragment --><h2><a class="anchor" id="compile-and-run-the-example-10"></a>
 Compile and run the example</h2>
 <p>Clone the source code, create a build directory and use <code>cmake</code> and <code>make</code> to compile the code:</p>
 <div class="fragment"><div class="line">git clone https://github.com/gazebosim/gz-rendering</div>
@@ -147,9 +155,16 @@ Compile and run the example</h2>
 <div class="line">mkdir build</div>
 <div class="line">cd build</div>
 <div class="line">cmake ..</div>
-<div class="line">make</div>
+<div class="line"># On Linux</div>
+<div class="line">cmake --build .</div>
+<div class="line"># On Windows</div>
+<div class="line">cmake --build . --config Release</div>
 </div><!-- fragment --><p>Execute the example:</p>
-<div class="fragment"><div class="line">./depth_camera ogre</div>
+<div class="fragment"><div class="line"># Linux</div>
+<div class="line">./depth_camera ogre</div>
+<div class="line"> </div>
+<div class="line"># Windows</div>
+<div class="line">.\Release\depth_camera.exe ogre</div>
 </div><!-- fragment --><p>You'll see:</p>
 <div class="fragment"><div class="line">[Msg] Loading plugin [gz-rendering-ogre]</div>
 <div class="line">===============================</div>
@@ -158,7 +173,7 @@ Compile and run the example</h2>
 </div><!-- fragment --><div class="image">
 <img src="depth_camera_ogre.png" alt=""/>
 </div>
-<h2><a class="anchor" id="autotoc_md58"></a>
+<h2><a class="anchor" id="code-11"></a>
 Code</h2>
 <p>Most of the code is adapted from <a class="el" href="simple_demo.html">Simple demo</a>, here we outline the key differences.</p>
 <p>The function <code>buildScene()</code> is responsible for creating and configuring the depth camera. The main points to note are:</p>

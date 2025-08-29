@@ -36,7 +36,7 @@
         <h1 class="project_title">Gazebo Transport</h1>
         <h2>API Reference</h2>
         <div class="version">
-        13.4.0
+        13.4.1
         </div>
       </header>
       <!-- NOTE: If you add a link to a doxygen generated page, then make
@@ -158,6 +158,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node_1_1Publisher.html">Publisher</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class that is used to store information about an advertised publisher. An instance of this class is returned from <a class="el" href="classgz_1_1transport_1_1Node.html#a48c80e1b3823d9071045da3adfe6f8d0" title="Advertise a new topic. If a topic is currently advertised, you cannot advertise it a second time (reg...">Node::Advertise</a>, and should be used in subsequent <a class="el" href="classgz_1_1transport_1_1Node_1_1Publisher.html#adb2f83cb844a8b92b0539a7478075269" title="Publish a message. This function will copy the message when publishing to interprocess subscribers....">Node::Publisher::Publish</a> calls.  <a href="classgz_1_1transport_1_1Node_1_1Publisher.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node_1_1Subscriber.html">Subscriber</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class that is used to store information about an subscriber. An instance of this class is returned from Node::CreateSubscribe. When the object is destroyed, the corresponding subscription handler is removed from the node.  <a href="classgz_1_1transport_1_1Node_1_1Subscriber.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -169,6 +172,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaaefc7b696b15da7a556d7911735a277"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node.html#aaaefc7b696b15da7a556d7911735a277">~Node</a> ()</td></tr>
 <tr class="memdesc:aaaefc7b696b15da7a556d7911735a277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classgz_1_1transport_1_1Node.html#aaaefc7b696b15da7a556d7911735a277">More...</a><br /></td></tr>
 <tr class="separator:aaaefc7b696b15da7a556d7911735a277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141ffbcd254478db4c5ac918c47fc594"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node.html#a141ffbcd254478db4c5ac918c47fc594">AddGlobalRelay</a> (const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_relayAddress)</td></tr>
+<tr class="memdesc:a141ffbcd254478db4c5ac918c47fc594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a unicast relay IP. All nodes in this process will send UDP unicast traffic to the address to connect networks when UDP multicast traffic is not forwarded. It's also possible to use the environment variable GZ_RELAY to add relays.  <a href="classgz_1_1transport_1_1Node.html#a141ffbcd254478db4c5ac918c47fc594">More...</a><br /></td></tr>
+<tr class="separator:a141ffbcd254478db4c5ac918c47fc594"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d4b4773db7350b906421c8eaa73778d"><td class="memTemplParams" colspan="2">template&lt;typename RequestT , typename ReplyT &gt; </td></tr>
 <tr class="memitem:a3d4b4773db7350b906421c8eaa73778d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node.html#a3d4b4773db7350b906421c8eaa73778d">Advertise</a> (const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_topic, bool(*_callback)(const RequestT &amp;_request, ReplyT &amp;_reply), const <a class="el" href="classgz_1_1transport_1_1AdvertiseServiceOptions.html">AdvertiseServiceOptions</a> &amp;_options=<a class="el" href="classgz_1_1transport_1_1AdvertiseServiceOptions.html">AdvertiseServiceOptions</a>())</td></tr>
 <tr class="memdesc:a3d4b4773db7350b906421c8eaa73778d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertise a new service. In this version the callback is a plain function pointer.  <a href="classgz_1_1transport_1_1Node.html#a3d4b4773db7350b906421c8eaa73778d">More...</a><br /></td></tr>
@@ -218,9 +224,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d3ba8d71efafd38e305f72da62ef057"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node.html#a4d3ba8d71efafd38e305f72da62ef057">AdvertisedTopics</a> () const</td></tr>
 <tr class="memdesc:a4d3ba8d71efafd38e305f72da62ef057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of topics advertised by this node.  <a href="classgz_1_1transport_1_1Node.html#a4d3ba8d71efafd38e305f72da62ef057">More...</a><br /></td></tr>
 <tr class="separator:a4d3ba8d71efafd38e305f72da62ef057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83101247c17be80d60e942c1a7cdad45"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:a83101247c17be80d60e942c1a7cdad45"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classgz_1_1transport_1_1Node_1_1Subscriber.html">Node::Subscriber</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node.html#a83101247c17be80d60e942c1a7cdad45">CreateSubscriber</a> (const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_topic, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a83101247c17be80d60e942c1a7cdad45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a subscriber to a topic registering a callback This is function is overloaded with different variants of callback functions. It returns a <a class="el" href="classgz_1_1transport_1_1Node_1_1Subscriber.html" title="A class that is used to store information about an subscriber. An instance of this class is returned ...">Node::Subscriber</a> object that maintains the subscription while the object is alive. When the subscriber object goes out of scope, it automatically unsubscribes to the topic, removing just one single subscription handler from the node that it belongs to. Supported function callbacks are:  <a href="classgz_1_1transport_1_1Node.html#a83101247c17be80d60e942c1a7cdad45">More...</a><br /></td></tr>
+<tr class="separator:a83101247c17be80d60e942c1a7cdad45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a747b3fc13017610dec50e6b367368215"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node.html#a747b3fc13017610dec50e6b367368215">EnableStats</a> (const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_topic, bool _enable, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_publicationTopic=&quot;/statistics&quot;, uint64_t _publicationRate=1)</td></tr>
 <tr class="memdesc:a747b3fc13017610dec50e6b367368215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn topic statistics on or off.  <a href="classgz_1_1transport_1_1Node.html#a747b3fc13017610dec50e6b367368215">More...</a><br /></td></tr>
 <tr class="separator:a747b3fc13017610dec50e6b367368215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd3469b868c480c9e5c608060b288ad"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node.html#a5cd3469b868c480c9e5c608060b288ad">GlobalRelays</a> () const</td></tr>
+<tr class="memdesc:a5cd3469b868c480c9e5c608060b288ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the relay addresses configured for all nodes in this process.  <a href="classgz_1_1transport_1_1Node.html#a5cd3469b868c480c9e5c608060b288ad">More...</a><br /></td></tr>
+<tr class="separator:a5cd3469b868c480c9e5c608060b288ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a879d781495827b2e1cb86ed5c4b97a20"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgz_1_1transport_1_1NodeOptions.html">NodeOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node.html#a879d781495827b2e1cb86ed5c4b97a20">Options</a> () const</td></tr>
 <tr class="memdesc:a879d781495827b2e1cb86ed5c4b97a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the reference to the current node options.  <a href="classgz_1_1transport_1_1Node.html#a879d781495827b2e1cb86ed5c4b97a20">More...</a><br /></td></tr>
 <tr class="separator:a879d781495827b2e1cb86ed5c4b97a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -271,11 +284,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6dd5279b3b53b4191a2475b91cef2629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adffa9bc04a2005cae5c775257fd7dff4"><td class="memTemplParams" colspan="2">template&lt;typename MessageT &gt; </td></tr>
 <tr class="memitem:adffa9bc04a2005cae5c775257fd7dff4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node.html#adffa9bc04a2005cae5c775257fd7dff4">Subscribe</a> (const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_topic, <a class="elRef" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function</a>&lt; void(const MessageT &amp;_msg)&gt; _callback, const <a class="el" href="classgz_1_1transport_1_1SubscribeOptions.html">SubscribeOptions</a> &amp;_opts=<a class="el" href="classgz_1_1transport_1_1SubscribeOptions.html">SubscribeOptions</a>())</td></tr>
-<tr class="memdesc:adffa9bc04a2005cae5c775257fd7dff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to a topic registering a callback. Note that this callback does not include any message information. In this version the callback is a lamda function.  <a href="classgz_1_1transport_1_1Node.html#adffa9bc04a2005cae5c775257fd7dff4">More...</a><br /></td></tr>
+<tr class="memdesc:adffa9bc04a2005cae5c775257fd7dff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to a topic registering a callback. Note that this callback does not include any message information. In this version the callback is a lambda function.  <a href="classgz_1_1transport_1_1Node.html#adffa9bc04a2005cae5c775257fd7dff4">More...</a><br /></td></tr>
 <tr class="separator:adffa9bc04a2005cae5c775257fd7dff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56fa8a28feb54ca098f6e8a6e5b7491e"><td class="memTemplParams" colspan="2">template&lt;typename MessageT &gt; </td></tr>
 <tr class="memitem:a56fa8a28feb54ca098f6e8a6e5b7491e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node.html#a56fa8a28feb54ca098f6e8a6e5b7491e">Subscribe</a> (const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_topic, <a class="elRef" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function</a>&lt; void(const MessageT &amp;_msg, const <a class="el" href="classgz_1_1transport_1_1MessageInfo.html">MessageInfo</a> &amp;_info)&gt; _callback, const <a class="el" href="classgz_1_1transport_1_1SubscribeOptions.html">SubscribeOptions</a> &amp;_opts=<a class="el" href="classgz_1_1transport_1_1SubscribeOptions.html">SubscribeOptions</a>())</td></tr>
-<tr class="memdesc:a56fa8a28feb54ca098f6e8a6e5b7491e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to a topic registering a callback. Note that this callback includes message information. In this version the callback is a lamda function.  <a href="classgz_1_1transport_1_1Node.html#a56fa8a28feb54ca098f6e8a6e5b7491e">More...</a><br /></td></tr>
+<tr class="memdesc:a56fa8a28feb54ca098f6e8a6e5b7491e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to a topic registering a callback. Note that this callback includes message information. In this version the callback is a lambda function.  <a href="classgz_1_1transport_1_1Node.html#a56fa8a28feb54ca098f6e8a6e5b7491e">More...</a><br /></td></tr>
 <tr class="separator:a56fa8a28feb54ca098f6e8a6e5b7491e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07053a1894f5c860d62b3b9256fc6355"><td class="memTemplParams" colspan="2">template&lt;typename MessageT &gt; </td></tr>
 <tr class="memitem:a07053a1894f5c860d62b3b9256fc6355"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgz_1_1transport_1_1Node.html#a07053a1894f5c860d62b3b9256fc6355">Subscribe</a> (const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;_topic, void(*_callback)(const MessageT &amp;_msg), const <a class="el" href="classgz_1_1transport_1_1SubscribeOptions.html">SubscribeOptions</a> &amp;_opts=<a class="el" href="classgz_1_1transport_1_1SubscribeOptions.html">SubscribeOptions</a>())</td></tr>
@@ -400,6 +413,32 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a141ffbcd254478db4c5ac918c47fc594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a141ffbcd254478db4c5ac918c47fc594">&#9670;&nbsp;</a></span>AddGlobalRelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddGlobalRelay </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>_relayAddress</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a unicast relay IP. All nodes in this process will send UDP unicast traffic to the address to connect networks when UDP multicast traffic is not forwarded. It's also possible to use the environment variable GZ_RELAY to add relays. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_relayAddress</td><td>IPv4 address of the relay to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3d4b4773db7350b906421c8eaa73778d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d4b4773db7350b906421c8eaa73778d">&#9670;&nbsp;</a></span>Advertise() <span class="overload">[1/11]</span></h2>
 
@@ -650,7 +689,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A PublisherId, which can be used in Node::Publish calls. The PublisherId also acts as boolean, where true occurs if the topic was succesfully advertised. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A PublisherId, which can be used in Node::Publish calls. The PublisherId also acts as boolean, where true occurs if the topic was successfully advertised. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classgz_1_1transport_1_1AdvertiseOptions.html" title="A class for customizing the publication options for a topic or service advertised....">AdvertiseOptions</a>. </dd></dl>
 
 </div>
@@ -696,7 +735,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A PublisherId, which can be used in Node::Publish calls. The PublisherId also acts as boolean, where true occurs if the topic was succesfully advertised. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A PublisherId, which can be used in Node::Publish calls. The PublisherId also acts as boolean, where true occurs if the topic was successfully advertised. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classgz_1_1transport_1_1AdvertiseOptions.html" title="A class for customizing the publication options for a topic or service advertised....">AdvertiseOptions</a>. </dd></dl>
 
 </div>
@@ -996,6 +1035,52 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a83101247c17be80d60e942c1a7cdad45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83101247c17be80d60e942c1a7cdad45">&#9670;&nbsp;</a></span>CreateSubscriber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgz_1_1transport_1_1Node_1_1Subscriber.html">Node::Subscriber</a> CreateSubscriber </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>_topic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a subscriber to a topic registering a callback This is function is overloaded with different variants of callback functions. It returns a <a class="el" href="classgz_1_1transport_1_1Node_1_1Subscriber.html" title="A class that is used to store information about an subscriber. An instance of this class is returned ...">Node::Subscriber</a> object that maintains the subscription while the object is alive. When the subscriber object goes out of scope, it automatically unsubscribes to the topic, removing just one single subscription handler from the node that it belongs to. Supported function callbacks are: </p>
+<ul>
+<li>free function</li>
+<li>member function</li>
+<li>lambda function The callback function can contain one (_msg) or both (_msg, _info) of the following parameters:</li>
+<li>_msg Protobuf message containing a new topic update.</li>
+<li>_info Message information (e.g.: topic name). <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_topic</td><td>Topic to be subscribed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>Arguments to be forwarded to SubscribeImpl </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true when successfully subscribed or false otherwise. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>SubscribeImpl </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
 <a id="a747b3fc13017610dec50e6b367368215"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a747b3fc13017610dec50e6b367368215">&#9670;&nbsp;</a></span>EnableStats()</h2>
 
@@ -1044,6 +1129,26 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a5cd3469b868c480c9e5c608060b288ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd3469b868c480c9e5c608060b288ad">&#9670;&nbsp;</a></span>GlobalRelays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt;<a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a>&gt; GlobalRelays </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the relay addresses configured for all nodes in this process. </p>
+<dl class="section return"><dt>Returns</dt><dd>The relay addresses. </dd></dl>
 
 </div>
 </div>
@@ -1101,7 +1206,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true when the service call was succesfully requested. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true when the service call was successfully requested. </dd></dl>
 
 </div>
 </div>
@@ -1209,7 +1314,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true when the service call was succesfully requested. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true when the service call was successfully requested. </dd></dl>
 
 </div>
 </div>
@@ -1258,7 +1363,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true when the service call was succesfully requested. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true when the service call was successfully requested. </dd></dl>
 
 </div>
 </div>
@@ -1314,7 +1419,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true when the service call was succesfully requested. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true when the service call was successfully requested. </dd></dl>
 
 </div>
 </div>
@@ -1408,7 +1513,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true when the service call was succesfully requested. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true when the service call was successfully requested. </dd></dl>
 
 </div>
 </div>
@@ -1450,7 +1555,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true when the service call was succesfully requested. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true when the service call was successfully requested. </dd></dl>
 
 </div>
 </div>
@@ -1499,7 +1604,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true when the service call was succesfully requested. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true when the service call was successfully requested. </dd></dl>
 
 </div>
 </div>
@@ -1672,7 +1777,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Subscribe to a topic registering a callback. Note that this callback does not include any message information. In this version the callback is a lamda function. </p>
+<p>Subscribe to a topic registering a callback. Note that this callback does not include any message information. In this version the callback is a lambda function. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">_topic</td><td>Topic to be subscribed. </td></tr>
@@ -1720,7 +1825,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Subscribe to a topic registering a callback. Note that this callback includes message information. In this version the callback is a lamda function. </p>
+<p>Subscribe to a topic registering a callback. Note that this callback includes message information. In this version the callback is a lambda function. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">_topic</td><td>Topic to be subscribed. </td></tr>
