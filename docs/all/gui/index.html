@@ -8,7 +8,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Understanding the GUI &#8212; Gazebo harmonic documentation</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKS50SX85K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JKS50SX85K');
+    </script>
+    
+    <title>Understanding the GUI &#8212; Gazebo ionic documentation</title>
   
   
   
@@ -16,42 +25,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=12e630a0" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=173bdbe0" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=173ad40a"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/documentation_options.js?v=0b151d4f"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'gui';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://addisu.taddese.com/docs/docs/harmonic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'harmonic';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://addisu.taddese.com/docs/docs/ionic/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'ionic';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
-    <link rel="canonical" href="https://addisu.taddese.com/docs/docs/latestgui/" />
+    <link rel="canonical" href="https://addisu.taddese.com/docs/docs/latest/gui/" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -59,6 +72,7 @@
     <link rel="prev" title="Actors" href="../actors/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="ionic" />
   </head>
   
   
@@ -74,19 +88,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search/"
       method="get">
@@ -94,7 +97,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -102,8 +104,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +142,8 @@
       
     
     
-    <img src="../_static/gazebo_horz_pos.svg" class="logo__image only-light" alt="Gazebo harmonic documentation - Home"/>
-    <script>document.write(`<img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark" alt="Gazebo harmonic documentation - Home"/>`);</script>
+    <img src="../_static/gazebo_horz_pos.svg" class="logo__image only-light" alt="Gazebo ionic documentation - Home"/>
+    <img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark pst-js-only" alt="Gazebo ionic documentation - Home"/>
   
   
 </a></div>
@@ -180,29 +182,21 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
       
@@ -213,15 +207,11 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -238,36 +228,30 @@ document.write(`
   <div class="banner d-flex flex-column-reverse flex-sm-row">
     <div>
       <div class="d-none d-sm-block">
-        <span class="d-inline fs-2">Docs / Gazebo Harmonic</span>
-        
-          <span class="badge bg-primary fs-4 fw-light ms-2">LTS</span>
+        <span class="d-inline fs-2">Docs / Gazebo Ionic</span>
         
       </div>
-      <span>Supported Sep, 2023 to Sep, 2028</span>
+      <span>Supported Sep, 2024 to Sep, 2026</span>
     </div><div class="gz-version-switcher">
   <span class="fs-4 fw-light pe-2">Release:</span>
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div></div>
+</div></div></div>
 </div>
 
     </header>
@@ -278,7 +262,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -318,15 +303,11 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
         
@@ -363,7 +344,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../fuel_insert/">Model Insertion from Fuel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hotkeys/">Keyboard Shortcuts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spawn_urdf/">Spawn URDF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros2_integration/">ROS 2 integration via bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_overview/">ROS 2 integration overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_launch_gazebo/">Launch Gazebo from ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_integration/">Use ROS 2 to interact with Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_spawn_model/">Use ROS 2 to spawn a Gazebo model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ros2_interop/">ROS 2 interoperability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ros_gz_project_template_guide/">ROS 2 integration template</a></li>
 </ul>
@@ -372,11 +356,16 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../ros2_gz_vendor_pkgs/">ROS 2 Gazebo Vendor Packages</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../install_gz11_side_by_side/">Installing Gazebo11 side by side with new Gazebo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../migrating_gazebo_classic_ros2_packages/">Migration from ROS 2 Gazebo Classic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_gazebo_in_ci/">Continuous Integration For Gazebo Packages</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gazebo_classic_migration/">Gazebo Classic Migration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install_gz11_side_by_side/">Installing Gazebo11 side by side with new Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migrating_gazebo_classic_ros2_packages/">Migration from ROS 2 Gazebo Classic</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../roadmap/">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../release-features/">Release Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../releases/">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance/">Governance</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../development/">Development</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/">Contributing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ci/">Continuous Integration</a></li>
@@ -397,23 +386,24 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../fuel_fair_use/">What is Fair Use</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects_using_gazebo/">Projects using Gazebo</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../library_reference_nav/">Library Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/cmake/3">cmake</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/common/5">common</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/fuel_tools/9">fuel_tools</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/gui/8">gui</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/launch/7">launch</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/math/7">math</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/msgs/10">msgs</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/physics/7">physics</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/plugin/2">plugin</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/rendering/8">rendering</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sensors/8">sensors</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sim/8">sim</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/cmake/4">cmake</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/common/6">common</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/fuel_tools/10">fuel_tools</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/gui/9">gui</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/launch/8">launch</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/math/8">math</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/msgs/11">msgs</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/physics/8">physics</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/plugin/3">plugin</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/rendering/9">rendering</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sensors/9">sensors</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sim/9">sim</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/tools/2">tools</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/transport/13">transport</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/utils/2">utils</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sdformat/14">sdformat</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/transport/14">transport</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/utils/3">utils</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sdformat/15">sdformat</a></li>
 </ul>
 </details></li>
 </ul>
@@ -423,9 +413,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -443,8 +438,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -456,7 +449,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../tutorials/" class="nav-link">Gazebo Tutorials</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Understandin...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Understanding the GUI</span></li>
   </ul>
 </nav>
 </div>
@@ -478,9 +471,9 @@ document.write(`
 <p>This guide is an introduction to the Gazebo Graphical User Interface (GUI).</p>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
-<p>Before beginning, you should have <a class="reference external" href="/docs/harmonic/install">Harmonic installed</a>.
-If you installed <a class="reference external" href="/docs/harmonic/install">from source</a>
-you will need to <a class="reference external" href="/docs/harmonic/install_ubuntu_src#using-the-workspace">source</a> the workspace;
+<p>Before beginning, you should have <a class="reference internal" href="../install/"><span class="doc std std-doc">Ionic installed</span></a>.
+If you installed <a class="reference internal" href="../install/"><span class="doc std std-doc">from source</span></a>
+you will need to <a class="reference internal" href="../install_ubuntu_src/#using-the-workspace"><span class="std std-ref">source</span></a> the workspace;
 otherwise, you’re good to go!</p>
 <p>Start by getting Gazebo up and running with a sample world:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gz<span class="w"> </span>sim<span class="w"> </span>shapes.sdf
@@ -488,14 +481,15 @@ otherwise, you’re good to go!</p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">gz</span> <span class="pre">sim</span></code> will run the latest version of Gazebo you have installed.
 You can check if you have more than one version of Gazebo installed by running <code class="docutils literal notranslate"><span class="pre">gz</span> <span class="pre">sim</span> <span class="pre">--versions</span></code>.
-For example, if you have Harmonic (8.x.x), Garden (7.x.x), and Fortress (6.x.x) installed, <code class="docutils literal notranslate"><span class="pre">--versions</span></code> might return:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">8</span>.0.0
+For example, if you have Ionic (9.x.x), Harmonic (8.x.x), Garden (7.x.x), and Fortress (6.x.x) installed, <code class="docutils literal notranslate"><span class="pre">--versions</span></code> might return:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">9</span>.0.0
+<span class="m">8</span>.0.0
 <span class="m">7</span>.0.0
 <span class="m">6</span>.0.0
 </pre></div>
 </div>
-<p>To ensure you’re working with Harmonic, include the <code class="docutils literal notranslate"><span class="pre">--force-version</span></code> directive when starting up:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gz<span class="w"> </span>sim<span class="w"> </span>--force-version<span class="w"> </span><span class="m">8</span>.0.0<span class="w"> </span>shapes.sdf
+<p>To ensure you’re working with Ionic, include the <code class="docutils literal notranslate"><span class="pre">--force-version</span></code> directive when starting up:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gz<span class="w"> </span>sim<span class="w"> </span>--force-version<span class="w"> </span><span class="m">9</span>.0.0<span class="w"> </span>shapes.sdf
 </pre></div>
 </div>
 </section>
@@ -510,14 +504,14 @@ For example, if you have Harmonic (8.x.x), Garden (7.x.x), and Fortress (6.x.x) 
 The file menu button allows you to save the world to a file, save and load interface configurations and customize interface style settings.
 An interface configuration consists of the plugins you have loaded and the style settings in place.</p>
 <p><img alt="toolbars" src="../_images/toolbars.png" /></p>
-<p>The top left toolbar hanging below the file menu button contains shape buttons (sphere, box, cylinder, capsule and ellipsoid) as well as lighting controls (point, directional and spot).
-The shape buttons allow you to directly insert a box, sphere, cylinder capsule, or ellipsoid model into the world.
+<p>The top left toolbar hanging below the file menu button contains shape buttons (box, sphere, cone, cylinder, capsule) as well as lighting controls (point, directional and spot).
+The shape buttons allow you to directly insert a box, sphere, cone, cylinder or capsule model into the world.
 Simply click on the shape you would like to insert, and place it into the world.
 The shape will automatically snap onto the ground plane, and its properties will show up on the Entity Tree plugin window.</p>
 <p>The following image shows the scene and the Entity Tree after adding three shapes (<code class="docutils literal notranslate"><span class="pre">box_0</span></code>, <code class="docutils literal notranslate"><span class="pre">sphere_0</span></code> and <code class="docutils literal notranslate"><span class="pre">capsule_0</span></code>):</p>
 <p><img alt="shape insertion" src="../_images/shape_insertion.png" /></p>
 <p>The first five buttons on the second row are for <code class="docutils literal notranslate"><span class="pre">Transform</span> <span class="pre">Control</span></code>.
-To learn more about this plugin, go to the <code class="docutils literal notranslate"><span class="pre">Transform</span> <span class="pre">Control</span></code> section of <a class="reference external" href="manipulating_models">Manipulating Models</a> tutorial.</p>
+To learn more about this plugin, go to the <code class="docutils literal notranslate"><span class="pre">Transform</span> <span class="pre">Control</span></code> section of <a class="reference internal" href="../manipulating_models/"><span class="doc std std-doc">Manipulating Models</span></a> tutorial.</p>
 <p>The plugins button lists all the available plugins.
 You can scroll down this list to see all the plugins that are available for your version of Gazebo.
 When you select one, its interface will appear in the right panel.</p>
@@ -544,7 +538,8 @@ You can (re)open plugins through the plugin menu.</p>
 <li><p><strong>Right-click</strong>: opens menu with options:</p>
 <ul>
 <li><p><em>Move to</em>: center the scene on an entity</p></li>
-<li><p><em>Follow</em>: choose an entity for the view to  stay centered on, whether it moves or you pan around</p></li>
+<li><p><em>Follow</em>: open a submenu with different options to choose the view behaviour, whether it moves or you pan around</p></li>
+<li><p><em>Track</em>: choose an entity for the view to track</p></li>
 <li><p><em>Remove</em>: erase the entity from the simulation</p></li>
 <li><p><em>Copy</em>: copy the entity to the virtual clipboard</p></li>
 <li><p><em>Paste</em>: paste the entity from the virtual clipboard creating a duplicate</p></li>
@@ -573,12 +568,13 @@ The plugin will now show up in the right panel (below the Entity Tree, scroll do
 <h4>World Control<a class="headerlink" href="#world-control" title="Link to this heading">#</a></h4>
 <p>Along the bottom edge of the scene, you’ll notice several buttons:</p>
 <p><img alt="Playback buttons" src="../_images/playback.png" /></p>
-<p>From left to right, the options are <code class="docutils literal notranslate"><span class="pre">Play</span></code>, <code class="docutils literal notranslate"><span class="pre">Steps</span></code> and <code class="docutils literal notranslate"><span class="pre">RTF</span></code> (real time factor).</p>
+<p>From left to right, the options are <code class="docutils literal notranslate"><span class="pre">Play</span></code>, <code class="docutils literal notranslate"><span class="pre">Steps</span></code>, <code class="docutils literal notranslate"><span class="pre">Reset</span></code>,  <code class="docutils literal notranslate"><span class="pre">RTF</span></code> (real time factor).</p>
 <p>Pressing <code class="docutils literal notranslate"><span class="pre">Play</span></code> will start the simulation.
 You can use the same button to pause the simulation as well.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Steps</span></code> button allows you to step through the simulation at the rate of a step size, or simulation iteration.
 You can customize step size by hovering over the button.</p>
 <p><img alt="hover steps" src="../_images/hover_steps.png" /></p>
+<p>Pressing <code class="docutils literal notranslate"><span class="pre">Reset</span></code> will clear any unsaved modification to the scene. Clicking it will remove the newly inserted shapes <code class="docutils literal notranslate"><span class="pre">box_0</span></code>, <code class="docutils literal notranslate"><span class="pre">sphere_0</span></code> and <code class="docutils literal notranslate"><span class="pre">capsule_0</span></code>.</p>
 <p>At the furthest right end of the scene, you can expand <code class="docutils literal notranslate"><span class="pre">RTF</span></code> to see not only the percentage value that compares real time with sim time, but also those individual values themselves, as well as iteration count.</p>
 <p><img alt="RTF expanded" src="../_images/rtf_expanded.png" /></p>
 <p>The function of the World Control options will become clearer once you begin manipulating entities.</p>
@@ -587,7 +583,7 @@ You can customize step size by hovering over the button.</p>
 </section>
 <section id="next-up">
 <h2>Next Up<a class="headerlink" href="#next-up" title="Link to this heading">#</a></h2>
-<p>Now that you’re comfortable with Gazebo GUI navigation and terminology, let’s start learning about more meaningful model interactions with the <a class="reference external" href="manipulating_models">Manipulating Models</a> tutorial.</p>
+<p>Now that you’re comfortable with Gazebo GUI navigation and terminology, let’s start learning about more meaningful model interactions with the <a class="reference internal" href="../manipulating_models/"><span class="doc std std-doc">Manipulating Models</span></a> tutorial.</p>
 </section>
 </section>
 
@@ -602,7 +598,8 @@ You can customize step size by hovering over the button.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -632,7 +629,7 @@ You can customize step size by hovering over the button.</p>
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/gazebosim/docs/edit/master/harmonic/GUI_tutorial.md">
+    <a href="https://github.com/gazebosim/docs/edit/master/ionic/GUI_tutorial.md">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -657,8 +654,8 @@ You can customize step size by hovering over the button.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -668,7 +665,7 @@ You can customize step size by hovering over the button.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
@@ -680,8 +677,8 @@ You can customize step size by hovering over the button.</p>
       
         <div class="footer-item"><p> Brought to you by <a href="https://openrobotics.org">Open Robotics</a>. </p>
 <p> Except where otherwise noted, the gazebosim.org web pages are licensed under <a
-    href="https://creativecommons.org/licenses/by/3.0/us/">Creative Commons
-    Attribution 3.0</a>. </p></div>
+    href="https://creativecommons.org/licenses/by/4.0/us/">Creative Commons
+    Attribution 4.0</a>. </p></div>
       
     </div>
   
@@ -690,7 +687,8 @@ You can customize step size by hovering over the button.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

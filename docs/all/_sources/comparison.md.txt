@@ -2,7 +2,7 @@
 
 A list of features present in [Gazebo-classic](https://github.com/osrf/gazebo/)
 version 11 and the status of their migration to
-[Gazebo Harmonic](https://gazebosim.org/).
+[Gazebo Ionic](https://gazebosim.org/).
 
 All the issues below are labeled with
 [close the gap](https://github.com/search?q=org%3Agazebosim+label%3A%22close+the+gap%22&type=Issues)
@@ -36,7 +36,7 @@ Sonar | ✓ | [Issue](https://github.com/gazebosim/gz-sensors/issues/19)
 Thermal camera | ✕  | ✓
 Triggered camera | ✕ | ✓
 Wide-angle camera | ✓ | ✓
-Wireless | ✓ | [Issue](https://github.com/gazebosim/gz-sensors/issues/28)
+Wireless | ✓ | ✓ RFComms
 
 Sensor features | Gazebo-classic | Gazebo Sim
 -- | -- | --
@@ -286,11 +286,11 @@ Supported versions:
 
 * ROS 2 Iron (from source) / Rolling (from source)
 
-Note: binaries for ROS2 might be available sometime after the Harmonic release.
+Note: binaries for ROS2 might be available sometime after the Ionic release.
 
 For **ROS 2 Rolling**, the Rolling distribution moves with the next future release
 of ROS 2 defined in [REP-2000](https://www.ros.org/reps/rep-2000.html). For the Gz
-Harmonic release this means that it will be adopted when ROS 2 Jazzy goes into the
+Ionic release this means that it will be adopted when ROS 2 Jazzy goes into the
 [REP-2000](https://www.ros.org/reps/rep-2000.html).
 
 ## Platforms

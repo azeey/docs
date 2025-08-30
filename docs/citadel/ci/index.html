@@ -8,6 +8,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKS50SX85K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JKS50SX85K');
+    </script>
+    
     <title>Gazebo Continuous Integration &#8212; Gazebo citadel documentation</title>
   
   
@@ -16,42 +25,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=12e630a0" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=173bdbe0" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=3db3e7f7"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ci';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://addisu.taddese.com/docs/docs/citadel/_static/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'citadel';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
-    <link rel="canonical" href="https://addisu.taddese.com/docs/docs/latestci/" />
+    <link rel="canonical" href="https://addisu.taddese.com/docs/docs/latest/ci/" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -59,6 +72,7 @@
     <link rel="prev" title="Contributing to Gazebo" href="../contributing/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="citadel" />
   </head>
   
   
@@ -74,19 +88,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search/"
       method="get">
@@ -94,7 +97,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -102,8 +104,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -112,14 +114,15 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
   
-  <aside aria-label="Version warning" class="bd-header-announcement bd-header-version-info" style="min-height: 3rem;">
+  <aside aria-label="Version warning" class="bd-header-announcement bd-header-version-warning" style="min-height: 3rem;">
     <div class="bd-header-announcement__content">
       <div class="sidebar-message">
         
-          This is documentation for <strong> Gazebo Citadel</strong>,
-          an older but still supported version of Gazebo. 
+          This is documentation for <strong>Gazebo Citadel</strong>, which has reached its EOL
+          (end-of-life) and is no longer officially supported.
+        
         <a class="btn text-wrap font-weight-bold ms-3 my-1 align-baseline pst-button-link-to-stable-version"
-        href="../../harmonic/ci">Switch to the latest stable version</a>
+        href="../../ionic/ci">Switch to the latest stable version</a>
       </div>
     </div>
   </aside>
@@ -153,7 +156,7 @@
     
     
     <img src="../_static/gazebo_horz_pos.svg" class="logo__image only-light" alt="Gazebo citadel documentation - Home"/>
-    <script>document.write(`<img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark" alt="Gazebo citadel documentation - Home"/>`);</script>
+    <img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark pst-js-only" alt="Gazebo citadel documentation - Home"/>
   
   
 </a></div>
@@ -192,29 +195,21 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
       
@@ -225,15 +220,11 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -258,28 +249,24 @@ document.write(`
       <span>Supported Dec, 2019 to Dec, 2024</span>
     </div><div class="gz-version-switcher">
   <span class="fs-4 fw-light pe-2">Release:</span>
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div></div>
+</div></div></div>
 </div>
 
     </header>
@@ -290,7 +277,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -330,15 +318,11 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
         
@@ -386,11 +370,16 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../ros2_gz_vendor_pkgs/">ROS 2 Gazebo Vendor Packages</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../install_gz11_side_by_side/">Installing Gazebo11 side by side with new Gazebo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../migrating_gazebo_classic_ros2_packages/">Migration from ROS 2 Gazebo Classic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_gazebo_in_ci/">Continuous Integration For Gazebo Packages</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gazebo_classic_migration/">Gazebo Classic Migration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install_gz11_side_by_side/">Installing Gazebo11 side by side with new Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migrating_gazebo_classic_ros2_packages/">Migration from ROS 2 Gazebo Classic</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../roadmap/">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../release-features/">Release Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../releases/">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance/">Governance</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../development/">Development</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../contributing/">Contributing</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Continuous Integration</a></li>
@@ -411,6 +400,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../fuel_fair_use/">What is Fair Use</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects_using_gazebo/">Projects using Gazebo</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../library_reference_nav/">Library Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/cmake/2">cmake</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/common/3">common</a></li>
@@ -436,9 +426,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -456,8 +451,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -469,7 +462,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../development/" class="nav-link">Gazebo Development</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Gazebo...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Gazebo Continuous Integration</span></li>
   </ul>
 </nav>
 </div>
@@ -493,7 +486,7 @@ run for various platforms. This process is called Continuous Integration, or CI.
 This document covers all the CI jobs that are available for Gazebo and how to
 interpret their results.</p>
 <p>This documentation assumes you have gone over the
-<a class="reference external" href="https://gazebosim.org/docs/all/contributing">Contributing guide</a> and
+<a class="reference internal" href="../contributing/"><span class="doc std std-doc">Contributing guide</span></a> and
 therefore are familiar with:</p>
 <ul class="simple">
 <li><p>Opening pull requests</p></li>
@@ -621,9 +614,15 @@ single coverage result for each branch.</p></li>
 have some differences. Some Jenkins jobs run with on GPU machines and
 provides a nice interface to introspect builds. On the other hand, Actions
 runs coverage and codecheck.</p></li>
-<li><p>The choice of stable / pre-release / nightly dependencies for Linux CI on both
-Jenkins and Actions is defined on
-<a class="reference external" href="https://github.com/gazebo-tooling/gzdev/blob/master/plugins/config/repository.yaml">gzdev’s repository.yaml</a></p></li>
+<li><p>For Linux CI, the choice of stable / pre-release / nightly dependencies on both
+Jenkins and Actions is defined in
+<a class="reference external" href="https://github.com/gazebo-tooling/gzdev/blob/master/plugins/config/repository.yaml">gzdev’s repository.yaml</a>.</p></li>
+<li><p>For macOS CI, the dependencies and tarball / source branch of each package are
+specified in the <a class="reference external" href="https://github.com/osrf/homebrew-simulation/tree/master/Formula">Formula/*.rb</a>
+files.</p></li>
+<li><p>For Windows CI, the dependencies and source branch of each package are specified
+in <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> files in the <a class="reference external" href="https://github.com/gazebo-tooling/gazebodistro">gazebo-tooling/gazebodistro</a>
+repository.</p></li>
 </ul>
 </section>
 <section id="required-checks">
@@ -742,6 +741,50 @@ after login.</p></li>
 </ul>
 </li>
 </ul>
+<section id="testing-pull-requests-with-custom-tooling-branches">
+<h3>Testing pull requests with custom tooling branches<a class="headerlink" href="#testing-pull-requests-with-custom-tooling-branches" title="Link to this heading">#</a></h3>
+<p>As noted above, the <a class="reference external" href="https://github.com/gazebo-tooling/gzdev">gzdev</a>,
+<a class="reference external" href="https://github.com/osrf/homebrew-simulation">homebrew-simulation</a>, and
+<a class="reference external" href="https://github.com/gazebo-tooling/gazebodistro">gazebodistro</a> tooling repositories
+each contain metadata about dependencies for each package on Ubuntu, macOS,
+and Windows, respectively. If you wish to test a pull request with a custom
+branch of one of these tooling repositories, you can do this by creating
+branches with the same name that starts with <code class="docutils literal notranslate"><span class="pre">ci_matching_branch/</span></code> on both the
+tooling repository and the repository to be tested.</p>
+<section id="example-testing-with-an-additional-dependency-on-macos">
+<h4>Example: testing with an additional dependency on macOS<a class="headerlink" href="#example-testing-with-an-additional-dependency-on-macos" title="Link to this heading">#</a></h4>
+<p>In <a class="reference external" href="https://github.com/gazebosim/gz-math/pull/361">gz-math#361</a>, a fix for
+gz-math’s python bindings on macOS was proposed, but <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> was not yet
+a dependency of the <code class="docutils literal notranslate"><span class="pre">gz-math</span></code> homebrew formulae. To test this pull request
+with pybind11 installed in the macOS CI machines,
+identical branch names <code class="docutils literal notranslate"><span class="pre">ci_matching_branch/math_scripting</span></code> were used for
+<a class="reference external" href="https://github.com/gazebosim/gz-math/pull/361">gz-math#361</a> and
+<a class="reference external" href="https://github.com/osrf/homebrew-simulation/pull/1793">homebrew-simulation#1793</a>
+which allowed the gz-math macOS CI build to include the new dependency.</p>
+</section>
+<section id="example-testing-with-a-source-build-of-a-custom-branch-of-a-dependency-on-macos">
+<h4>Example: testing with a source build of a custom branch of a dependency on macOS<a class="headerlink" href="#example-testing-with-a-source-build-of-a-custom-branch-of-a-dependency-on-macos" title="Link to this heading">#</a></h4>
+<p>To determine whether changes in gz-math and sdformat were the cause of gz-sim
+test failures documented in
+<a class="reference external" href="https://github.com/osrf/buildfarm-tools/issues/67#issuecomment-2232120738">osrf/buildfarm-tools#67 (comment)</a>,
+the <code class="docutils literal notranslate"><span class="pre">gz-math8</span></code> and <code class="docutils literal notranslate"><span class="pre">sdformat15</span></code> formulae were modified so that the primary
+<code class="docutils literal notranslate"><span class="pre">url</span></code> field contains the URL of their respective git repositories, along with a
+<code class="docutils literal notranslate"><span class="pre">branch</span></code> field indicating the branch name to be tested. The <code class="docutils literal notranslate"><span class="pre">gz-math8</span></code> formula
+was <a class="reference external" href="https://github.com/osrf/homebrew-simulation/blob/6bdfaea6c9b5a30fed163c619e1f398b31937514/Formula/gz-math8.rb#L4">modified to use the <code class="docutils literal notranslate"><span class="pre">scpeters/revert_606</span></code> branch</a>
+(corresponding to <a class="reference external" href="https://github.com/gazebosim/gz-math/pull/609">gz-math#609</a>),
+and the <code class="docutils literal notranslate"><span class="pre">sdformat15</span></code> formula was <a class="reference external" href="https://github.com/osrf/homebrew-simulation/blob/6bdfaea6c9b5a30fed163c619e1f398b31937514/Formula/sdformat15.rb#L4">modified to use the <code class="docutils literal notranslate"><span class="pre">scpeters/revert_1458</span></code> branch</a>
+(corresponding to <a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1459">sdformat#1459</a>).
+These changes to formulae were commited to the
+<code class="docutils literal notranslate"><span class="pre">ci_matching_branch/revert_math_graph_init</span></code> branch (see
+<a class="reference external" href="https://github.com/osrf/homebrew-simulation/pull/2701/commits/6bdfaea6c9b5a30fed163c619e1f398b31937514">osrf/homebrew-simulation&#64;6bdfaea6</a>).
+To test gz-sim with these branches of gz-math and sdformat, a trivial change
+to the gz-sim README was made in a branch with matching name
+<code class="docutils literal notranslate"><span class="pre">ci_matching_branch/revert_math_graph_init</span></code>, and a draft pull request
+(<a class="reference external" href="https://github.com/gazebosim/gz-sim/pull/2482">gz-sim#2482</a>)
+was opened to trigger CI builds. The homebrew build used the matching
+branch of homebrew-simulation and built against the intended branches.</p>
+</section>
+</section>
 <section id="custom-branches">
 <h3>Custom branches<a class="headerlink" href="#custom-branches" title="Link to this heading">#</a></h3>
 <p>Maintainers can manually trigger builds for custom branches without opening pull
@@ -783,6 +826,40 @@ for building a custom <code class="docutils literal notranslate"><span class="pr
 <p>If you want to share the status of your custom build on a pull request,
 click on <code class="docutils literal notranslate"><span class="pre">Embeddable</span> <span class="pre">Build</span> <span class="pre">Status</span></code> and copy the markdown code into the pull
 request.</p>
+<section id="manually-triggered-from-source-jobs">
+<h5>Manually triggered from source jobs<a class="headerlink" href="#manually-triggered-from-source-jobs" title="Link to this heading">#</a></h5>
+<p>The <a class="reference external" href="https://build.osrfoundation.org/view/ci/">CI view in Jenkins</a> contains
+different jobs generated designed to build all the Gazebo libraries in a
+releases from source using the build tools: vcs (tool to grab sources,
+mainly with the yaml files at <a class="reference external" href="https://github.com/gazebo-tooling/gazebodistro">gazebodistro repository</a>
+and colcon (build tool).</p>
+<p>The <a class="reference external" href="https://build.osrfoundation.org/view/ci/">CI view in Jenkins</a> contains
+different jobs:</p>
+<ul class="simple">
+<li><p>Separated by ubuntu distro. i.e: <code class="docutils literal notranslate"><span class="pre">ci__colcon_any-manual_ubuntu_jammy_amd64</span></code> or
+<code class="docutils literal notranslate"><span class="pre">ci__colcon_any-manual_ubuntu_noble_amd64</span></code> for jammy and noble.</p></li>
+<li><p>Separated to be run on GPU or not: <code class="docutils literal notranslate"><span class="pre">ci__colcon_gpu_any-manual_ubuntu_jammy_amd64</span></code>
+in gpu or <code class="docutils literal notranslate"><span class="pre">ci__colcon_any-manual_ubuntu_jammy_amd64</span></code> to not use gpu.</p></li>
+</ul>
+<p><strong>Parameters</strong> in the CI jobs (most important ones):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">repos_file_urls</span></code>: typically a VCS yaml file defining the sources to be built.
+Default can be modified to build any Gazebo collection or any Gazebo package
+starting from Harmonic. Typical value is one of the raw files at
+<a class="reference external" href="https://github.com/gazebo-tooling/gazebodistro">gazebodistro repository</a> .</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">build_tool_args</span></code>: <a class="reference external" href="https://colcon.readthedocs.io/en/released/reference/verb/build.html">colcon build parameters</a>
+to use. Default can be preserve <strong>but</strong>, unless the whole list of packages
+defined in <code class="docutils literal notranslate"><span class="pre">repos_file_urls</span></code> is to be built, a set of packages needs to
+defined. For example, to build all packages needed until gz-tranport8,
+<code class="docutils literal notranslate"><span class="pre">--packages-up-to</span> <span class="pre">gz-transport8</span></code> can be added to the default options.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">build_tool_test_args</span></code>: <a class="reference external" href="https://colcon.readthedocs.io/en/released/reference/verb/test.html">colcon test parameters</a>
+to use. Default can be preserve <strong>but</strong>, unless the whole list of tests
+of all packages defined in <code class="docutils literal notranslate"><span class="pre">repos_file_urls</span></code> is to be run, a set of
+packages needs to be defined to be the software under test. For example,
+to run only gz-transport8 tests, the <code class="docutils literal notranslate"><span class="pre">--packages-select</span> <span class="pre">gz-transport8</span></code> can
+be added to the default options.</p></li>
+</ul>
+</section>
 </section>
 </section>
 </section>
@@ -810,7 +887,8 @@ request.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -825,9 +903,17 @@ request.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-checks">Required checks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-results">Interpreting results</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#triggering-ci">Triggering CI</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-pull-requests-with-custom-tooling-branches">Testing pull requests with custom tooling branches</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-testing-with-an-additional-dependency-on-macos">Example: testing with an additional dependency on macOS</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-testing-with-a-source-build-of-a-custom-branch-of-a-dependency-on-macos">Example: testing with a source build of a custom branch of a dependency on macOS</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-branches">Custom branches</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#actions">Actions</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jenkins">Jenkins</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jenkins">Jenkins</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#manually-triggered-from-source-jobs">Manually triggered from source jobs</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -865,8 +951,8 @@ request.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -876,7 +962,7 @@ request.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
@@ -888,8 +974,8 @@ request.</p>
       
         <div class="footer-item"><p> Brought to you by <a href="https://openrobotics.org">Open Robotics</a>. </p>
 <p> Except where otherwise noted, the gazebosim.org web pages are licensed under <a
-    href="https://creativecommons.org/licenses/by/3.0/us/">Creative Commons
-    Attribution 3.0</a>. </p></div>
+    href="https://creativecommons.org/licenses/by/4.0/us/">Creative Commons
+    Attribution 4.0</a>. </p></div>
       
     </div>
   
@@ -898,7 +984,8 @@ request.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

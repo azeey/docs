@@ -24,37 +24,22 @@ cases where the default option cannot be easily changed.
 Install tools needed by this tutorial:
 
 ```bash
-sudo apt install python3-pip lsb-release gnupg curl
+sudo apt install python3-pip python3-venv lsb-release gnupg curl git
 ```
 
 ## vcstool and colcon from pip
 
-PIP is available on all platforms:
+PIP is available on all platforms. Using a PIP workspace to install the tools:
 
 ```bash
-pip install vcstool || pip3 install vcstool
+python3 -m venv $HOME/vcs_colcon_installation
+. $HOME/vcs_colcon_installation/bin/activate
+pip3 install vcstool colcon-common-extensions
 ```
 
-```bash
-pip install -U colcon-common-extensions || pip3 install -U colcon-common-extensions
-```
-
-Check that no errors were printed while installing with PIP. If your system is not recognising the commands, and you're using a system that is compatible with Debian or Ubuntu packages, see the instructions below to install using `apt`.
-
-After installing `vcstool` and `colcon` with PIP, you may need to add their executables to your `$PATH`.
-Check where the installation of these packages took place:
-
-```bash
-pip show vcstool || pip3 show vcstool | grep Location
-
-pip show colcon-common-extensions || pip3 show colcon-common-extensions | grep Location
-```
-
-If your install path is prefixed with `$HOME/.local`, you'll probably need to add the executables within this directory to your `$PATH` in order to avoid "command not found" errors when using `vcstool` and `colcon` later on:
-
-```bash
-export PATH=$PATH:$HOME/.local/bin/
-```
+`vcs` and `colcon` are now available from the PIP workspace in the current
+terminal. For using them in other terminals run the `activate` script as
+done above.
 
 ## vcstool and colcon from apt
 
@@ -65,15 +50,6 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros2/ubuntu $(lsb_release -sc) mai
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install python3-vcstool python3-colcon-common-extensions
-```
-
-## Git
-
-Gazebo libraries use `git` for version control, so it must be available
-in the system for `vcstool` to work properly.
-
-```bash
-sudo apt-get install git
 ```
 
 ## Getting the sources
@@ -89,18 +65,18 @@ mkdir -p ~/workspace/src
 cd ~/workspace/src
 ```
 
-All the sources of gazebo-harmonic are declared in a yaml file. Download
+All the sources of gazebo-ionic are declared in a yaml file. Download
 it to the workspace:
 
 ```bash
-curl -O https://raw.githubusercontent.com/gazebo-tooling/gazebodistro/master/collection-harmonic.yaml
+curl -O https://raw.githubusercontent.com/gazebo-tooling/gazebodistro/master/collection-ionic.yaml
 ```
 
 Use `vcstool` to automatically retrieve all the Gazebo libraries sources from
 their repositories:
 
 ```bash
-vcs import < collection-harmonic.yaml
+vcs import < collection-ionic.yaml
 ```
 
 The src subdirectory should contain all the sources ready to be built.
@@ -108,7 +84,7 @@ The src subdirectory should contain all the sources ready to be built.
 ## Install dependencies
 
 Before compiling it is necessary to install all the dependencies of the different
-packages that compose the Harmonic collection. Every platform has a different
+packages that compose the Ionic collection. Every platform has a different
 method to install software dependencies.
 
 Add `packages.osrfoundation.org` to the apt sources list:
@@ -127,6 +103,38 @@ sudo apt -y install \
   $(sort -u $(find . -iname 'packages-'`lsb_release -cs`'.apt' -o -iname 'packages.apt' | grep -v '/\.git/') | sed '/gz\|sdf/d' | tr '\n' ' ')
 ```
 
+Alternatively, if you want to install dependencies using
+[rosdep](https://docs.ros.org/en/rolling/Tutorials/Intermediate/Rosdep.html),
+ensure that [rosdep is installed](https://docs.ros.org/en/rolling/Tutorials/Intermediate/Rosdep.html#how-do-i-use-the-rosdep-tool)
+and use the following command:
+
+```bash
+cd ~/workspace/src
+rosdep install -i --from-path . -y \
+    --skip-keys "gz-cmake3 DART libogre-dev libogre-next-2.3-dev"
+```
+
+The `rosdep` command attempts to install dependencies listed in `package.xml`
+files, but when problems arise the `--skip-keys` argument is used. Explanations
+for its use in the previous line are given below:
+
+* `gz-cmake3`: `gz-tools2` can build from source against
+  [both `gz-cmake3` and `gz-cmake4`](https://github.com/gazebosim/gz-tools/pull/128),
+  and this workspace only contains `gz-cmake4`. The `gz-tools2` `package.xml`
+  file only [depends on gz-cmake3](https://github.com/gazebosim/gz-tools/blob/2b228e5b956/package.xml#L13)
+  and since that package is not present, use `--skip-keys gz-cmake3`.
+* `DART`: `gz-physics8` can build against [dartsim](http://dartsim.github.io),
+  which is listed as DART in the [gz-physics package.xml file](https://github.com/gazebosim/gz-physics/blob/gz-physics8_8.0.0/package.xml#L16).
+  This package is not in the workspace, so `DART` is added to the `--skip-keys`
+  string.
+  See the discussion in [gz-physics#608](https://github.com/gazebosim/gz-physics/pull/608#discussion_r1589512231)
+  for more background on the package name used for `DART`.
+* `libogre-dev` and `libogre-next-2.3-dev`: `gz-rendering9` can build against
+  ogre 1.9 and ogre-next 2.3. The debian package names are listed as
+  dependencies in the [gz-rendering package.xml](https://github.com/gazebosim/gz-rendering/blob/gz-rendering9_9.0.0/package.xml#L22-L23)
+  but they are not available on all Linux versions, so work around with
+  `--skip-keys "libogre-dev libogre-next-2.3-dev"`.
+
 ## Building the Gazebo Libraries
 
 Once the compiler and all the sources are in place it is time to compile them.
@@ -143,6 +151,15 @@ colcon graph
 If that is the case, then you are ready
 to build the whole set of libraries:
 
+:::{warning}
+
+Compilation can take up to 16Gb of RAM memory. Use MAKEFLAGS with
+colcon as detailed in its instructions to reduce the number of
+compilation threads if needed.
+
+:::
+
+
 ```bash
 colcon build --merge-install
 ```
@@ -150,7 +167,7 @@ colcon build --merge-install
 To speed up the build process, you could also disable tests by using
 
 ```bash
-colcon build --cmake-args -DBUILD_TESTING=OFF --merge-install
+colcon build --cmake-args ' -DBUILD_TESTING=OFF' --merge-install
 ```
 
 To use debuggers activate debug symbols. Gazebo will run slower, but you'll be able to use GDB:
@@ -173,7 +190,7 @@ colcon build --packages-select PACKAGE_NAME
 
 Visit [colcon documentation](https://colcon.readthedocs.io/en/released/#) to view more `colcon` build and test options.
 
-If there are no errors, all the binaries should be ready to use. You can check the [Troubleshooting](/docs/harmonic/troubleshooting#ubuntu) section for errors.
+If there are no errors, all the binaries should be ready to use. You can check the [Troubleshooting](troubleshooting.md#ubuntu) section for errors.
 
 ## Using the workspace
 
@@ -191,7 +208,7 @@ Or in zsh:
 . ~/workspace/install/setup.zsh
 ```
 
-This is the end of the source install instructions; head back to the [Getting started](/docs/all/getstarted)
+This is the end of the source install instructions; head back to the [Getting started](getstarted)
 page to start using Gazebo!
 
 ## Uninstalling source-based install
@@ -216,7 +233,7 @@ the results you want:
 
 ## Troubleshooting
 
-See [Troubleshooting](/docs/harmonic/troubleshooting#ubuntu)
+See [Troubleshooting](troubleshooting.md#ubuntu)
 
 ## QML Debugging
 
@@ -228,7 +245,7 @@ To perform QML debugging you'll need:
 You will need to build Gazebo with:
 
 ```bash
-colcon build --cmake-args -DQT_QML_DEBUG --merge-install
+colcon build --cmake-args ' -DQT_QML_DEBUG' --merge-install
 ```
 
 > **Note:** Advanced users may note that only the `gz-sim` project needs this flag.

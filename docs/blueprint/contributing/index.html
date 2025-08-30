@@ -8,6 +8,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKS50SX85K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JKS50SX85K');
+    </script>
+    
     <title>Contributing to Gazebo &#8212; Gazebo blueprint documentation</title>
   
   
@@ -16,42 +25,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=12e630a0" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=173bdbe0" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=c940b5aa"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contributing';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://addisu.taddese.com/docs/docs/blueprint/_static/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'blueprint';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
-    <link rel="canonical" href="https://addisu.taddese.com/docs/docs/latestcontributing/" />
+    <link rel="canonical" href="https://addisu.taddese.com/docs/docs/latest/contributing/" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -59,6 +72,7 @@
     <link rel="prev" title="Gazebo Development" href="../development/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="blueprint" />
   </head>
   
   
@@ -74,19 +88,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search/"
       method="get">
@@ -94,7 +97,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -102,8 +104,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,7 +122,7 @@
           (end-of-life) and is no longer officially supported.
         
         <a class="btn text-wrap font-weight-bold ms-3 my-1 align-baseline pst-button-link-to-stable-version"
-        href="../../harmonic/contributing">Switch to the latest stable version</a>
+        href="../../ionic/contributing">Switch to the latest stable version</a>
       </div>
     </div>
   </aside>
@@ -154,7 +156,7 @@
     
     
     <img src="../_static/gazebo_horz_pos.svg" class="logo__image only-light" alt="Gazebo blueprint documentation - Home"/>
-    <script>document.write(`<img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark" alt="Gazebo blueprint documentation - Home"/>`);</script>
+    <img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark pst-js-only" alt="Gazebo blueprint documentation - Home"/>
   
   
 </a></div>
@@ -193,29 +195,21 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
       
@@ -226,15 +220,11 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -259,28 +249,24 @@ document.write(`
       <span>Supported May, 2019 to Dec, 2020</span>
     </div><div class="gz-version-switcher">
   <span class="fs-4 fw-light pe-2">Release:</span>
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div></div>
+</div></div></div>
 </div>
 
     </header>
@@ -291,7 +277,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -331,15 +318,11 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
         
@@ -371,11 +354,16 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../ros2_gz_vendor_pkgs/">ROS 2 Gazebo Vendor Packages</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../install_gz11_side_by_side/">Installing Gazebo11 side by side with new Gazebo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../migrating_gazebo_classic_ros2_packages/">Migration from ROS 2 Gazebo Classic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_gazebo_in_ci/">Continuous Integration For Gazebo Packages</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gazebo_classic_migration/">Gazebo Classic Migration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install_gz11_side_by_side/">Installing Gazebo11 side by side with new Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migrating_gazebo_classic_ros2_packages/">Migration from ROS 2 Gazebo Classic</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../roadmap/">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../release-features/">Release Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../releases/">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance/">Governance</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../development/">Development</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Contributing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ci/">Continuous Integration</a></li>
@@ -396,6 +384,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../fuel_fair_use/">What is Fair Use</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects_using_gazebo/">Projects using Gazebo</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../library_reference_nav/">Library Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/cmake/2">cmake</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/common/3">common</a></li>
@@ -421,9 +410,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -441,8 +435,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -454,7 +446,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../development/" class="nav-link">Gazebo Development</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Contributing...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Contributing to Gazebo</span></li>
   </ul>
 </nav>
 </div>
@@ -534,7 +526,7 @@ classes and functions with minimal dependencies.</p></li>
 <h3>Gazebo Architecture<a class="headerlink" href="#gazebo-architecture" title="Link to this heading">#</a></h3>
 <p>Documents describing the architecture of Gazebo are listed here:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="/docs/all/architecture">Gazebo Sim Architecture</a></p></li>
+<li><p><a class="reference internal" href="../architecture/"><span class="doc std std-doc">Gazebo Sim Architecture</span></a></p></li>
 </ul>
 </section>
 </section>
@@ -545,7 +537,7 @@ classes and functions with minimal dependencies.</p></li>
 <p><strong>Before Submitting a Bug Report</strong></p>
 <ol class="arabic simple">
 <li><p>Check the <a class="reference external" href="http://answers.gazebosim.org">questions and answers forum</a>. Your issue may have already been resolved.</p></li>
-<li><p>Determine <a class="reference external" href="https://gazebosim.org/docs/all/contributing#repository-list">the repository</a> which should receive the problem.</p></li>
+<li><p>Determine <a class="reference internal" href="#repository-list"><span class="std std-ref">the repository</span></a> which should receive the problem.</p></li>
 <li><p>Search the repository’s issues to see if the same or similar problem has
 been opened. If it has and the issue is still open, then add a comment to
 the existing issue. Otherwise, create a new issue.</p></li>
@@ -561,7 +553,7 @@ Guide</a> as well as the following tips:</p>
 <li><p><strong>Provide specific examples to demonstrate the steps.</strong> Include links to files or projects, or copy/pasteable snippets, which you use in those examples.</p></li>
 <li><p><strong>Describe the behavior you observed after following the steps</strong> and point out what exactly is the problem with that behavior.</p></li>
 <li><p><strong>Explain which behavior you expected to see instead and why</strong>.</p></li>
-<li><p><strong>Include screenshots and animated GIFs</strong> which show you following the described steps and clearly demonstrate the problem. See <a class="reference external" href="https://gazebosim.org/docs/all/contributing#creating-gifs">Creating GIFs</a> for GIF creation utilities.</p></li>
+<li><p><strong>Include screenshots and animated GIFs</strong> which show you following the described steps and clearly demonstrate the problem. See <a class="reference internal" href="#creating-gifs"><span class="std std-ref">Creating GIFs</span></a> for GIF creation utilities.</p></li>
 <li><p><strong>If the problem wasn’t triggered by a specific action</strong>, describe what you were doing before the problem happened and share more information using the guidelines below.</p></li>
 </ul>
 <p>Provide more context by answering these questions:</p>
@@ -584,11 +576,11 @@ Guide</a> as well as the following tips:</p>
 including completely new features and minor improvements to existing
 functionality. Following these guidelines helps maintainers and the
 community understand your suggestion and find related suggestions.</p>
-<p>Before creating enhancement suggestions, please check <a class="reference external" href="https://gazebosim.org/docs/all/contributing#before-submitting-an-enhancement-suggestion">this
-list</a> as you
+<p>Before creating enhancement suggestions, please check <a class="reference internal" href="#before-submitting-an-enhancement-suggestion"><span class="std std-ref">this
+list</span></a> as you
 might find out that you don’t need to create one. When you are creating an
-enhancement suggestion, please <a class="reference external" href="https://gazebosim.org/docs/all/contributing#how-do-i-submit-a-good-enhancement-suggestion-">include as many details as
-possible</a>.
+enhancement suggestion, please <a class="reference internal" href="#how-do-i-submit-a-good-enhancement-suggestion"><span class="std std-ref">include as many details as
+possible</span></a>.
 When filling in the issue form for an enhancement suggestion, include the
 steps that you imagine you would take if the feature you’re requesting
 existed.</p>
@@ -597,7 +589,7 @@ existed.</p>
 <ul class="simple">
 <li><p><strong>Check if you’re using the latest software version</strong>. A more recent version may contain your desired feature.</p></li>
 <li><p><strong>Check if there’s already <a class="reference external" href="https://gazebosim.org/libs">a library</a> which provides that enhancement.</strong></p></li>
-<li><p><strong>Determine <a class="reference external" href="https://gazebosim.org/docs/all/contributing#repository-list">which repository the enhancement should be suggested in</a>.</strong></p></li>
+<li><p><strong>Determine <a class="reference internal" href="#repository-list"><span class="std std-ref">which repository the enhancement should be suggested in</span></a>.</strong></p></li>
 <li><p><strong>Perform a <a class="reference external" href="https://github.com/search?q=org%3Agazebosim&amp;amp;type=Issues">cursory search</a></strong> to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.</p></li>
 <li><p><strong>Ask on the <a class="reference external" href="https://community.gazebosim.org">community forum</a> about your
 feature.</strong> Someone else might already have started, and you might be able to
@@ -608,7 +600,7 @@ help.</p></li>
 <h4>How Do I Submit A (Good) Enhancement Suggestion?<a class="headerlink" href="#how-do-i-submit-a-good-enhancement-suggestion" title="Link to this heading">#</a></h4>
 <p>Enhancement suggestions are tracked as <a class="reference external" href="https://help.github.com/en/github/managing-your-work-on-github/about-issues">GitHub
 issues</a>.
-After you’ve determined <a class="reference external" href="https://gazebosim.org/docs/all/contributing#repository-list">which repository</a>
+After you’ve determined <a class="reference internal" href="#repository-list"><span class="std std-ref">which repository</span></a>
 your enhancement suggestion is related to, create an issue on that
 repository and provide the following information:</p>
 <ul class="simple">
@@ -616,7 +608,7 @@ repository and provide the following information:</p>
 <li><p><strong>Provide a step-by-step description of the suggested enhancement</strong> in as many details as possible.</p></li>
 <li><p><strong>Provide specific examples to demonstrate the steps</strong>. Include copy/pasteable snippets which you use in those examples, as <a class="reference external" href="https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks">Markdown code blocks</a>.</p></li>
 <li><p><strong>Describe the current behavior</strong> and <strong>explain which behavior you expected to see instead</strong> and why.</p></li>
-<li><p><strong>Include screenshots and animated GIFs</strong> which show you following the described steps and clearly demonstrate the problem. See <a class="reference external" href="https://gazebosim.org/docs/all/contributing#creating-gifs">Creating GIFs</a> for GIF creation utilities.</p></li>
+<li><p><strong>Include screenshots and animated GIFs</strong> which show you following the described steps and clearly demonstrate the problem. See <a class="reference internal" href="#creating-gifs"><span class="std std-ref">Creating GIFs</span></a> for GIF creation utilities.</p></li>
 <li><p><strong>Explain why this enhancement would be useful</strong> to most users and isn’t something that can or should be implemented as a separate application.</p></li>
 <li><p><strong>Specify which version of Gazebo you’re using.</strong></p></li>
 <li><p><strong>Specify the name and version of the OS you’re using.</strong></p></li>
@@ -629,7 +621,7 @@ repository and provide the following information:</p>
 collaboration, and make high quality code. Review the following to
 get acquainted with this development process.</p>
 <ol class="arabic">
-<li><p><strong>Read the <a class="reference external" href="https://gazebosim.org/docs/all/contributing#reporting-bugs">Reporting Bugs</a> and <a class="reference external" href="https://gazebosim.org/docs/all/contributing#suggesting-enhancements">Suggesting Enhancements</a></strong> sections first.</p></li>
+<li><p><strong>Read the <a class="reference internal" href="#reporting-bugs"><span class="std std-ref">Reporting Bugs</span></a> and <a class="reference internal" href="#suggesting-enhancements"><span class="std std-ref">Suggesting Enhancements</span></a></strong> sections first.</p></li>
 <li><p><strong>Fork the Gazebo library</strong> you want to contribute to. This will create
 your own personal copy of the library. All of your development should
 take place in your fork.</p>
@@ -641,7 +633,7 @@ take place in your fork.</p>
 <ul class="simple">
 <li><p>If your changes will break API or ABI, then base your new branch off of <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
 <li><p>If you are making interdependent changes to multiple repositories without
-breaking API or ABI, it is also recommended to base your new branches of of <code class="docutils literal notranslate"><span class="pre">main</span></code>
+breaking API or ABI, it is also recommended to base your new branches off of <code class="docutils literal notranslate"><span class="pre">main</span></code>
 to simplify automated testing of the changes and the review process. Your
 changes may be backported to an existing release once all the changes
 have been merged.</p></li>
@@ -655,16 +647,16 @@ a release / main branch. This is a good habit to get in, and will make
 your life easier.</p></li>
 <li><p><strong>Write your code.</strong> This is the fun part, but is good to remember:</p>
 <ul class="simple">
-<li><p>Always <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-the-commit-signoff-policy-for-your-repository#about-commit-signoffs">signoff on your commits</a> (See the bullet about Developer Certificate of Origin in the <a class="reference external" href="https://gazebosim.org/docs/all/contributing#process">Process</a> section below)</p></li>
+<li><p>Always <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-the-commit-signoff-policy-for-your-repository#about-commit-signoffs">signoff on your commits</a> (See the bullet about Developer Certificate of Origin in the <a class="reference internal" href="#process"><span class="std std-ref">Process</span></a> section below)</p></li>
 <li><p>Look at the existing code and try to maintain the existing style and pattern as much as possible</p></li>
 <li><p><strong>Always</strong> keep your branch updated with the original repository</p></li>
 </ul>
 </li>
 <li><p><strong>Write tests.</strong> In most cases, a pull request will only be accepted if
-it has tests. See the <a class="reference external" href="https://gazebosim.org/docs/all/contributing#writing-tests">Writing Tests</a>
+it has tests. See the <a class="reference internal" href="#writing-tests"><span class="std std-ref">Writing Tests</span></a>
 section below for more information.</p></li>
 <li><p><strong>Resolve compiler warnings.</strong> Code must have zero compile warnings, or at least make sure your pull request is not adding new warnings.</p></li>
-<li><p><strong>Follow the <a class="reference external" href="https://gazebosim.org/docs/all/contributing#style-guides">style guide</a>.</strong></p>
+<li><p><strong>Follow the <a class="reference internal" href="#style-guides"><span class="std std-ref">style guide</span></a>.</strong></p>
 <p>Static code checking analyzes your code for bugs, such as potential memory
 leaks, and style. Most Gazebo libraries use the <code class="docutils literal notranslate"><span class="pre">cppcheck</span></code> static code
 checker, and a modified version <code class="docutils literal notranslate"><span class="pre">cpplint</span></code>. Ubuntu
@@ -674,7 +666,7 @@ users can install via:</p>
 </div>
 <p>To check your code, run the following script from the <code class="docutils literal notranslate"><span class="pre">build</span></code> folder of the project that you’re working on.
 If you’re working on <em>gz-math</em>, for instance, the path for the folder should be something similar to <code class="docutils literal notranslate"><span class="pre">~/citadel_ws/build/gz-math6</span></code>.
-The path example is assuming you followed <a class="reference external" href="/docs/citadel/install">our installation instructions</a> using colcon.</p>
+The path example is assuming you followed <a class="reference internal" href="../install/"><span class="doc std std-doc">our installation instructions</span></a> using colcon.</p>
 <p>Then, run the script inside this folder:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> make codecheck
 </pre></div>
@@ -684,7 +676,7 @@ the output looks like:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> Built target codecheck
 </pre></div>
 </div>
-<p>The tool does not catch all style errors. See the <a class="reference external" href="https://gazebosim.org/docs/all/contributing#style-guides">code style</a> section below for more information.</p>
+<p>The tool does not catch all style errors. See the <a class="reference internal" href="#style-guides"><span class="std std-ref">code style</span></a> section below for more information.</p>
 </li>
 <li><p><strong>(optional) Use clang-tidy for additional checks.</strong></p>
 <p>clang-tidy should return no errors when run against the code base.</p>
@@ -722,7 +714,7 @@ requests. For reference, here are a few examples:</p>
 <p>The moment you make a pull request, a few test jobs
 will be started. These jobs will build your branch on Linux, Mac and
 Windows, run all tests and check for warnings.</p>
-<p>Check the <a class="reference external" href="https://gazebosim.org/docs/all/ci">Continuous Integration guide</a>
+<p>Check the <a class="reference internal" href="../ci/"><span class="doc std std-doc">Continuous Integration guide</span></a>
 for information on how to interpret the results.</p>
 </li>
 <li><p><strong>Respond to reviewers.</strong> At least two other people have to approve your pull request before it can be merged. Please be responsive to any questions and comments.</p></li>
@@ -857,11 +849,32 @@ to work on it, but the community is welcome to do so.</p>
 </ul>
 <p>Porting changes across branches:</p>
 <ul>
-<li><p>Pull requests should target the lowest possible
-<a class="reference external" href="https://gazebosim.org/docs/all/releases">supported version</a> where the
+<li><p>Pull requests should target the latest <a class="reference internal" href="../releases/"><span class="doc std std-doc">supported version</span></a> where the
 changes can be added in a backwards-compatible way (no API / ABI / behavior
 break in released branches).</p></li>
-<li><p>Periodically, a maintainer will <strong>forward-port</strong> changes to newer release
+<li><p>To backport a pull request (i.e. from a higher version to a lower version),
+use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">cherry-pick</span></code> instead of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>, for example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  git checkout gz-&lt;library&gt;N
+  git pull
+  git checkout gz-&lt;library&gt;M
+  git pull
+  git checkout -b N_to_M_&lt;date&gt;
+  git cherry-pick &lt;commits from verrsion N&gt;
+  # Fix conflicts
+  git commit -sam&quot;Backport from N to M&quot;
+  # Open pull request
+  # Do not squash, rebase instead
+</pre></div>
+</div>
+<p>Alternatively, you can use <code class="docutils literal notranslate"><span class="pre">mergify</span></code> to create backports. Go to the original
+pull request and add a comment:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  @mergifyio backport gz-&lt;library&gt;M
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">M</span></code> is the version to backport to.</p>
+</li>
+<li><p>In certain cases when a pull request is merged into an older release branch,
+a maintainer will <strong>forward-port</strong> changes to newer release
 branches all the way up to <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
 <li><p>See <a class="reference external" href="https://github.com/gazebosim/docs/blob/master/tools/branch_comparisons.md">this list</a> to check if a branch needs porting.</p></li>
 <li><p>The merge forward can be done with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code> in order to keep the commit history
@@ -876,22 +889,6 @@ and so it’s easier to compare branches. For example:</p>
   git commit -sam&quot;Merge M into N&quot;
   # Open pull request
   # Do not squash or rebase, create a merge commit
-</pre></div>
-</div>
-</li>
-<li><p>In the rare event that a pull request needs to be backported (i.e. from a
-higher version to a lower version), use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">cherry-pick</span></code> instead of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>,
-for example:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  git checkout gz-&lt;library&gt;N
-  git pull
-  git checkout gz-&lt;library&gt;M
-  git pull
-  git checkout -b N_to_M_&lt;date&gt;
-  git cherry-pick &lt;commits from verrsion N&gt;
-  # Fix conflicts
-  git commit -sam&quot;Backport from N to M&quot;
-  # Open pull request
-  # Do not squash, rebase instead
 </pre></div>
 </div>
 </li>
@@ -1002,8 +999,8 @@ sudo<span class="w"> </span>python3<span class="w"> </span>setup.py<span class="
 </section>
 <section id="compiling-the-code-and-running-the-tests">
 <h4>Compiling the code and running the tests<a class="headerlink" href="#compiling-the-code-and-running-the-tests" title="Link to this heading">#</a></h4>
-<p>Create a Gazebo workspace for ASAN/TSAN related tasks. Refer to the <a class="reference external" href="https://gazebosim.org/docs/latest/install_ubuntu_src#getting-the-sources">offical documentation to get
-all the Gazebo sources</a>.</p>
+<p>Create a Gazebo workspace for ASAN/TSAN related tasks. Refer to the <a class="reference internal" href="#install_ubuntu_src.md#getting-the-sources"><span class="xref myst">offical documentation to get
+all the Gazebo sources</span></a>.</p>
 <p>First, compile all packages:</p>
 <ul class="simple">
 <li><p>ASan</p></li>
@@ -1196,7 +1193,7 @@ For example, if there is class called <code class="docutils literal notranslate"
 <h2>Appendix<a class="headerlink" href="#appendix" title="Link to this heading">#</a></h2>
 <section id="releasing-information-for-members-of-development-team">
 <h3>Releasing information for members of development team<a class="headerlink" href="#releasing-information-for-members-of-development-team" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="/docs/all/release">Releasing documentation</a> is available for the development team
+<p><a class="reference internal" href="../release/"><span class="doc std std-doc">Releasing documentation</span></a> is available for the development team
 members. Includes a general overview as well as detailed information about how to
 run a new release.</p>
 </section>
@@ -1222,7 +1219,8 @@ Cast</a> or
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1302,8 +1300,8 @@ Cast</a> or
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1313,7 +1311,7 @@ Cast</a> or
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
@@ -1325,8 +1323,8 @@ Cast</a> or
       
         <div class="footer-item"><p> Brought to you by <a href="https://openrobotics.org">Open Robotics</a>. </p>
 <p> Except where otherwise noted, the gazebosim.org web pages are licensed under <a
-    href="https://creativecommons.org/licenses/by/3.0/us/">Creative Commons
-    Attribution 3.0</a>. </p></div>
+    href="https://creativecommons.org/licenses/by/4.0/us/">Creative Commons
+    Attribution 4.0</a>. </p></div>
       
     </div>
   
@@ -1335,7 +1333,8 @@ Cast</a> or
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

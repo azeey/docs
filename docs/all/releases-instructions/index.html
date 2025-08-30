@@ -8,7 +8,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Gazebo Release Instructions &#8212; Gazebo harmonic documentation</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKS50SX85K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JKS50SX85K');
+    </script>
+    
+    <title>Gazebo Release Instructions &#8212; Gazebo ionic documentation</title>
   
   
   
@@ -16,42 +25,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=12e630a0" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=173bdbe0" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=173ad40a"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/documentation_options.js?v=0b151d4f"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'releases-instructions';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://addisu.taddese.com/docs/docs/harmonic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'harmonic';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://addisu.taddese.com/docs/docs/ionic/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'ionic';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
-    <link rel="canonical" href="https://addisu.taddese.com/docs/docs/latestreleases-instructions/" />
+    <link rel="canonical" href="https://addisu.taddese.com/docs/docs/latest/releases-instructions/" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -59,6 +72,7 @@
     <link rel="prev" title="Debian/Ubuntu versioning in nightly and prerelease binaries" href="../releasing/versioning_pre_nightly/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="ionic" />
   </head>
   
   
@@ -74,19 +88,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search/"
       method="get">
@@ -94,7 +97,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -102,8 +104,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +142,8 @@
       
     
     
-    <img src="../_static/gazebo_horz_pos.svg" class="logo__image only-light" alt="Gazebo harmonic documentation - Home"/>
-    <script>document.write(`<img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark" alt="Gazebo harmonic documentation - Home"/>`);</script>
+    <img src="../_static/gazebo_horz_pos.svg" class="logo__image only-light" alt="Gazebo ionic documentation - Home"/>
+    <img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark pst-js-only" alt="Gazebo ionic documentation - Home"/>
   
   
 </a></div>
@@ -180,29 +182,21 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
       
@@ -213,15 +207,11 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -238,36 +228,30 @@ document.write(`
   <div class="banner d-flex flex-column-reverse flex-sm-row">
     <div>
       <div class="d-none d-sm-block">
-        <span class="d-inline fs-2">Docs / Gazebo Harmonic</span>
-        
-          <span class="badge bg-primary fs-4 fw-light ms-2">LTS</span>
+        <span class="d-inline fs-2">Docs / Gazebo Ionic</span>
         
       </div>
-      <span>Supported Sep, 2023 to Sep, 2028</span>
+      <span>Supported Sep, 2024 to Sep, 2026</span>
     </div><div class="gz-version-switcher">
   <span class="fs-4 fw-light pe-2">Release:</span>
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div></div>
+</div></div></div>
 </div>
 
     </header>
@@ -278,7 +262,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -318,15 +303,11 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
         
@@ -363,7 +344,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../fuel_insert/">Model Insertion from Fuel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hotkeys/">Keyboard Shortcuts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spawn_urdf/">Spawn URDF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros2_integration/">ROS 2 integration via bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_overview/">ROS 2 integration overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_launch_gazebo/">Launch Gazebo from ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_integration/">Use ROS 2 to interact with Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_spawn_model/">Use ROS 2 to spawn a Gazebo model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ros2_interop/">ROS 2 interoperability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ros_gz_project_template_guide/">ROS 2 integration template</a></li>
 </ul>
@@ -372,11 +356,16 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../ros2_gz_vendor_pkgs/">ROS 2 Gazebo Vendor Packages</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../install_gz11_side_by_side/">Installing Gazebo11 side by side with new Gazebo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../migrating_gazebo_classic_ros2_packages/">Migration from ROS 2 Gazebo Classic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_gazebo_in_ci/">Continuous Integration For Gazebo Packages</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gazebo_classic_migration/">Gazebo Classic Migration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install_gz11_side_by_side/">Installing Gazebo11 side by side with new Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migrating_gazebo_classic_ros2_packages/">Migration from ROS 2 Gazebo Classic</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../roadmap/">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../release-features/">Release Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../releases/">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance/">Governance</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../development/">Development</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../contributing/">Contributing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ci/">Continuous Integration</a></li>
@@ -397,23 +386,24 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../fuel_fair_use/">What is Fair Use</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects_using_gazebo/">Projects using Gazebo</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../library_reference_nav/">Library Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/cmake/3">cmake</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/common/5">common</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/fuel_tools/9">fuel_tools</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/gui/8">gui</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/launch/7">launch</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/math/7">math</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/msgs/10">msgs</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/physics/7">physics</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/plugin/2">plugin</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/rendering/8">rendering</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sensors/8">sensors</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sim/8">sim</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/cmake/4">cmake</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/common/6">common</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/fuel_tools/10">fuel_tools</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/gui/9">gui</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/launch/8">launch</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/math/8">math</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/msgs/11">msgs</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/physics/8">physics</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/plugin/3">plugin</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/rendering/9">rendering</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sensors/9">sensors</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sim/9">sim</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/tools/2">tools</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/transport/13">transport</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/utils/2">utils</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sdformat/14">sdformat</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/transport/14">transport</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/utils/3">utils</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sdformat/15">sdformat</a></li>
 </ul>
 </details></li>
 </ul>
@@ -423,9 +413,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -443,8 +438,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -456,7 +449,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../development/" class="nav-link">Gazebo Development</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Gazebo...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Gazebo Release Instructions</span></li>
   </ul>
 </nav>
 </div>
@@ -510,12 +503,22 @@ them configured automatically on every run.</p>
 <li><p>The Gz library intended to be released and</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gazebo-release</span></code> repository.</p></li>
 </ol>
-<p>There are some credentials needed to interact with the release
-process:</p>
-<ul class="simple">
-<li><p>Release token: magic sequence of characters needed while running <code class="docutils literal notranslate"><span class="pre">release.py</span></code>
-to interact with <code class="docutils literal notranslate"><span class="pre">build.osrfoundation.org</span></code>. This should be given to Gz developers that run releases by the Infra team.</p></li>
-</ul>
+<p>To interact with Jenkins an API token needs to be created and stored in the
+user system:</p>
+<ol class="arabic">
+<li><p>Creating a Jenkins API token: Open
+<a class="reference external" href="https://build.osrfoundation.org/user/%3Cuser%3E/security/">https://build.osrfoundation.org/user/&lt;user&gt;/security/</a>
+(Remember to change <code class="docutils literal notranslate"><span class="pre">&lt;user&gt;</span></code> to your username).
+In the “API Token” section, there is an <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">new</span> <span class="pre">Token</span></code> button to add a new
+Jenkins API token.</p></li>
+<li><p>The token needs to be stored in <code class="docutils literal notranslate"><span class="pre">~/.buildfarm/jenkins.ini</span></code> in the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">build</span><span class="o">.</span><span class="n">osrfoundation</span><span class="o">.</span><span class="n">org</span><span class="p">]</span>
+<span class="n">username</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="n">user</span><span class="o">&gt;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">token</span> <span class="n">created</span> <span class="ow">in</span> <span class="n">step</span> <span class="mi">1</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
 </section>
 </section>
 <section id="for-each-release">
@@ -536,12 +539,12 @@ release.</p></li>
 <section id="update-code-version-and-changelogs">
 <h3>2. Update code version and changelogs<a class="headerlink" href="#update-code-version-and-changelogs" title="Link to this heading">#</a></h3>
 <p>The first step to get a new release ready is to update the current code (upstream)
-version (view the <a class="reference external" href="release#versioning">versioning</a> section for more information). This
+version (view the <a class="reference internal" href="../release/#versioning"><span class="std std-ref">versioning</span></a> section for more information). This
 bump could be in the major number (non-compatible changes), minor number (new
 features), patch number (patches and bugfixes).</p>
 <p><strong>Bumping major number</strong> of the version implies some work to have the
-<a class="reference external" href="#metadata-for-releasing">metadata</a> updated correctly. There is a <a class="reference external" href="releasing/bump_major.md">dedicated
-document</a> that you should go through before continuing to work through the steps in this
+metadata updated correctly. There is a <a class="reference internal" href="../releasing/bump_major/"><span class="std std-doc">dedicated
+document</span></a> that you should go through before continuing to work through the steps in this
 document.</p>
 <ol class="arabic">
 <li><p>To update the upstream version a local checkout of the Gz library is
@@ -593,7 +596,7 @@ is usually 2.1.0-1).</p>
 <p>There should be a repository matching the name and major version of Gz
 library that you want to bump in the
 <a class="reference external" href="https://github.com/gazebo-release/">gz-release</a> GitHub organization.
-(see <a class="reference external" href="releasing/release_repositories.md">release repositories document</a> for more
+(see <a class="reference internal" href="../releasing/release_repositories/"><span class="std std-doc">release repositories document</span></a> for more
 information about how they are used).</p>
 <ol class="arabic">
 <li><p>It is required to clone the corresponding release repository to update the
@@ -603,7 +606,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/gazeb
 </pre></div>
 </div>
 </li>
-<li><p>To bump the package versions that will appear in Debian/Ubuntu binary packages there is a helper script in <code class="docutils literal notranslate"><span class="pre">release-tools</span></code> (see <a class="reference external" href="#initial-setup">initial setup</a>). The script is called <code class="docutils literal notranslate"><span class="pre">changelog_spawn.sh</span></code> and require to be executed while the active directory is a <code class="docutils literal notranslate"><span class="pre">release</span> <span class="pre">repository</span></code>:</p>
+<li><p>To bump the package versions that will appear in Debian/Ubuntu binary packages there is a helper script in <code class="docutils literal notranslate"><span class="pre">release-tools</span></code> (see <a class="reference internal" href="#initial-setup">initial setup</a>). The script is called <code class="docutils literal notranslate"><span class="pre">changelog_spawn.sh</span></code> and require to be executed while the active directory is a <code class="docutils literal notranslate"><span class="pre">release</span> <span class="pre">repository</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gz library named foo and major version X</span>
 <span class="nb">cd</span><span class="w"> </span>gz-fooX-release
 ~/release-tools/release-repo-scripts/changelog_spawn.sh<span class="w"> </span>X.Y.Z-R
@@ -637,7 +640,7 @@ build in the server. Now, the following needs to happen:</p>
 </li>
 </ol>
 <p>The <code class="docutils literal notranslate"><span class="pre">release.py</span></code> script  and Jenkins will perform all these actions. For more information of all the processes
-triggered by the <code class="docutils literal notranslate"><span class="pre">release.py</span></code> script please check <a class="reference external" href="release#using-the-gzdev-repository-command">the release process</a>.</p>
+triggered by the <code class="docutils literal notranslate"><span class="pre">release.py</span></code> script please check <a class="reference internal" href="../release/#using-the-gzdev-repository-command"><span class="std std-ref">the release process</span></a>.</p>
 <section id="executing-release-py">
 <h3>4. Executing <a class="reference external" href="http://release.py">release.py</a><a class="headerlink" href="#executing-release-py" title="Link to this heading">#</a></h3>
 <p>Make sure you are in the source code repository before running <code class="docutils literal notranslate"><span class="pre">release.py</span></code>.
@@ -645,8 +648,17 @@ You should be on the branch to be released, after the pull request bumping
 the version has been merged (run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> to check the branch, and <code class="docutils literal notranslate"><span class="pre">git</span>&#160;&#160;&#160;&#160; <span class="pre">log</span></code> to check that the version bump pull request has been included).
 Running <code class="docutils literal notranslate"><span class="pre">release.py</span></code> from the source code repository will generate and
 upload some Git tags (“release tags”) to the source code repository.</p>
-<p>You will also need the token described in the <a class="reference external" href="#access-and-credentials">credentials
+<p>You will also need the token described in the <a class="reference internal" href="#access-and-credentials">credentials
 section</a>.</p>
+<p>There are a few external dependencies for running <a class="reference external" href="http://release.py">release.py</a>. They can be
+esily installed using virtual enviroments and pip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># you can change .releasepy_venv by any directory of your preference</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="o">~/.</span><span class="n">releasepy_venv</span>
+<span class="o">.</span> <span class="o">~/.</span><span class="n">releasepy_venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">cd</span> <span class="o">&lt;</span><span class="n">release</span><span class="o">-</span><span class="n">tools</span><span class="o">-</span><span class="nb">dir</span><span class="o">&gt;</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
+</pre></div>
+</div>
 <p><strong>dry-run simulation mode</strong></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">release.py</span></code> tool supports a <code class="docutils literal notranslate"><span class="pre">--dry-run</span></code> flag that allows users to
 simulate releases (nothing is modified) in order to ensure that the correct
@@ -657,7 +669,7 @@ ensure that proper commands are being used to trigger releases.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example of dry-run for gz-cmake3 bumped to 3.0.1</span>
 <span class="nb">cd</span><span class="w"> </span>gz-cmake3
 git<span class="w"> </span>checkout<span class="w"> </span>gz-cmake3
-~/release-tools/release.py<span class="w"> </span>gz-cmake3<span class="w"> </span><span class="m">3</span>.0.1<span class="w"> </span>dry-run-fake-token<span class="w"> </span>--dry-run
+~/release-tools/release.py<span class="w"> </span>gz-cmake3<span class="w"> </span><span class="m">3</span>.0.1<span class="w"> </span>--dry-run
 </pre></div>
 </div>
 <p><strong><a class="reference external" href="http://release.py">release.py</a> for stable releases</strong></p>
@@ -665,38 +677,35 @@ git<span class="w"> </span>checkout<span class="w"> </span>gz-cmake3
 <span class="nb">cd</span><span class="w"> </span>ign/gz-fooX
 git<span class="w"> </span>checkout<span class="w"> </span>ign/gz-fooX
 
-<span class="c1"># Example gz-cmake3 bumped to 3.0.1 with jenkins_token credential</span>
+<span class="c1"># Example gz-cmake3 bumped to 3.0.1</span>
 <span class="nb">cd</span><span class="w"> </span>gz-cmake3
 git<span class="w"> </span>checkout<span class="w"> </span>gz-cmake3
-<span class="c1"># please replace &lt;jenkins_token&gt; with real release token (check crendentials section)</span>
-~/release-tools/release.py<span class="w"> </span>gz-cmake3<span class="w"> </span><span class="m">3</span>.0.1<span class="w"> </span>&lt;jenkins_token&gt;
+~/release-tools/release.py<span class="w"> </span>gz-cmake3<span class="w"> </span><span class="m">3</span>.0.1
 </pre></div>
 </div>
 <p><strong><a class="reference external" href="http://release.py">release.py</a> for prereleases or nightlies</strong></p>
 <p>When releasing prereleases or nightly releases, there are some special flags
 to be set. The <code class="docutils literal notranslate"><span class="pre">--upload-to-repo</span></code> argument is mandatory when running
 <code class="docutils literal notranslate"><span class="pre">release.py</span></code>, and should be set to <code class="docutils literal notranslate"><span class="pre">prerelease</span></code> or <code class="docutils literal notranslate"><span class="pre">nightly</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example gz-cmake3 bumped to prerelease 3.0.0~pre1 with jenkins_token credential</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example gz-cmake3 bumped to prerelease 3.0.0~pre1</span>
 <span class="nb">cd</span><span class="w"> </span>gz-cmake3
 git<span class="w"> </span>checkout<span class="w"> </span>gz-cmake3
-<span class="c1"># please replace &lt;jenkins_token&gt; with real release token (check crendentials section)</span>
-~/release-tools/release.py<span class="w"> </span>gz-cmake3<span class="w"> </span><span class="m">3</span>.0.0~pre1<span class="w"> </span>&lt;jenkins_token&gt;<span class="w"> </span>--upload-to-repo<span class="w"> </span>prerelease
+~/release-tools/release.py<span class="w"> </span>gz-cmake3<span class="w"> </span><span class="m">3</span>.0.0~pre1<span class="w"> </span>--upload-to-repo<span class="w"> </span>prerelease
 </pre></div>
 </div>
 <p>Nightly invocation is generally coded in the server. The version will be
 taken from the last changelog entry and modified during building. No source
 code will be uploaded, but taken directly in the binary build from the
 branch pointed by <code class="docutils literal notranslate"><span class="pre">--nightly-src-branch</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example gz-cmake3 nightly from main branch with jenkins_token credential</span>
-<span class="c1"># please replace &lt;jenkins_token&gt; with real release token (check crendentials section)</span>
-~/release-tools/release.py<span class="w"> </span>gz-cmake3<span class="w"> </span><span class="m">3</span>.0.0~pre1<span class="w"> </span>&lt;jenkins_token&gt;<span class="w"> </span>--upload-to-repo<span class="w"> </span>nightly<span class="w"> </span>--nightly-src-branch<span class="w"> </span>main
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example gz-cmake3 nightly from main branch</span>
+~/release-tools/release.py<span class="w"> </span>gz-cmake3<span class="w"> </span><span class="m">3</span>.0.0~pre1<span class="w"> </span>--upload-to-repo<span class="w"> </span>nightly<span class="w"> </span>--nightly-src-branch<span class="w"> </span>main
 </pre></div>
 </div>
 <p><strong>Binary version schema for prereleases and nightlies</strong></p>
 <p>Prerelease and nightlies binary versions use particular naming schema to define right
 ordering for package managers. <a class="reference external" href="https://classic.gazebosim.org/tutorials?tut=install_unstable&amp;amp;cat=install#Versioninginnightlyandprerelease">This information about versioning</a> in Gazebo Classic applies to the [Gazebo] too.</p>
 <p><strong><a class="reference external" href="http://release.py">release.py</a> for revision bumps</strong></p>
-<p>Bumping the <a class="reference external" href="release#versioning">revision number for binary packages</a> is a special
+<p>Bumping the <a class="reference internal" href="../release/#versioning"><span class="std std-ref">revision number for binary packages</span></a> is a special
 case of releasing since the original tarball with the source code will
 remain the same. Once the release repository is ready with the new release
 version, <code class="docutils literal notranslate"><span class="pre">release.py</span></code> needs the <code class="docutils literal notranslate"><span class="pre">--only-bump-revision-linux</span></code> flag.</p>
@@ -704,9 +713,8 @@ version, <code class="docutils literal notranslate"><span class="pre">release.py
 of the software version. All the tarballs can be found at <a class="reference external" href="https://classic.gazebosim.org/distributions">https://classic.gazebosim.org/distributions</a>
 or the information should appear in the parameters of the Jenkins -debbuilder build that created
 the first version of the sofware.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example gz-cmake3 bumped from 3.0.1-1 to 3.0.1-2 with jenkins_token credential</span>
-<span class="c1"># please replace &lt;jenkins_token&gt; with real release token (check crendentials section)</span>
-~/release-tools/release.py<span class="w"> </span>gz-cmake3<span class="w"> </span><span class="m">3</span>.0.1<span class="w"> </span>&lt;jenkins_token&gt;<span class="w"> </span>--source-tarball-uri<span class="w"> </span>https://osrf-distributions.s3.amazonaws.com/gz-cmake/releases/gz-cmake-3.0.1.tar.bz2<span class="w"> </span>--only-bump-revision-linux<span class="w"> </span>-release-version<span class="w"> </span><span class="m">2</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example gz-cmake3 bumped from 3.0.1-1 to 3.0.1-2</span>
+~/release-tools/release.py<span class="w"> </span>gz-cmake3<span class="w"> </span><span class="m">3</span>.0.1<span class="w"> </span>--source-tarball-uri<span class="w"> </span>https://osrf-distributions.s3.amazonaws.com/gz-cmake/releases/gz-cmake-3.0.1.tar.bz2<span class="w"> </span>--only-bump-revision-linux<span class="w"> </span>-release-version<span class="w"> </span><span class="m">2</span>
 </pre></div>
 </div>
 </section>
@@ -763,6 +771,59 @@ and <a class="reference external" href="https://github.com/gazebo-release/gz-too
 For further details, see the <a class="reference external" href="https://github.com/osrf/homebrew-simulation#to-build-bottles">README at osrf/homebrew-simulation</a>.</p></li>
 </ol>
 </li>
+<li><p>A pull request was opened to
+<a class="github reference external" href="https://github.com/gazebo-release/$VENDOR_PACKAGE/">gazebo-release/$VENDOR_PACKAGE</a>, where
+<code class="docutils literal notranslate"><span class="pre">$VENDOR_PACKAGE</span></code> is the name of the Gazebo vendor package for ROS (see
+<a class="reference external" href="https://gazebosim.org/docs/latest/ros2_gz_vendor_pkgs/">https://gazebosim.org/docs/latest/ros2_gz_vendor_pkgs/</a>)</p>
+<ol class="arabic simple">
+<li><p>Ensure that the ROS CI build passes. Note that some builds have
+warnings which show up as failures on the Github UI while the build
+actually succeeded.</p></li>
+<li><p>For packages that are considered to be part of ROS core
+(<code class="docutils literal notranslate"><span class="pre">gz_cmake_vendor</span></code>, <code class="docutils literal notranslate"><span class="pre">gz_utils_vendor</span></code>, and <code class="docutils literal notranslate"><span class="pre">gz_math_vendor</span></code>), start
+additional CI tests using <a class="reference external" href="http://ci.ros2.org">ci.ros2.org</a> to build and test all ROS core
+packages that depend on these Gazebo vendor packages.</p>
+<ul class="simple">
+<li><p>To do so, start a new <a class="reference external" href="https://ci.ros2.org/job/ci_launcher/"><code class="docutils literal notranslate"><span class="pre">ci_launcher</span></code></a> build with the
+following parameters:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">CI_BRANCH_TO_TEST</span></code>: branch name of the PR (e.g. <code class="docutils literal notranslate"><span class="pre">releasepy/rolling/3.1.1</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CI_ROS2_REPOS_URL</span></code>: If the vendor package is going to <code class="docutils literal notranslate"><span class="pre">rolling</span></code>,
+this can be skipped, otherwise use <code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/ros2/ros2/$ROSDISTRO/ros2.repos</span></code>
+where <code class="docutils literal notranslate"><span class="pre">$ROSDISTRO</span></code> is replaced by the target ROS distribution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CI_UBUNTU_DISTRO</span></code>: Pick the Ubuntu distro that matches the target ROS distribution</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CI_ROS_DISTRO</span></code>: The target ROS distribution. For Harmonic this is <code class="docutils literal notranslate"><span class="pre">jazzy</span></code>, for Ionic this is <code class="docutils literal notranslate"><span class="pre">rolling</span></code> until <code class="docutils literal notranslate"><span class="pre">kilted</span></code> is released.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CI_BUILD_ARGS</span></code>: <code class="docutils literal notranslate"><span class="pre">--event-handlers</span> <span class="pre">console_cohesion+</span> <span class="pre">console_package_list+</span> <span class="pre">--cmake-args</span> <span class="pre">-DINSTALL_EXAMPLES=OFF</span> <span class="pre">-DSECURITY=ON</span> <span class="pre">-DAPPEND_PROJECT_NAME_TO_INCLUDEDIR=ON</span>&#160; <span class="pre">--packages-above-and-dependencies</span> <span class="pre">$VENDOR_PACKAGE</span></code> where <code class="docutils literal notranslate"><span class="pre">$VENDOR_PACKAGE</span></code> is the name of the Gazebo vendor package.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CI_TEST_ARGS</span></code>: <code class="docutils literal notranslate"><span class="pre">--event-handlers</span> <span class="pre">console_cohesion+</span> <span class="pre">--retest-until-pass</span> <span class="pre">2</span> <span class="pre">--ctest-args</span> <span class="pre">-LE</span> <span class="pre">xfail</span> <span class="pre">--pytest-args</span> <span class="pre">-m</span> <span class="pre">'not</span> <span class="pre">xfail'</span> <span class="pre">--executor</span> <span class="pre">sequential</span> <span class="pre">--packages-above</span> <span class="pre">$VENDOR_PACKAGE</span></code> where <code class="docutils literal notranslate"><span class="pre">$VENDOR_PACKAGE</span></code> is the name of the Gazebo vendor package.</p></li>
+</ul>
+</li>
+<li><p>Note: you might have to ask the Infrastructure team to get
+permission to run builds on <a class="reference external" href="http://ci.ros2.org">ci.ros2.org</a>.</p></li>
+</ul>
+</li>
+<li><p>Once all of CI builds are successful, merge the PR</p></li>
+<li><p>Make sure you have the required permission by checking
+<a class="github reference external" href="https://github.com/ros2-gbp/ros2-gbp-github-org/blob/latest/gazebo.tf">ros2-gbp/ros2-gbp-github-org</a>.
+If your username is not there, follow
+<a class="reference external" href="https://docs.ros.org/en/rolling/How-To-Guides/Releasing/Release-Team-Repository.html#join-a-release-team">these instructions</a>
+to get added to the release team.</p></li>
+<li><p>Follow the steps of releasing a ROS package to release the vendor
+package
+<a class="reference external" href="https://docs.ros.org/en/rolling/How-To-Guides/Releasing/Subsequent-Releases.html">https://docs.ros.org/en/rolling/How-To-Guides/Releasing/Subsequent-Releases.html</a></p>
+<ul class="simple">
+<li><p>Bump patch versions if the package has already been released for
+the target ROS distribution. This is almost always what you want
+to do.</p></li>
+<li><p>Bump minor version only if the package is being released into
+<code class="docutils literal notranslate"><span class="pre">rolling</span></code> and if the release happens immediately after a new ROS
+distribution has been branched off of <code class="docutils literal notranslate"><span class="pre">rolling</span></code>. The intention
+here is that all release branches (e.g. <code class="docutils literal notranslate"><span class="pre">jazzy</span></code>, <code class="docutils literal notranslate"><span class="pre">kilted</span></code>,
+<code class="docutils literal notranslate"><span class="pre">rolling</span></code>, etc.) have distinct minor version numbers.</p></li>
+<li><p>Never bump the major version number.</p></li>
+</ul>
+</li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
@@ -780,7 +841,8 @@ For further details, see the <a class="reference external" href="https://github.
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -839,8 +901,8 @@ For further details, see the <a class="reference external" href="https://github.
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -850,7 +912,7 @@ For further details, see the <a class="reference external" href="https://github.
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
@@ -862,8 +924,8 @@ For further details, see the <a class="reference external" href="https://github.
       
         <div class="footer-item"><p> Brought to you by <a href="https://openrobotics.org">Open Robotics</a>. </p>
 <p> Except where otherwise noted, the gazebosim.org web pages are licensed under <a
-    href="https://creativecommons.org/licenses/by/3.0/us/">Creative Commons
-    Attribution 3.0</a>. </p></div>
+    href="https://creativecommons.org/licenses/by/4.0/us/">Creative Commons
+    Attribution 4.0</a>. </p></div>
       
     </div>
   
@@ -872,7 +934,8 @@ For further details, see the <a class="reference external" href="https://github.
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

@@ -1,8 +1,6 @@
 # Gazebo Harmonic
 
-Up to Harmonic's release date, the collection should be considered unstable.
-
-Gazebo Harmonic will be the 8th major release of Gazebo. It will be a
+Gazebo Harmonic is the 8th major release of Gazebo. It is a
 long-term release.
 
 ## Binary installation instructions
@@ -49,9 +47,6 @@ This list of library versions may change up to the release date.
 
 ## Supported platforms
 
-Harmonic is planned to be [supported](/docs/all/releases) on the platforms below.
-This list may change up to the release date.
-
 These are the **officially** supported platforms:
 
 * Ubuntu Jammy on amd64
@@ -61,6 +56,7 @@ Platforms supported at **best-effort** include arm architectures, Windows and
 macOS. See
 [this ticket](https://github.com/gazebo-tooling/release-tools/issues/597)
 for the full status.
+
 ```{toctree}
 :hidden:
 :maxdepth: 1

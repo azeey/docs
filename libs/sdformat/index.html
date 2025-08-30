@@ -8,6 +8,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKS50SX85K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JKS50SX85K');
+    </script>
+    
     <title>sdformat &#8212; Gazebo  documentation</title>
   
   
@@ -16,42 +25,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=12e630a0" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=173bdbe0" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=187304be"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'sdformat/index';</script>
-    <link rel="canonical" href="https://addisu.taddese.com/docs/libssdformat/" />
+    <link rel="canonical" href="https://addisu.taddese.com/docs/libs/sdformat/" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
     <link rel="prev" title="utils" href="../utils/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -67,19 +80,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search/"
       method="get">
@@ -87,7 +89,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -95,8 +96,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -132,7 +133,7 @@
     
     
     <img src="../_static/gazebo_horz_pos.svg" class="logo__image only-light" alt="Gazebo  documentation - Home"/>
-    <script>document.write(`<img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark" alt="Gazebo  documentation - Home"/>`);</script>
+    <img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark pst-js-only" alt="Gazebo  documentation - Home"/>
   
   
 </a></div>
@@ -171,29 +172,21 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
       
@@ -204,15 +197,11 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -239,7 +228,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -279,15 +269,11 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
         
@@ -323,9 +309,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -343,8 +334,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -353,7 +342,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">sdformat</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">sdformat</span></li>
   </ul>
 </nav>
 </div>
@@ -380,7 +369,7 @@ document.write(`
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 Readme</label><div class="sd-tab-content docutils">
-<h1 class="rubric" id="id1">sdformat</h1>
+<p class="rubric" id="id1">sdformat</p>
 <p><a class="reference external" href="https://github.com/gazebosim/sdformat/issues"><img alt="GitHub open issues" src="https://img.shields.io/github/issues-raw/gazebosim/sdformat.svg" /></a>
 <a class="reference external" href="https://github.com/gazebosim/sdformat/pulls"><img alt="GitHub open pull requests" src="https://img.shields.io/github/issues-pr-raw/gazebosim/sdformat.svg" /></a>
 <a class="reference external" href="https://community.gazebosim.org"><img alt="Discourse topics" src="https://img.shields.io/discourse/https/community.gazebosim.org/topics.svg" /></a>
@@ -396,16 +385,16 @@ Note: The branch name in the codecov URL & library version should be updated whe
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Test coverage</p></td>
-<td><p><a class="reference external" href="https://codecov.io/gh/gazebosim/sdformat/tree/sdf14"><img alt="codecov" src="https://codecov.io/gh/gazebosim/sdformat/tree/sdf14/graph/badge.svg" /></a></p></td>
+<td><p><a class="reference external" href="https://codecov.io/gh/gazebosim/sdformat/tree/sdf15"><img alt="codecov" src="https://codecov.io/gh/gazebosim/sdformat/tree/sdf15/graph/badge.svg" /></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Ubuntu Jammy</p></td>
-<td><p><a class="reference external" href="https://build.osrfoundation.org/job/sdformat-ci-sdf14-jammy-amd64"><img alt="Build Status" src="https://build.osrfoundation.org/buildStatus/icon?job=sdformat-ci-sdf14-jammy-amd64" /></a></p></td>
+<td><p><a class="reference external" href="https://build.osrfoundation.org/job/sdformat-ci-sdf15-noble-amd64"><img alt="Build Status" src="https://build.osrfoundation.org/buildStatus/icon?job=sdformat-ci-sdf15-noble-amd64" /></a></p></td>
 </tr>
 <tr class="row-even"><td><p>Homebrew</p></td>
-<td><p><a class="reference external" href="https://build.osrfoundation.org/job/sdformat-ci-sdf14-homebrew-amd64"><img alt="Build Status" src="https://build.osrfoundation.org/buildStatus/icon?job=sdformat-ci-sdf14-homebrew-amd64" /></a></p></td>
+<td><p><a class="reference external" href="https://build.osrfoundation.org/job/sdformat-ci-sdf15-homebrew-amd64"><img alt="Build Status" src="https://build.osrfoundation.org/buildStatus/icon?job=sdformat-ci-sdf15-homebrew-amd64" /></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Windows</p></td>
-<td><p><a class="reference external" href="https://build.osrfoundation.org/job/sdformat-sdf14-win"><img alt="Build Status" src="https://build.osrfoundation.org/buildStatus/icon?job=sdformat-sdf14-win" /></a></p></td>
+<td><p><a class="reference external" href="https://build.osrfoundation.org/job/sdformat-sdf15-clowin"><img alt="Build Status" src="https://build.osrfoundation.org/buildStatus/icon?job=sdformat-sdf15-clowin" /></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -416,7 +405,7 @@ and describing different physic engines, lighting properties, terrain, static
 or dynamic objects, and articulated robots with various sensors, and actuators.
 The format of SDFormat is also described by XML, which facilitates updates and
 allows conversion from previous versions.</p>
-<h2 class="rubric" id="documentation">Documentation</h2>
+<p class="rubric" id="documentation">Documentation</p>
 <p>See the <a class="reference external" href="http://sdformat.org/">SDFormat Website</a> for a more comprehensive
 description of the specification, proposals for modifications, developer
 information, etc.
@@ -427,7 +416,7 @@ TODO(eric.cousineau): Move installation instructions to sdf_tutorials, and link
 there?
 TODO(eric.cousineau): Move terminology section to sdf_tutorials?
 -->
-<h2 class="rubric" id="terminology">Terminology</h2>
+<p class="rubric" id="terminology">Terminology</p>
 <ul class="simple">
 <li><p><strong>SDFormat</strong> - The specification.</p>
 <ul>
@@ -439,11 +428,11 @@ TODO(eric.cousineau): Move terminology section to sdf_tutorials?
 which can be used to read SDFormat files and return a C++ interface.</p></li>
 </ul>
 <p><a class="reference external" href="http://sdformat.org/">http://sdformat.org/</a></p>
-<h1 class="rubric" id="installation">Installation</h1>
+<p class="rubric" id="installation">Installation</p>
 <p>We recommend following the Binary Installation instructions to get up and running as quickly and painlessly as possible.</p>
 <p>The Source Installation instructions should be used if you need the very latest software improvements, you need to modify the code, or you plan to make a contribution.</p>
-<h2 class="rubric" id="binary-installation">Binary Installation</h2>
-<h3 class="rubric" id="ubuntu">Ubuntu</h3>
+<p class="rubric" id="binary-installation">Binary Installation</p>
+<p class="rubric" id="ubuntu">Ubuntu</p>
 <p>On Ubuntu systems, <code class="docutils literal notranslate"><span class="pre">apt-get</span></code> can be used to install <code class="docutils literal notranslate"><span class="pre">sdformat</span></code>:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main&quot; &gt; /etc/apt/sources.list.d/gazebo-stable.list&#39;</span>
 wget<span class="w"> </span>http://packages.osrfoundation.org/gazebo.key<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
@@ -452,21 +441,21 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libsdformat&lt;<span class="c1">#&gt;-dev libsdformat&lt;#&gt;</span>
 </pre></div>
 </div>
-<p>Be sure to replace <code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> with a number value, such as 2 or 3, depending on
+<p>Be sure to replace <code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> with a number value, such as 14 or 15, depending on
 which version you need, or leave it empty for version 1.</p>
-<h3 class="rubric" id="macos">macOS</h3>
-<p>On macOS, add OSRF packages:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
-brew<span class="w"> </span>tap<span class="w"> </span>osrf/simulation
+<p class="rubric" id="macos">macOS</p>
+<p>On macOS, after installing the <a class="reference external" href="https://brew.sh">Homebrew package manager</a>,
+add OSRF packages:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>tap<span class="w"> </span>osrf/simulation
 </pre></div>
 </div>
 <p>Install sdformat:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>sdformat&lt;<span class="c1">#&gt;</span>
 </pre></div>
 </div>
-<p>Be sure to replace <code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> with a number value, such as 1 or 2, depending on
+<p>Be sure to replace <code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> with a number value, such as 14 or 15, depending on
 which version you need.</p>
-<h3 class="rubric" id="windows">Windows</h3>
+<p class="rubric" id="windows">Windows</p>
 <p>Install <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html">Conda package management system</a>.
 Miniconda suffices.</p>
 <p>Create if necessary, and activate a Conda environment:</p>
@@ -486,19 +475,32 @@ Miniconda suffices.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">libsdformat</span><span class="o">=</span><span class="mf">12.5.0</span> <span class="o">--</span><span class="n">channel</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
 </pre></div>
 </div>
-<h2 class="rubric" id="source-installation">Source Installation</h2>
-<p><strong>Note:</strong> the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch is under development for <code class="docutils literal notranslate"><span class="pre">libsdformat14</span></code> and is
+<p class="rubric" id="source-installation">Source Installation</p>
+<p><strong>Note:</strong> the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch is under development for <code class="docutils literal notranslate"><span class="pre">libsdformat15</span></code> and is
 currently unstable. A release branch (<code class="docutils literal notranslate"><span class="pre">sdf12</span></code>, <code class="docutils literal notranslate"><span class="pre">sdf11</span></code>, <code class="docutils literal notranslate"><span class="pre">sdf10</span></code>, <code class="docutils literal notranslate"><span class="pre">sdf9</span></code>, etc.)
 is recommended for most users.</p>
-<h2 class="rubric" id="unix">UNIX</h2>
-<h3 class="rubric" id="prerequisites">Prerequisites</h3>
+<p class="rubric" id="unix">UNIX</p>
+<p class="rubric" id="prerequisites">Prerequisites</p>
 <p>Clone the repository</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/gazebosim/sdformat<span class="w"> </span>-b<span class="w"> </span>sdf&lt;<span class="c1">#&gt;</span>
 </pre></div>
 </div>
-<p>Be sure to replace <code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> with a number value, such as 1 or 2, depending on
+<p>Be sure to replace <code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> with a number value, such as 14 or 15, depending on
 which version you need.</p>
-<h3 class="rubric" id="build-from-source">Build from Source</h3>
+<p class="rubric" id="install-dependencies">Install dependencies</p>
+<p class="rubric" id="id2">Ubuntu</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>sdformat
+sudo<span class="w"> </span>apt<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="k">$(</span>sort<span class="w"> </span>-u<span class="w"> </span><span class="k">$(</span>find<span class="w"> </span>.<span class="w"> </span>-iname<span class="w"> </span><span class="s1">&#39;packages-&#39;</span><span class="sb">`</span>lsb_release<span class="w"> </span>-cs<span class="sb">`</span><span class="s1">&#39;.apt&#39;</span><span class="w"> </span>-o<span class="w"> </span>-iname<span class="w"> </span><span class="s1">&#39;packages.apt&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="k">))</span>
+</pre></div>
+</div>
+<p class="rubric" id="id3">macOS</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>--only-dependencies<span class="w"> </span>sdformat&lt;<span class="c1">#&gt;</span>
+</pre></div>
+</div>
+<p>Be sure to replace <code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> with a number value, such as 14 or 15, depending on
+which version you need.</p>
+<p class="rubric" id="build-from-source">Build from Source</p>
 <p>Standard installation can be performed in UNIX systems using the following
 steps:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>sdformat
@@ -509,56 +511,59 @@ make<span class="w"> </span>install
 </pre></div>
 </div>
 <p>sdformat supported cmake parameters at configuring time:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">USE_INTERNAL_URDF</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) [default <code class="docutils literal notranslate"><span class="pre">False</span></code>] <br/>
-Use an internal copy of urdfdom 1.0.0 instead of look for one
-installed in the system</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">USE_UPSTREAM_CFLAGS</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) [default <code class="docutils literal notranslate"><span class="pre">True</span></code>] <br/>
-Use the sdformat team compilation flags instead of the common set defined
-by cmake.</p></li>
-</ul>
-<h2 class="rubric" id="uninstallation">Uninstallation</h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SKIP_PYBIND11</span></code></p></td>
+<td><p>BOOL</p></td>
+<td><p>False</p></td>
+<td><p>Skip generating Python bindings via pybind11</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">USE_INTERNAL_URDF</span></code></p></td>
+<td><p>BOOL</p></td>
+<td><p>False</p></td>
+<td><p>Use an internal copy of urdfdom 1.0.0 instead of looking for one installed in the system</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">USE_UPSTREAM_CFLAGS</span></code></p></td>
+<td><p>BOOL</p></td>
+<td><p>True</p></td>
+<td><p>Use the sdformat team compilation flags instead of the common set defined by cmake.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric" id="build-python-bindings-separately-from-main-library">Build python bindings separately from main library</p>
+<p>If you want to build Python bindings separately from the main libsdformat library
+(for example if you want to build Python bindings for multiple versions of Python),
+you can invoke cmake on the <code class="docutils literal notranslate"><span class="pre">python</span></code> folder instead of the root folder.
+Specify the path to the python executable with which you wish to build bindings
+in the <code class="docutils literal notranslate"><span class="pre">Python3_EXECUTABLE</span></code> cmake variable.
+Specify the install path for the bindings in the <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code>
+variable, and be sure to set your <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> accordingly after install.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>sdformat
+mkdir<span class="w"> </span>build_python3
+<span class="nb">cd</span><span class="w"> </span>build_python3
+cmake<span class="w"> </span>../python<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DPython3_EXECUTABLE<span class="o">=</span>/usr/local/bin/python3.12<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>&lt;prefix&gt;
+</pre></div>
+</div>
+<p>See the homebrew <a class="reference external" href="https://github.com/osrf/homebrew-simulation/blob/027d06f5be49da1e40d01180aedae7f76dc7ff47/Formula/sdformat15.rb#L12-L56">sdformat15 formula</a>
+for an example of building bindings for multiple versions of Python.</p>
+<p class="rubric" id="uninstallation">Uninstallation</p>
 <p>To uninstall the software installed with the previous steps:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>build
 make<span class="w"> </span>uninstall
 </pre></div>
 </div>
-<h2 class="rubric" id="id2">macOS</h2>
-<h3 class="rubric" id="id3">Prerequisites</h3>
-<p>Clone the repository</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/gazebosim/sdformat<span class="w"> </span>-b<span class="w"> </span>sdf&lt;<span class="c1">#&gt;</span>
-</pre></div>
-</div>
-<p>Be sure to replace <code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> with a number value, such as 1 or 2, depending on
-which version you need.</p>
-<p>Install dependencies</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>--only-dependencies<span class="w"> </span>sdformat&lt;<span class="c1">#&gt;</span>
-</pre></div>
-</div>
-<h3 class="rubric" id="id4">Build from Source</h3>
-<ol class="arabic simple">
-<li><p>Configure and build</p></li>
-</ol>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>sdformat
-mkdir<span class="w"> </span>build
-<span class="nb">cd</span><span class="w"> </span>build
-cmake<span class="w"> </span>..<span class="w"> </span><span class="c1"># Consider specifying -DCMAKE_INSTALL_PREFIX=...</span>
-make
-</pre></div>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>Optionally, install and uninstall</p></li>
-</ol>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>make<span class="w"> </span>install
-</pre></div>
-</div>
-<p>To uninstall the software installed with the previous steps:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>build/
-sudo<span class="w"> </span>make<span class="w"> </span>uninstall
-</pre></div>
-</div>
-<h2 class="rubric" id="id5">Windows</h2>
-<h3 class="rubric" id="id6">Prerequisites</h3>
+<p class="rubric" id="id4">Windows</p>
+<p class="rubric" id="id5">Prerequisites</p>
 <p>Install <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html">Conda package management system</a>.
 Miniconda suffices.</p>
 <p>Create if necessary, and activate a Conda environment:</p>
@@ -567,41 +572,468 @@ Miniconda suffices.</p>
 </pre></div>
 </div>
 <p>Install prerequisites:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">tinyxml2</span> <span class="n">urdfdom</span> <span class="o">--</span><span class="n">channel</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">cmake</span> <span class="n">git</span> <span class="n">vcstool</span> <span class="n">colcon</span><span class="o">-</span><span class="n">common</span><span class="o">-</span><span class="n">extensions</span> <span class="o">^</span>
+<span class="n">tinyxml2</span> <span class="n">urdfdom</span> <span class="n">pybind11</span> <span class="o">-</span><span class="n">channel</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
 </pre></div>
 </div>
-<p>Install Gazebo dependencies:</p>
-<p>You can view lists of dependencies:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">search</span> <span class="n">libsdformat</span> <span class="o">--</span><span class="n">channel</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">--</span><span class="n">info</span>
-</pre></div>
-</div>
-<p>Install dependencies, replacing <code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> with the desired versions:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">libgz</span><span class="o">-</span><span class="n">cmake</span><span class="o">&lt;</span><span class="c1">#&gt; libgz-math&lt;#&gt; libgz-tools&lt;#&gt; libgz-utils&lt;#&gt; --channel conda-forge</span>
-</pre></div>
-</div>
-<h3 class="rubric" id="id7">Build from Source</h3>
-<p>This assumes you have created and activated a Conda environment while installing the Prerequisites.</p>
+<p class="rubric" id="getting-the-sources-and-building-from-source">Getting the sources and building from Source</p>
+<p>Be sure to replace <code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> with a number value, such as 14 or 15, depending on
+which version you need.</p>
 <ol class="arabic simple">
-<li><p>Configure and build</p></li>
+<li><p>Getting the sources</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build</span>
-<span class="n">cd</span> <span class="n">build</span>
-<span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">DBUILD_TESTING</span><span class="o">=</span><span class="n">OFF</span>  <span class="c1"># Optionally, -DCMAKE_INSTALL_PREFIX=path\to\install</span>
-<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">ws</span>\<span class="n">src</span>
+<span class="n">cd</span> <span class="n">ws</span>
+<span class="n">vcs</span> <span class="kn">import</span><span class="w"> </span><span class="nn">src</span> <span class="o">--</span><span class="nb">input</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">gazebo</span><span class="o">-</span><span class="n">tooling</span><span class="o">/</span><span class="n">gazebodistro</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">sdformat</span><span class="o">&lt;</span><span class="c1">#&gt;.yaml</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Install</p></li>
+<li><p>Build from source</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">--</span><span class="n">install</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span>
+<p>Note: the Gazebo library dependencies are going to be compiled from source
+with sdformat although it should be possible to install them from
+conda-forge on stable Gazebo releases using the standard conda install
+command.</p>
+<p>Build the gazebo libraries needed as dependencies (skip testing to speed up the compilation)
+using the <a class="reference external" href="https://colcon.readthedocs.io/en/released/">colcon</a> tool:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">colcon</span> <span class="n">build</span> <span class="o">--</span><span class="n">cmake</span><span class="o">-</span><span class="n">args</span> <span class="o">-</span><span class="n">DBUILD_TESTING</span><span class="o">=</span><span class="n">OFF</span> <span class="o">--</span><span class="n">merge</span><span class="o">-</span><span class="n">install</span> <span class="o">--</span><span class="n">packages</span><span class="o">-</span><span class="n">skip</span> <span class="n">sdformat</span><span class="o">&lt;</span><span class="c1">#&gt;</span>
+</pre></div>
+</div>
+<p>Build sdformat with its test suite:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">colcon</span> <span class="n">build</span> <span class="o">--</span><span class="n">cmake</span><span class="o">-</span><span class="n">args</span> <span class="o">-</span><span class="n">DBUILD_TESTING</span><span class="o">=</span><span class="n">ON</span> <span class="o">--</span><span class="n">merge</span><span class="o">-</span><span class="n">install</span> <span class="o">--</span><span class="n">packages</span><span class="o">-</span><span class="n">select</span> <span class="n">sdformat</span><span class="o">&lt;</span><span class="c1">#&gt;</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 Changelog</label><div class="sd-tab-content docutils">
-<h2 class="rubric" id="libsdformat-14-x">libsdformat 14.X</h2>
-<h3 class="rubric" id="libsdformat-14-4-0-2024-06-20">libsdformat 14.4.0 (2024-06-20)</h3>
+<p class="rubric" id="libsdformat-15-x">libsdformat 15.X</p>
+<p class="rubric" id="libsdformat-15-3-0-2025-05-16">libsdformat 15.3.0 (2025-05-16)</p>
+<ol class="arabic simple">
+<li><p>Allow camera HFOV lower than 0.5°</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1563">Pull request #1563</a></p></li>
+</ul>
+</li>
+<li><p>Add AxisAlignedBox getters for all relevant geometries</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1547">Pull request #1547</a></p></li>
+</ul>
+</li>
+<li><p>ci: enable doxygen check on noble</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1559">Pull request #1559</a></p></li>
+</ul>
+</li>
+<li><p>Fix some cmake logic related to python</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1557">Pull request #1557</a></p></li>
+</ul>
+</li>
+<li><p>Test building python bindings in macOS</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1556">Pull request #1556</a></p></li>
+</ul>
+</li>
+<li><p>Test building python bindings in CI</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1555">Pull request #1555</a></p></li>
+</ul>
+</li>
+<li><p>Fix Crash On Negative Value</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1553">Pull request #1553</a></p></li>
+</ul>
+</li>
+<li><p>Code cleanup</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1552">Pull request #1552</a></p></li>
+</ul>
+</li>
+<li><p>Standalone <code class="docutils literal notranslate"><span class="pre">gz</span> <span class="pre">sdf</span></code> executable</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1539">Pull request #1539</a></p></li>
+</ul>
+</li>
+<li><p>Improve error messages when <a class="reference external" href="http://embedSdf.py">embedSdf.py</a> fails</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1549">Pull request #1549</a></p></li>
+</ul>
+</li>
+<li><p>Check proper creation of <a class="reference external" href="http://EmbeddedSdf.cc">EmbeddedSdf.cc</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1536">Pull request #1536</a></p></li>
+</ul>
+</li>
+<li><p>Build sdformattest pybind11 library as MODULE</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1544">Pull request #1544</a></p></li>
+</ul>
+</li>
+<li><p>Add policy for handling CalculateInertial failures</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1543">Pull request #1543</a></p></li>
+</ul>
+</li>
+<li><p>Unify Python3_Development_FOUND checks</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1541">Pull request #1541</a></p></li>
+</ul>
+</li>
+<li><p>bazel: switch to globbed targets</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1540">Pull request #1540</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="libsdformat-15-2-0-2025-02-12">libsdformat 15.2.0 (2025-02-12)</p>
+<ol class="arabic simple">
+<li><p>Add entry to Migration guide about the updated auto-inertia behavior</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1528">Pull request #1528</a></p></li>
+</ul>
+</li>
+<li><p>Add missed spec version 1.12 in the sdf_descriptions target</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1529">Pull request #1529</a></p></li>
+</ul>
+</li>
+<li><p>Resolve auto inertia based on input mass</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1513">Pull request #1513</a></p></li>
+</ul>
+</li>
+<li><p>ci.yml: run cppcheck, cpplint on noble</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1521">Pull request #1521</a></p></li>
+</ul>
+</li>
+<li><p>Add non-const overload for Root::Model() getter</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1524">Pull request #1524</a></p></li>
+</ul>
+</li>
+<li><p>Remove unnecessary <iostream> includes</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1523">Pull request #1523</a></p></li>
+</ul>
+</li>
+<li><p>Don’t reparse parent elements when cloning.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1484">Pull request #1484</a></p></li>
+</ul>
+</li>
+<li><p>python bindings: get version from package.xml</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1504">Pull request #1504</a></p></li>
+</ul>
+</li>
+<li><p>Permit to test when building bindings separately from main library</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1509">Pull request #1509</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="libsdformat-15-1-1-2024-11-15">libsdformat 15.1.1 (2024-11-15)</p>
+<ol class="arabic simple">
+<li><p><strong>Baseline:</strong> this includes all changes from 15.1.0 and earlier.</p></li>
+<li><p>Fix bazel rules for layering_check and parse_headers with clang</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1507">Pull request #1507</a></p></li>
+</ul>
+</li>
+<li><p>Enable header layering checks for bazel build</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1505">Pull request #1505</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="libsdformat-15-1-0-2024-11-13">libsdformat 15.1.0 (2024-11-13)</p>
+<ol class="arabic simple">
+<li><p>Bazel CI</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1500">Pull request #1500</a></p></li>
+</ul>
+</li>
+<li><p>Add bzlmod support to sdf15</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1493">Pull request #1493</a></p></li>
+</ul>
+</li>
+<li><p>Support removing the actor, light, or model from the root</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1492">Pull request #1492</a></p></li>
+</ul>
+</li>
+<li><p>Only look for psutil if testing is enabled</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1495">Pull request #1495</a></p></li>
+</ul>
+</li>
+<li><p>Improve installation instructions</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1496">Pull request #1496</a></p></li>
+</ul>
+</li>
+<li><p>Permit building python bindings separately from libsdformat library</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1491">Pull request #1491</a></p></li>
+</ul>
+</li>
+<li><p>Change sdf_config.h to sdf/config.hh everywhere</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1494">Pull request #1494</a></p></li>
+</ul>
+</li>
+<li><p>Improve installation instructions</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1490">Pull request #1490</a></p></li>
+</ul>
+</li>
+<li><p>Fix symbol checking test when compiled with debug symbols</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1474">Pull request #1474</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="libsdformat-15-0-0-2024-09-25">libsdformat 15.0.0 (2024-09-25)</p>
+<ol class="arabic simple">
+<li><p><strong>Baseline:</strong> this includes all changes from 14.5.0 and earlier.</p></li>
+<li><p>Use colcon for Windows building compilation</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1481">Pull request #1481</a></p></li>
+</ul>
+</li>
+<li><p>Spec 1.12: link_state, joint_state changes</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1461">Pull request #1461</a></p></li>
+</ul>
+</li>
+<li><p>Fix symbol checking test when compiled with debug symbols</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1474">Pull request #1474</a></p></li>
+</ul>
+</li>
+<li><p>README: update badges for sdf15</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1472">Pull request #1472</a></p></li>
+</ul>
+</li>
+<li><p>Ionic Changelog</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1471">Pull request #1471</a></p></li>
+</ul>
+</li>
+<li><p>Spec 1.12: add <code class="docutils literal notranslate"><span class="pre">_state</span></code> suffix to //state subelements</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1455">Pull request #1455</a></p></li>
+</ul>
+</li>
+<li><p>Add optional binary relocatability</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1414">Pull request #1414</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1468">Pull request #1468</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1469">Pull request #1469</a></p></li>
+</ul>
+</li>
+<li><p>FrameSemantics: fix NullVertex warnings</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1460">Pull request #1460</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1459">Pull request #1459</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1458">Pull request #1458</a></p></li>
+</ul>
+</li>
+<li><p>Remove deprecated APIs</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1456">Pull request #1456</a></p></li>
+</ul>
+</li>
+<li><p>Spec 1.12: add <code class="docutils literal notranslate"><span class="pre">//sensor/frame_id</span></code></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1454">Pull request #1454</a></p></li>
+</ul>
+</li>
+<li><p>Disable latex and class hierarchy generation</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1447">Pull request #1447</a></p></li>
+</ul>
+</li>
+<li><p>Print auto inertial values with <code class="docutils literal notranslate"><span class="pre">gz</span> <span class="pre">sdf</span> <span class="pre">--print</span> <span class="pre">--expand-auto-inertials</span></code></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1422">Pull request #1422</a></p></li>
+</ul>
+</li>
+<li><p>Add cone shape to SDFormat spec</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1418">Pull request #1418</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1434">Pull request #1434</a></p></li>
+</ul>
+</li>
+<li><p>Enable 24.04 CI, remove distutils dependency</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1408">Pull request #1408</a></p></li>
+</ul>
+</li>
+<li><p>Change behavior of <code class="docutils literal notranslate"><span class="pre">Param::Get&lt;bool&gt;</span></code></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1397">Pull request #1397</a></p></li>
+</ul>
+</li>
+<li><p>Parse kinematic property in Link, expand spec documentation of property</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1390">Pull request #1390</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1399">Pull request #1399</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1462">Pull request #1462</a></p></li>
+</ul>
+</li>
+<li><p>Spec 1.11+: add <code class="docutils literal notranslate"><span class="pre">//mesh/&#64;optimization</span></code>, <code class="docutils literal notranslate"><span class="pre">//mesh/convex_decomposition</span></code></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1382">Pull request #1382</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1386">Pull request #1386</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1403">Pull request #1403</a></p></li>
+</ul>
+</li>
+<li><p>Copy 1.11 spec to 1.12 for libsdformat15</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1375">Pull request #1375</a></p></li>
+</ul>
+</li>
+<li><p>Fix find Python3 logic and macOS workflow</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1367">Pull request #1367</a></p></li>
+</ul>
+</li>
+<li><p>Remove <code class="docutils literal notranslate"><span class="pre">HIDE_SYMBOLS_BY_DEFAULT</span></code>: replace by a default configuration in gz-cmake.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1355">Pull request #1355</a></p></li>
+</ul>
+</li>
+<li><p>Dependency version bumps in ionic: use gz-cmake4, gz-utils3, gz-math8</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1340">Pull request #1340</a></p></li>
+</ul>
+</li>
+<li><p>Bump major version to 15</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1338">Pull request #1338</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="libsdformat-14-x">libsdformat 14.X</p>
+<p class="rubric" id="libsdformat-14-8-0-2025-07-02">libsdformat 14.8.0 (2025-07-02)</p>
+<ol class="arabic simple">
+<li><p>Improve error messages when <a class="reference external" href="http://embedSdf.py">embedSdf.py</a> fails</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1550">Pull request #1550</a></p></li>
+</ul>
+</li>
+<li><p>Add AxisAlignedBox getters for all relevant geometries</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1547">Pull request #1547</a></p></li>
+</ul>
+</li>
+<li><p>Unify Python3_Development_FOUND checks</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1541">Pull request #1541</a></p></li>
+</ul>
+</li>
+<li><p>Add policy for handling CalculateInertial failures</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1543">Pull request #1543</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="libsdformat-14-7-0-2025-01-30">libsdformat 14.7.0 (2025-01-30)</p>
+<ol class="arabic simple">
+<li><p>Resolve auto inertia based on input mass</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1513">Pull request #1513</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1530">Pull request #1530</a></p></li>
+</ul>
+</li>
+<li><p>Print auto inertial values with gz sdf –print –expand-auto-inertials</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1422">Pull request #1422</a></p></li>
+</ul>
+</li>
+<li><p>Only look for psutil if testing is enabled</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1495">Pull request #1495</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="libsdformat-14-6-0-2024-11-18">libsdformat 14.6.0 (2024-11-18)</p>
+<ol class="arabic simple">
+<li><p>Support removing the actor, light, or model from the root.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1492">Pull request #1492</a></p></li>
+</ul>
+</li>
+<li><p>Backport: Permit building python bindings separately from libsdformat library.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1497">Pull request #1497</a></p></li>
+</ul>
+</li>
+<li><p>Backport: Improve installation instructions.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1496">Pull request #1496</a></p></li>
+</ul>
+</li>
+<li><p>Backport: Fix symbol checking test when compiled with debug symbols.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1476">Pull request #1476</a></p></li>
+</ul>
+</li>
+<li><p>Update joinPaths implementation in InstallationDirectories.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1469">Pull request #1469</a></p></li>
+</ul>
+</li>
+<li><p>Decouple linking to shlwapi from <code class="docutils literal notranslate"><span class="pre">BUILD_TESTING</span></code>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1468">Pull request #1468</a></p></li>
+</ul>
+</li>
+<li><p>Add optional binary relocatability.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1414">Pull request #1414</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="libsdformat-14-5-0-2024-08-05">libsdformat 14.5.0 (2024-08-05)</p>
+<ol class="arabic simple">
+<li><p>Adding Errors structure to XmlUtils</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1296">Pull request #1296</a></p></li>
+</ul>
+</li>
+<li><p>Disable latex and class hierarchy generation</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1447">Pull request #1447</a></p></li>
+</ul>
+</li>
+<li><p>Added SetHeightMap and Heighmap to Geometry Python binding</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1440">Pull request #1440</a></p></li>
+</ul>
+</li>
+<li><p>workflows/ci.yml fix push branch regex</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1445">Pull request #1445</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="http://SDF.cc">SDF.cc</a> update calls to use sdf::Errors output</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1295">Pull request #1295</a></p></li>
+</ul>
+</li>
+<li><p>Added World::ActorByName</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/sdformat/pull/1436">Pull request #1436</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="libsdformat-14-4-0-2024-06-20">libsdformat 14.4.0 (2024-06-20)</p>
 <ol class="arabic simple">
 <li><p>Add Cone as a primitive parametric shape.</p>
 <ul class="simple">
@@ -615,7 +1047,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-14-3-0-2024-06-14">libsdformat 14.3.0 (2024-06-14)</h3>
+<p class="rubric" id="libsdformat-14-3-0-2024-06-14">libsdformat 14.3.0 (2024-06-14)</p>
 <ol class="arabic simple">
 <li><p>Backport voxel_resolution sdf element</p>
 <ul class="simple">
@@ -666,7 +1098,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-14-2-0-2024-04-23">libsdformat 14.2.0 (2024-04-23)</h3>
+<p class="rubric" id="libsdformat-14-2-0-2024-04-23">libsdformat 14.2.0 (2024-04-23)</p>
 <ol class="arabic simple">
 <li><p>Fix trivial warning on 24.04 for JointAxis_TEST.cc</p>
 <ul class="simple">
@@ -691,7 +1123,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-14-1-1-2024-03-28">libsdformat 14.1.1 (2024-03-28)</h3>
+<p class="rubric" id="libsdformat-14-1-1-2024-03-28">libsdformat 14.1.1 (2024-03-28)</p>
 <ol class="arabic simple">
 <li><p>Fix warning with pybind11 2.12</p>
 <ul class="simple">
@@ -704,7 +1136,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-14-1-0-2024-03-14">libsdformat 14.1.0 (2024-03-14)</h3>
+<p class="rubric" id="libsdformat-14-1-0-2024-03-14">libsdformat 14.1.0 (2024-03-14)</p>
 <ol class="arabic simple">
 <li><p>Resolve URIs relative to file path</p>
 <ul class="simple">
@@ -770,7 +1202,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-14-0-0-2023-09-29">libsdformat 14.0.0 (2023-09-29)</h3>
+<p class="rubric" id="libsdformat-14-0-0-2023-09-29">libsdformat 14.0.0 (2023-09-29)</p>
 <ol class="arabic simple">
 <li><p>Add missing conda dependencies</p>
 <ul class="simple">
@@ -868,8 +1300,8 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-13-x">libsdformat 13.X</h2>
-<h3 class="rubric" id="libsdformat-13-8-0-2024-06-25">libsdformat 13.8.0 (2024-06-25)</h3>
+<p class="rubric" id="libsdformat-13-x">libsdformat 13.X</p>
+<p class="rubric" id="libsdformat-13-8-0-2024-06-25">libsdformat 13.8.0 (2024-06-25)</p>
 <ol class="arabic simple">
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">World::ActorByName</span></code></p>
 <ul class="simple">
@@ -882,7 +1314,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-13-7-0-2024-06-13">libsdformat 13.7.0 (2024-06-13)</h3>
+<p class="rubric" id="libsdformat-13-7-0-2024-06-13">libsdformat 13.7.0 (2024-06-13)</p>
 <ol class="arabic simple">
 <li><p>Add support for no gravity link</p>
 <ul class="simple">
@@ -939,7 +1371,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-13-6-0-2023-08-30">libsdformat 13.6.0 (2023-08-30)</h3>
+<p class="rubric" id="libsdformat-13-6-0-2023-08-30">libsdformat 13.6.0 (2023-08-30)</p>
 <ol class="arabic simple">
 <li><p>Use relative path in an urdf include to avoid confusion between internal and system headers</p>
 <ul class="simple">
@@ -988,7 +1420,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-13-5-0-2023-05-18">libsdformat 13.5.0 (2023-05-18)</h3>
+<p class="rubric" id="libsdformat-13-5-0-2023-05-18">libsdformat 13.5.0 (2023-05-18)</p>
 <ol class="arabic simple">
 <li><p>Added projector Python wrapper</p>
 <ul class="simple">
@@ -1141,7 +1573,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-13-4-1-2023-03-08">libsdformat 13.4.1 (2023-03-08)</h3>
+<p class="rubric" id="libsdformat-13-4-1-2023-03-08">libsdformat 13.4.1 (2023-03-08)</p>
 <ol class="arabic simple">
 <li><p>Fix camera_info_topic default value</p>
 <ul class="simple">
@@ -1154,7 +1586,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-13-4-0-2023-03-03">libsdformat 13.4.0 (2023-03-03)</h3>
+<p class="rubric" id="libsdformat-13-4-0-2023-03-03">libsdformat 13.4.0 (2023-03-03)</p>
 <ol class="arabic simple">
 <li><p>Fix camera info topic default value</p>
 <ul class="simple">
@@ -1192,7 +1624,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-13-3-0-2023-02-07">libsdformat 13.3.0 (2023-02-07)</h3>
+<p class="rubric" id="libsdformat-13-3-0-2023-02-07">libsdformat 13.3.0 (2023-02-07)</p>
 <ol class="arabic simple">
 <li><p>Add airspeed sensor</p>
 <ul class="simple">
@@ -1272,7 +1704,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-13-2-0-2022-10-20">libsdformat 13.2.0 (2022-10-20)</h3>
+<p class="rubric" id="libsdformat-13-2-0-2022-10-20">libsdformat 13.2.0 (2022-10-20)</p>
 <ol class="arabic simple">
 <li><p>sdf/1.10/joint.sdf: add <code class="docutils literal notranslate"><span class="pre">screw_thread_pitch</span></code></p>
 <ul class="simple">
@@ -1311,7 +1743,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-13-1-0-2022-10-12">libsdformat 13.1.0 (2022-10-12)</h3>
+<p class="rubric" id="libsdformat-13-1-0-2022-10-12">libsdformat 13.1.0 (2022-10-12)</p>
 <ol class="arabic simple">
 <li><p>Add test helper python package for encapsulating versioned python packages</p>
 <ul class="simple">
@@ -1380,7 +1812,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-13-0-1-2022-09-27">libsdformat 13.0.1 (2022-09-27)</h3>
+<p class="rubric" id="libsdformat-13-0-1-2022-09-27">libsdformat 13.0.1 (2022-09-27)</p>
 <ol class="arabic simple">
 <li><p>Fix arm tests</p>
 <ul class="simple">
@@ -1388,7 +1820,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-13-0-0-2022-09-23">libsdformat 13.0.0 (2022-09-23)</h3>
+<p class="rubric" id="libsdformat-13-0-0-2022-09-23">libsdformat 13.0.0 (2022-09-23)</p>
 <ol class="arabic simple">
 <li><p>Add camera <code class="docutils literal notranslate"><span class="pre">optical_frame_id</span></code> element</p>
 <ul class="simple">
@@ -1644,8 +2076,8 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-12-x">libsdformat 12.X</h2>
-<h3 class="rubric" id="libsdformat-12-8-0-2024-06-06">libsdformat 12.8.0 (2024-06-06)</h3>
+<p class="rubric" id="libsdformat-12-x">libsdformat 12.X</p>
+<p class="rubric" id="libsdformat-12-8-0-2024-06-06">libsdformat 12.8.0 (2024-06-06)</p>
 <ol class="arabic simple">
 <li><p>Add support for no gravity link</p>
 <ul class="simple">
@@ -1669,7 +2101,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-12-7-2-2023-09-01">libsdformat 12.7.2 (2023-09-01)</h3>
+<p class="rubric" id="libsdformat-12-7-2-2023-09-01">libsdformat 12.7.2 (2023-09-01)</p>
 <ol class="arabic simple">
 <li><p>Fixed 1.9/light.sdf</p>
 <ul class="simple">
@@ -1708,7 +2140,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-12-7-1-2023-02-28">libsdformat 12.7.1 (2023-02-28)</h3>
+<p class="rubric" id="libsdformat-12-7-1-2023-02-28">libsdformat 12.7.1 (2023-02-28)</p>
 <ol class="arabic simple">
 <li><p>Fix camera info topic default value</p>
 <ul class="simple">
@@ -1716,7 +2148,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-12-7-0-2023-02-03">libsdformat 12.7.0 (2023-02-03)</h3>
+<p class="rubric" id="libsdformat-12-7-0-2023-02-03">libsdformat 12.7.0 (2023-02-03)</p>
 <ol class="arabic simple">
 <li><p>Forward port libsdformat9.10.0. This includes the ign to gz headers.</p></li>
 <li><p>Use File.exist? for Ruby 3.2 compatibility.</p>
@@ -1736,7 +2168,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-12-6-0-2022-09-07">libsdformat 12.6.0 (2022-09-07)</h3>
+<p class="rubric" id="libsdformat-12-6-0-2022-09-07">libsdformat 12.6.0 (2022-09-07)</p>
 <ol class="arabic simple">
 <li><p>Reduce the number of include dirs for sdformat.</p>
 <ul class="simple">
@@ -1814,7 +2246,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-12-5-0-2022-05-12">libsdformat 12.5.0 (2022-05-12)</h3>
+<p class="rubric" id="libsdformat-12-5-0-2022-05-12">libsdformat 12.5.0 (2022-05-12)</p>
 <ol class="arabic simple">
 <li><p>Add visibility mask to Lidar / Ray sensor</p>
 <ul class="simple">
@@ -1908,7 +2340,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-12-4-0-2022-03-29">libsdformat 12.4.0 (2022-03-29)</h3>
+<p class="rubric" id="libsdformat-12-4-0-2022-03-29">libsdformat 12.4.0 (2022-03-29)</p>
 <ol class="arabic simple">
 <li><p>Use ParserConfig more in <a class="reference external" href="http://parser.cc">parser.cc</a></p>
 <ul class="simple">
@@ -2129,7 +2561,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-12-3-0-2021-12-01">libsdformat 12.3.0 (2021-12-01)</h3>
+<p class="rubric" id="libsdformat-12-3-0-2021-12-01">libsdformat 12.3.0 (2021-12-01)</p>
 <ol class="arabic simple">
 <li><p>Fix empty pose parsing fail for rotation_format=‘quat_xyzw’</p>
 <ul class="simple">
@@ -2142,7 +2574,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-12-2-0-2021-11-23">libsdformat 12.2.0 (2021-11-23)</h3>
+<p class="rubric" id="libsdformat-12-2-0-2021-11-23">libsdformat 12.2.0 (2021-11-23)</p>
 <ol class="arabic simple">
 <li><p>Convert Joint DOM to Element.</p>
 <ul class="simple">
@@ -2256,7 +2688,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-12-1-0-2021-11-09">libsdformat 12.1.0 (2021-11-09)</h3>
+<p class="rubric" id="libsdformat-12-1-0-2021-11-09">libsdformat 12.1.0 (2021-11-09)</p>
 <ol class="arabic simple">
 <li><p>Support accessing mutable sensor types.</p>
 <ul class="simple">
@@ -2264,7 +2696,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-12-0-0-2021-09-30">libsdformat 12.0.0 (2021-09-30)</h3>
+<p class="rubric" id="libsdformat-12-0-0-2021-09-30">libsdformat 12.0.0 (2021-09-30)</p>
 <ol class="arabic simple">
 <li><p>Make exception for plugins when checking for name uniqueness</p>
 <ul class="simple">
@@ -2392,8 +2824,8 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-11-x">libsdformat 11.X</h2>
-<h3 class="rubric" id="libsdformat-11-4-1-2022-03-21">libsdformat 11.4.1 (2022-03-21)</h3>
+<p class="rubric" id="libsdformat-11-x">libsdformat 11.X</p>
+<p class="rubric" id="libsdformat-11-4-1-2022-03-21">libsdformat 11.4.1 (2022-03-21)</p>
 <ol class="arabic simple">
 <li><p>Install sdf/1.8 to versioned path</p>
 <ul class="simple">
@@ -2401,7 +2833,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-11-4-0-2022-03-14">libsdformat 11.4.0 (2022-03-14)</h3>
+<p class="rubric" id="libsdformat-11-4-0-2022-03-14">libsdformat 11.4.0 (2022-03-14)</p>
 <ol class="arabic simple">
 <li><p>Added option to visualize light on the GUI</p>
 <ul class="simple">
@@ -2554,7 +2986,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-11-3-0-2021-09-10">libsdformat 11.3.0 (2021-09-10)</h3>
+<p class="rubric" id="libsdformat-11-3-0-2021-09-10">libsdformat 11.3.0 (2021-09-10)</p>
 <ol class="arabic simple">
 <li><p>Fix world-complete.sdf and add particle_scatter_ratio to v1.8</p>
 <ul class="simple">
@@ -2683,7 +3115,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-11-2-2-2021-07-01">libsdformat 11.2.2 (2021-07-01)</h3>
+<p class="rubric" id="libsdformat-11-2-2-2021-07-01">libsdformat 11.2.2 (2021-07-01)</p>
 <ol class="arabic simple">
 <li><p>Fix segfault when checking for required elements in joint</p>
 <ul class="simple">
@@ -2701,7 +3133,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-11-2-1-2021-06-28">libsdformat 11.2.1 (2021-06-28)</h3>
+<p class="rubric" id="libsdformat-11-2-1-2021-06-28">libsdformat 11.2.1 (2021-06-28)</p>
 <ol class="arabic simple">
 <li><p>Fix ABI break on sdf11</p>
 <ul class="simple">
@@ -2714,7 +3146,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-11-2-0-2021-06-23">libsdformat 11.2.0 (2021-06-23)</h3>
+<p class="rubric" id="libsdformat-11-2-0-2021-06-23">libsdformat 11.2.0 (2021-06-23)</p>
 <ol class="arabic simple">
 <li><p>Revert behavior of FilePath() for elements loaded from strings</p>
 <ul class="simple">
@@ -2757,7 +3189,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-11-1-0-2021-04-30">libsdformat 11.1.0 (2021-04-30)</h3>
+<p class="rubric" id="libsdformat-11-1-0-2021-04-30">libsdformat 11.1.0 (2021-04-30)</p>
 <ol class="arabic simple">
 <li><p>Clean up use of PROJECT_SOURCE_PATH in tests</p>
 <ul class="simple">
@@ -2790,7 +3222,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-11-0-0-2021-03-30">libsdformat 11.0.0 (2021-03-30)</h3>
+<p class="rubric" id="libsdformat-11-0-0-2021-03-30">libsdformat 11.0.0 (2021-03-30)</p>
 <ol class="arabic simple">
 <li><p>Add ParserConfig class to encapsulate file path settings.</p>
 <ul class="simple">
@@ -3017,8 +3449,8 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-10-x">libsdformat 10.X</h2>
-<h3 class="rubric" id="libsdformat-10-7-0-2021-12-27">libsdformat 10.7.0 (2021-12-27)</h3>
+<p class="rubric" id="libsdformat-10-x">libsdformat 10.X</p>
+<p class="rubric" id="libsdformat-10-7-0-2021-12-27">libsdformat 10.7.0 (2021-12-27)</p>
 <ol class="arabic simple">
 <li><p>Fix flattening logic for nested model names (merged forward from sdf6)</p>
 <ul class="simple">
@@ -3087,7 +3519,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-10-6-0-2021-09-08">libsdformat 10.6.0 (2021-09-08)</h3>
+<p class="rubric" id="libsdformat-10-6-0-2021-09-08">libsdformat 10.6.0 (2021-09-08)</p>
 <ol class="arabic simple">
 <li><p>Parse URDF continuous joint effort/velocity limits</p>
 <ul class="simple">
@@ -3205,7 +3637,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-10-5-0-2021-05-17">libsdformat 10.5.0 (2021-05-17)</h3>
+<p class="rubric" id="libsdformat-10-5-0-2021-05-17">libsdformat 10.5.0 (2021-05-17)</p>
 <ol class="arabic simple">
 <li><p>Add scatter ratio parameter to Particle Emitter DOM.</p>
 <ul class="simple">
@@ -3223,7 +3655,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-10-4-0-2021-04-06">libsdformat 10.4.0 (2021-04-06)</h3>
+<p class="rubric" id="libsdformat-10-4-0-2021-04-06">libsdformat 10.4.0 (2021-04-06)</p>
 <ol class="arabic simple">
 <li><p>Added particle emitter.</p>
 <ul class="simple">
@@ -3242,7 +3674,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-10-3-0-2021-02-18">libsdformat 10.3.0 (2021-02-18)</h3>
+<p class="rubric" id="libsdformat-10-3-0-2021-02-18">libsdformat 10.3.0 (2021-02-18)</p>
 <ol class="arabic simple">
 <li><p>Replace PROJECT_SOURCE_DIR in tests</p>
 <ul class="simple">
@@ -3275,7 +3707,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-10-2-0-2021-01-12">libsdformat 10.2.0 (2021-01-12)</h3>
+<p class="rubric" id="libsdformat-10-2-0-2021-01-12">libsdformat 10.2.0 (2021-01-12)</p>
 <ol class="arabic simple">
 <li><p>Disable gz test on Windows</p>
 <ul class="simple">
@@ -3293,7 +3725,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-10-1-0-2020-12-15">libsdformat 10.1.0 (2020-12-15)</h3>
+<p class="rubric" id="libsdformat-10-1-0-2020-12-15">libsdformat 10.1.0 (2020-12-15)</p>
 <ol class="arabic simple">
 <li><p>Fix supported shader types (<code class="docutils literal notranslate"><span class="pre">normal_map_X_space</span></code>)</p>
 <ul class="simple">
@@ -3353,7 +3785,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-10-0-0-2020-09-28">libsdformat 10.0.0 (2020-09-28)</h3>
+<p class="rubric" id="libsdformat-10-0-0-2020-09-28">libsdformat 10.0.0 (2020-09-28)</p>
 <ol class="arabic simple">
 <li><p>Return positive <code class="docutils literal notranslate"><span class="pre">INF</span></code> instead of <code class="docutils literal notranslate"><span class="pre">-1</span></code> in DOM API for unbounded symmetric joint limits.</p>
 <ul class="simple">
@@ -3423,8 +3855,8 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-9-x">libsdformat 9.X</h2>
-<h3 class="rubric" id="libsdformat-9-10-1-2024-01-05">libsdformat 9.10.1 (2024-01-05)</h3>
+<p class="rubric" id="libsdformat-9-x">libsdformat 9.X</p>
+<p class="rubric" id="libsdformat-9-10-1-2024-01-05">libsdformat 9.10.1 (2024-01-05)</p>
 <ol class="arabic simple">
 <li><p>URDF-&gt;SDF handle links with no inertia or small mass</p>
 <ul class="simple">
@@ -3456,7 +3888,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-10-0-2022-11-30">libsdformat 9.10.0 (2022-11-30)</h3>
+<p class="rubric" id="libsdformat-9-10-0-2022-11-30">libsdformat 9.10.0 (2022-11-30)</p>
 <ol class="arabic simple">
 <li><p>Ign to gz header migration.</p>
 <ul class="simple">
@@ -3475,7 +3907,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-9-1-2022-11-08">libsdformat 9.9.1 (2022-11-08)</h3>
+<p class="rubric" id="libsdformat-9-9-1-2022-11-08">libsdformat 9.9.1 (2022-11-08)</p>
 <ol class="arabic simple">
 <li><p>Fix static URDF models with fixed joints</p>
 <ul class="simple">
@@ -3488,7 +3920,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-9-0-2022-09-07">libsdformat 9.9.0 (2022-09-07)</h3>
+<p class="rubric" id="libsdformat-9-9-0-2022-09-07">libsdformat 9.9.0 (2022-09-07)</p>
 <ol class="arabic simple">
 <li><p>sdf/camera.sdf: fields for projection matrix</p>
 <ul class="simple">
@@ -3542,7 +3974,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-8-0-2022-04-26">libsdformat 9.8.0 (2022-04-26)</h3>
+<p class="rubric" id="libsdformat-9-8-0-2022-04-26">libsdformat 9.8.0 (2022-04-26)</p>
 <ol class="arabic simple">
 <li><p>Polyline geometry DOM</p>
 <ul class="simple">
@@ -3621,7 +4053,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-7-0-2021-11-03">libsdformat 9.7.0 (2021-11-03)</h3>
+<p class="rubric" id="libsdformat-9-7-0-2021-11-03">libsdformat 9.7.0 (2021-11-03)</p>
 <ol class="arabic simple">
 <li><p>Make exception for plugins when checking for name uniqueness</p>
 <ul class="simple">
@@ -3649,7 +4081,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-6-1-2021-09-07">libsdformat 9.6.1 (2021-09-07)</h3>
+<p class="rubric" id="libsdformat-9-6-1-2021-09-07">libsdformat 9.6.1 (2021-09-07)</p>
 <ol class="arabic simple">
 <li><p>Parse URDF continuous joint effort/velocity limits</p>
 <ul class="simple">
@@ -3682,7 +4114,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-6-0-2021-08-18">libsdformat 9.6.0 (2021-08-18)</h3>
+<p class="rubric" id="libsdformat-9-6-0-2021-08-18">libsdformat 9.6.0 (2021-08-18)</p>
 <ol class="arabic simple">
 <li><p>Adds <code class="docutils literal notranslate"><span class="pre">enable_metrics</span></code> flag to Sensor.</p>
 <ul class="simple">
@@ -3775,7 +4207,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-5-0-2021-02-11">libsdformat 9.5.0 (2021-02-11)</h3>
+<p class="rubric" id="libsdformat-9-5-0-2021-02-11">libsdformat 9.5.0 (2021-02-11)</p>
 <ol class="arabic simple">
 <li><p>Add Windows installation</p>
 <ul class="simple">
@@ -3793,7 +4225,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-4-0-2021-01-08">libsdformat 9.4.0 (2021-01-08)</h3>
+<p class="rubric" id="libsdformat-9-4-0-2021-01-08">libsdformat 9.4.0 (2021-01-08)</p>
 <ol class="arabic simple">
 <li><p>Define <code class="docutils literal notranslate"><span class="pre">PATH_MAX</span></code> for Debian Hurd system</p>
 <ul class="simple">
@@ -3861,7 +4293,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-3-0-2020-xx-xx">libsdformat 9.3.0 (2020-XX-XX)</h3>
+<p class="rubric" id="libsdformat-9-3-0-2020-xx-xx">libsdformat 9.3.0 (2020-XX-XX)</p>
 <ol class="arabic">
 <li><p>Store material file path information.</p>
 <ul class="simple">
@@ -3929,7 +4361,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-2-0-2020-04-02">libsdformat 9.2.0 (2020-04-02)</h3>
+<p class="rubric" id="libsdformat-9-2-0-2020-04-02">libsdformat 9.2.0 (2020-04-02)</p>
 <ol class="arabic simple">
 <li><p>Remove URI scheme, if present, when finding files.</p>
 <ul class="simple">
@@ -4022,7 +4454,7 @@ conversion.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-1-0-2020-01-29">libsdformat 9.1.0 (2020-01-29)</h3>
+<p class="rubric" id="libsdformat-9-1-0-2020-01-29">libsdformat 9.1.0 (2020-01-29)</p>
 <ol class="arabic simple">
 <li><p>Remove URI scheme, if present, when finding files.</p>
 <ul class="simple">
@@ -4098,7 +4530,7 @@ in the matching <code class="docutils literal notranslate"><span class="pre">sdf
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-9-0-0-2019-12-10">libsdformat 9.0.0 (2019-12-10)</h3>
+<p class="rubric" id="libsdformat-9-0-0-2019-12-10">libsdformat 9.0.0 (2019-12-10)</p>
 <ol class="arabic simple">
 <li><p>Move recursiveSameTypeUniqueNames from <a class="reference external" href="http://gz.cc">gz.cc</a> to <a class="reference external" href="http://parser.cc">parser.cc</a> and make public.</p>
 <ul class="simple">
@@ -4230,9 +4662,9 @@ attributes per the following proposal:
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-8-0">libsdformat 8.0</h2>
-<h3 class="rubric" id="libsdformat-8-x-x-202x-xx-xx">libsdformat 8.X.X (202X-XX-XX)</h3>
-<h3 class="rubric" id="libsdformat-8-9-0-2020-09-04">libsdformat 8.9.0 (2020-09-04)</h3>
+<p class="rubric" id="libsdformat-8-0">libsdformat 8.0</p>
+<p class="rubric" id="libsdformat-8-x-x-202x-xx-xx">libsdformat 8.X.X (202X-XX-XX)</p>
+<p class="rubric" id="libsdformat-8-9-0-2020-09-04">libsdformat 8.9.0 (2020-09-04)</p>
 <ol class="arabic simple">
 <li><p>Find python3 in cmake, fix warning</p>
 <ul class="simple">
@@ -4267,7 +4699,7 @@ attributes per the following proposal:
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-8-8-0-2020-03-18">libsdformat 8.8.0 (2020-03-18)</h3>
+<p class="rubric" id="libsdformat-8-8-0-2020-03-18">libsdformat 8.8.0 (2020-03-18)</p>
 <ol class="arabic simple">
 <li><p>Add Transparency to visual DOM</p>
 <ul class="simple">
@@ -4303,7 +4735,7 @@ attributes per the following proposal:
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-8-7-1-2020-01-13">libsdformat 8.7.1 (2020-01-13)</h3>
+<p class="rubric" id="libsdformat-8-7-1-2020-01-13">libsdformat 8.7.1 (2020-01-13)</p>
 <ol class="arabic simple">
 <li><p>Fix memory leaks in move assignment operator.</p>
 <ul class="simple">
@@ -4316,7 +4748,7 @@ attributes per the following proposal:
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-8-7-0-2019-12-13">libsdformat 8.7.0 (2019-12-13)</h3>
+<p class="rubric" id="libsdformat-8-7-0-2019-12-13">libsdformat 8.7.0 (2019-12-13)</p>
 <ol class="arabic simple">
 <li><p>Remove some URDF error messages</p>
 <ul class="simple">
@@ -4339,7 +4771,7 @@ attributes per the following proposal:
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-8-6-1-2019-12-05">libsdformat 8.6.1 (2019-12-05)</h3>
+<p class="rubric" id="libsdformat-8-6-1-2019-12-05">libsdformat 8.6.1 (2019-12-05)</p>
 <ol class="arabic simple">
 <li><p>Unversioned lib name for cmds</p>
 <ul class="simple">
@@ -4347,7 +4779,7 @@ attributes per the following proposal:
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-8-6-0-2019-11-20">libsdformat 8.6.0 (2019-11-20)</h3>
+<p class="rubric" id="libsdformat-8-6-0-2019-11-20">libsdformat 8.6.0 (2019-11-20)</p>
 <ol class="arabic simple">
 <li><p>configure.bat: use gz-math6, not gz11</p>
 <ul class="simple">
@@ -4380,7 +4812,7 @@ attributes per the following proposal:
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-8-5-0-2019-11-06">libsdformat 8.5.0 (2019-11-06)</h3>
+<p class="rubric" id="libsdformat-8-5-0-2019-11-06">libsdformat 8.5.0 (2019-11-06)</p>
 <ol class="arabic simple">
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">thermal_camera</span></code> sensor type</p>
 <ul class="simple">
@@ -4409,7 +4841,7 @@ attributes per the following proposal:
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-8-4-0-2019-10-22">libsdformat 8.4.0 (2019-10-22)</h3>
+<p class="rubric" id="libsdformat-8-4-0-2019-10-22">libsdformat 8.4.0 (2019-10-22)</p>
 <ol class="arabic simple">
 <li><p>Accept relative path in <code class="docutils literal notranslate"><span class="pre">&lt;uri&gt;</span></code>.</p>
 <ul class="simple">
@@ -4469,7 +4901,7 @@ attributes per the following proposal:
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-8-3-0-2019-08-17">libsdformat 8.3.0 (2019-08-17)</h3>
+<p class="rubric" id="libsdformat-8-3-0-2019-08-17">libsdformat 8.3.0 (2019-08-17)</p>
 <ol class="arabic simple">
 <li><p>Added Actor DOM</p>
 <ul class="simple">
@@ -4482,7 +4914,7 @@ attributes per the following proposal:
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-8-2-0-2019-06-18">libsdformat 8.2.0 (2019-06-18)</h3>
+<p class="rubric" id="libsdformat-8-2-0-2019-06-18">libsdformat 8.2.0 (2019-06-18)</p>
 <ol class="arabic simple">
 <li><p>Added RGBD Camera Sensor type.</p>
 <ul class="simple">
@@ -4490,7 +4922,7 @@ attributes per the following proposal:
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-8-1-0-2019-05-20">libsdformat 8.1.0 (2019-05-20)</h3>
+<p class="rubric" id="libsdformat-8-1-0-2019-05-20">libsdformat 8.1.0 (2019-05-20)</p>
 <ol class="arabic simple">
 <li><p>Change installation path of SDF description files to allow side-by-side installation.</p>
 <ul class="simple">
@@ -4589,7 +5021,7 @@ types. These two types are equivalent to <code class="docutils literal notransla
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-8-0-0-2019-03-01">libsdformat 8.0.0 (2019-03-01)</h3>
+<p class="rubric" id="libsdformat-8-0-0-2019-03-01">libsdformat 8.0.0 (2019-03-01)</p>
 <ol class="arabic simple">
 <li><p>Rename depth camera from ‘depth’ to ‘depth_camera’</p>
 <ul class="simple">
@@ -4706,8 +5138,8 @@ types. These two types are equivalent to <code class="docutils literal notransla
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-7-0">libsdformat 7.0</h2>
-<h3 class="rubric" id="libsdformat-7-0-0-xxxx-xx-xx">libsdformat 7.0.0 (xxxx-xx-xx)</h3>
+<p class="rubric" id="libsdformat-7-0">libsdformat 7.0</p>
+<p class="rubric" id="libsdformat-7-0-0-xxxx-xx-xx">libsdformat 7.0.0 (xxxx-xx-xx)</p>
 <ol class="arabic simple">
 <li><p>Build Utils_TEST with <a class="reference external" href="http://Utils.cc">Utils.cc</a> explicitly passed since its symbols are not visible.</p>
 <ul class="simple">
@@ -4813,8 +5245,8 @@ will convert and print the specified SDFormat file.</p>
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-6-0">libsdformat 6.0</h2>
-<h3 class="rubric" id="libsdformat-6-3-1-2021-07-06">libsdformat 6.3.1 (2021-07-06)</h3>
+<p class="rubric" id="libsdformat-6-0">libsdformat 6.0</p>
+<p class="rubric" id="libsdformat-6-3-1-2021-07-06">libsdformat 6.3.1 (2021-07-06)</p>
 <ol class="arabic simple">
 <li><p>Fix flattening logic for nested model names</p>
 <ul class="simple">
@@ -4827,7 +5259,7 @@ will convert and print the specified SDFormat file.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-6-3-0-2021-06-21">libsdformat 6.3.0 (2021-06-21)</h3>
+<p class="rubric" id="libsdformat-6-3-0-2021-06-21">libsdformat 6.3.0 (2021-06-21)</p>
 <ol class="arabic simple">
 <li><p>Move recursiveSameTypeUniqueNames from <a class="reference external" href="http://gz.cc">gz.cc</a> to <a class="reference external" href="http://parser.cc">parser.cc</a> and make public.</p>
 <ul class="simple">
@@ -4870,7 +5302,7 @@ will convert and print the specified SDFormat file.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-6-2-0-2019-01-17">libsdformat 6.2.0 (2019-01-17)</h3>
+<p class="rubric" id="libsdformat-6-2-0-2019-01-17">libsdformat 6.2.0 (2019-01-17)</p>
 <ol class="arabic simple">
 <li><p>Add geometry for sonar collision shape</p>
 <ul class="simple">
@@ -4888,7 +5320,7 @@ will convert and print the specified SDFormat file.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-6-1-0-2018-10-04">libsdformat 6.1.0 (2018-10-04)</h3>
+<p class="rubric" id="libsdformat-6-1-0-2018-10-04">libsdformat 6.1.0 (2018-10-04)</p>
 <ol class="arabic simple">
 <li><p>Add collision_detector to dart physics config</p>
 <ul class="simple">
@@ -4916,7 +5348,7 @@ will convert and print the specified SDFormat file.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-6-0-0-2018-01-25">libsdformat 6.0.0 (2018-01-25)</h3>
+<p class="rubric" id="libsdformat-6-0-0-2018-01-25">libsdformat 6.0.0 (2018-01-25)</p>
 <ol class="arabic simple">
 <li><p>SDF DOM: Added a document object model.</p>
 <ul class="simple">
@@ -4968,9 +5400,9 @@ sdf::AssertionInternalError, which is more appropriate for a library.</p>
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-5-x">libsdformat 5.x</h2>
-<h3 class="rubric" id="libsdformat-5-x-x-2017-xx-xx">libsdformat 5.x.x (2017-xx-xx)</h3>
-<h3 class="rubric" id="libsdformat-5-3-0-2017-11-13">libsdformat 5.3.0 (2017-11-13)</h3>
+<p class="rubric" id="libsdformat-5-x">libsdformat 5.x</p>
+<p class="rubric" id="libsdformat-5-x-x-2017-xx-xx">libsdformat 5.x.x (2017-xx-xx)</p>
+<p class="rubric" id="libsdformat-5-3-0-2017-11-13">libsdformat 5.3.0 (2017-11-13)</p>
 <ol class="arabic simple">
 <li><p>Added wrapper around root SDF for an SDF element</p>
 <ul class="simple">
@@ -4999,7 +5431,7 @@ sdf::AssertionInternalError, which is more appropriate for a library.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-5-2-0-2017-08-03">libsdformat 5.2.0 (2017-08-03)</h3>
+<p class="rubric" id="libsdformat-5-2-0-2017-08-03">libsdformat 5.2.0 (2017-08-03)</p>
 <ol class="arabic simple">
 <li><p>Added a block for DART-specific physics properties.</p>
 <ul class="simple">
@@ -5049,7 +5481,7 @@ sdf::AssertionInternalError, which is more appropriate for a library.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-5-1-0-2017-02-22">libsdformat 5.1.0 (2017-02-22)</h3>
+<p class="rubric" id="libsdformat-5-1-0-2017-02-22">libsdformat 5.1.0 (2017-02-22)</p>
 <ol class="arabic simple">
 <li><p>Fixed <code class="docutils literal notranslate"><span class="pre">sdf::convertFile</span></code> and <code class="docutils literal notranslate"><span class="pre">sdf::convertString</span></code> always converting to latest version</p>
 <ul class="simple">
@@ -5062,7 +5494,7 @@ sdf::AssertionInternalError, which is more appropriate for a library.</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-5-0-0-2017-01-25">libsdformat 5.0.0 (2017-01-25)</h3>
+<p class="rubric" id="libsdformat-5-0-0-2017-01-25">libsdformat 5.0.0 (2017-01-25)</p>
 <ol class="arabic simple">
 <li><p>Removed libsdformat 4 deprecations</p>
 <ul class="simple">
@@ -5102,9 +5534,9 @@ A contribution from Olivier Crave</p>
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-4-0">libsdformat 4.0</h2>
-<h3 class="rubric" id="libsdformat-4-x-x-2017-xx-xx">libsdformat 4.x.x (2017-xx-xx)</h3>
-<h3 class="rubric" id="libsdformat-4-4-0-2017-10-26">libsdformat 4.4.0 (2017-10-26)</h3>
+<p class="rubric" id="libsdformat-4-0">libsdformat 4.0</p>
+<p class="rubric" id="libsdformat-4-x-x-2017-xx-xx">libsdformat 4.x.x (2017-xx-xx)</p>
+<p class="rubric" id="libsdformat-4-4-0-2017-10-26">libsdformat 4.4.0 (2017-10-26)</p>
 <ol class="arabic simple">
 <li><p>Add ODE parallelization parameters: threaded islands and position correction</p>
 <ul class="simple">
@@ -5127,7 +5559,7 @@ A contribution from Olivier Crave</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-4-3-2-2017-07-19">libsdformat 4.3.2 (2017-07-19)</h3>
+<p class="rubric" id="libsdformat-4-3-2-2017-07-19">libsdformat 4.3.2 (2017-07-19)</p>
 <ol class="arabic simple">
 <li><p>Add documentation for <code class="docutils literal notranslate"><span class="pre">Element::GetFirstElement()</span></code> and <code class="docutils literal notranslate"><span class="pre">Element::GetNextElement()</span></code></p>
 <ul class="simple">
@@ -5140,7 +5572,7 @@ A contribution from Olivier Crave</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-4-3-1-2017-03-24">libsdformat 4.3.1 (2017-03-24)</h3>
+<p class="rubric" id="libsdformat-4-3-1-2017-03-24">libsdformat 4.3.1 (2017-03-24)</p>
 <ol class="arabic simple">
 <li><p>Fix segmentation Fault in <code class="docutils literal notranslate"><span class="pre">sdf::getBestSupportedModelVersion</span></code></p>
 <ul class="simple">
@@ -5149,7 +5581,7 @@ A contribution from Olivier Crave</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-4-3-0-2017-03-20">libsdformat 4.3.0 (2017-03-20)</h3>
+<p class="rubric" id="libsdformat-4-3-0-2017-03-20">libsdformat 4.3.0 (2017-03-20)</p>
 <ol class="arabic simple">
 <li><p>Choosing models with more recent SDFormat version with <code class="docutils literal notranslate"><span class="pre">&lt;include&gt;</span></code> tag</p>
 <ul class="simple">
@@ -5199,7 +5631,7 @@ A contribution from Olivier Crave</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-4-2-0-2016-10-10">libsdformat 4.2.0 (2016-10-10)</h3>
+<p class="rubric" id="libsdformat-4-2-0-2016-10-10">libsdformat 4.2.0 (2016-10-10)</p>
 <ol class="arabic simple">
 <li><p>Added tag to specify ODE friction model.</p>
 <ul class="simple">
@@ -5217,7 +5649,7 @@ A contribution from Olivier Crave</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-4-1-1-2016-07-08">libsdformat 4.1.1 (2016-07-08)</h3>
+<p class="rubric" id="libsdformat-4-1-1-2016-07-08">libsdformat 4.1.1 (2016-07-08)</p>
 <ol class="arabic simple">
 <li><p>Added documentation and animation to <code class="docutils literal notranslate"><span class="pre">&lt;actor&gt;</span></code> element.</p>
 <ul class="simple">
@@ -5230,7 +5662,7 @@ A contribution from Olivier Crave</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-4-1-0-2016-04-01">libsdformat 4.1.0 (2016-04-01)</h3>
+<p class="rubric" id="libsdformat-4-1-0-2016-04-01">libsdformat 4.1.0 (2016-04-01)</p>
 <ol class="arabic simple">
 <li><p>Added SDF conversion functions to parser including sdf::convertFile and sdf::convertString.</p>
 <ul class="simple">
@@ -5243,7 +5675,7 @@ A contribution from Olivier Crave</p>
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-4-0-0-2015-01-12">libsdformat 4.0.0 (2015-01-12)</h3>
+<p class="rubric" id="libsdformat-4-0-0-2015-01-12">libsdformat 4.0.0 (2015-01-12)</p>
 <ol class="arabic simple">
 <li><p>Boost pointers and boost::function in the public API have been replaced
 by their std::equivalents (C++11 standard)</p></li>
@@ -5288,8 +5720,8 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-3-0">libsdformat 3.0</h2>
-<h3 class="rubric" id="libsdformat-3-x-x-201x-xx-xx">libsdformat 3.X.X (201X-XX-XX)</h3>
+<p class="rubric" id="libsdformat-3-0">libsdformat 3.0</p>
+<p class="rubric" id="libsdformat-3-x-x-201x-xx-xx">libsdformat 3.X.X (201X-XX-XX)</p>
 <ol class="arabic simple">
 <li><p>Improve precision of floating point parameters</p>
 <ul class="simple">
@@ -5298,7 +5730,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-3-7-0-2015-11-20">libsdformat 3.7.0 (2015-11-20)</h3>
+<p class="rubric" id="libsdformat-3-7-0-2015-11-20">libsdformat 3.7.0 (2015-11-20)</p>
 <ol class="arabic simple">
 <li><p>Add spring pass through for sdf3</p>
 <ul class="simple">
@@ -5317,7 +5749,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-3-6-0-2015-10-27">libsdformat 3.6.0 (2015-10-27)</h3>
+<p class="rubric" id="libsdformat-3-6-0-2015-10-27">libsdformat 3.6.0 (2015-10-27)</p>
 <ol class="arabic simple">
 <li><p>Add light state</p>
 <ul class="simple">
@@ -5335,7 +5767,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-3-5-0-2015-10-07">libsdformat 3.5.0 (2015-10-07)</h3>
+<p class="rubric" id="libsdformat-3-5-0-2015-10-07">libsdformat 3.5.0 (2015-10-07)</p>
 <ol class="arabic simple">
 <li><p>Camera lens description (Replaces #213)</p>
 <ul class="simple">
@@ -5348,7 +5780,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-3-4-0-2015-10-05">libsdformat 3.4.0 (2015-10-05)</h3>
+<p class="rubric" id="libsdformat-3-4-0-2015-10-05">libsdformat 3.4.0 (2015-10-05)</p>
 <ol class="arabic simple">
 <li><p>Support nested model states</p>
 <ul class="simple">
@@ -5361,7 +5793,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-3-3-0-2015-09-15">libsdformat 3.3.0 (2015-09-15)</h3>
+<p class="rubric" id="libsdformat-3-3-0-2015-09-15">libsdformat 3.3.0 (2015-09-15)</p>
 <ol class="arabic simple">
 <li><p>Windows Boost linking errors</p>
 <ul class="simple">
@@ -5384,7 +5816,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-3-2-2-2015-08-24">libsdformat 3.2.2 (2015-08-24)</h3>
+<p class="rubric" id="libsdformat-3-2-2-2015-08-24">libsdformat 3.2.2 (2015-08-24)</p>
 <ol class="arabic simple">
 <li><p>Added battery element (contribution from Olivier Crave)</p>
 <ul class="simple">
@@ -5402,7 +5834,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-3-1-1-2015-08-03">libsdformat 3.1.1 (2015-08-03)</h3>
+<p class="rubric" id="libsdformat-3-1-1-2015-08-03">libsdformat 3.1.1 (2015-08-03)</p>
 <ol class="arabic simple">
 <li><p>Fix tinyxml linking error</p>
 <ul class="simple">
@@ -5410,7 +5842,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-3-1-0-2015-08-02">libsdformat 3.1.0 (2015-08-02)</h3>
+<p class="rubric" id="libsdformat-3-1-0-2015-08-02">libsdformat 3.1.0 (2015-08-02)</p>
 <ol class="arabic simple">
 <li><p>Added logical camera sensor to SDF</p>
 <ul class="simple">
@@ -5418,7 +5850,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-3-0-0-2015-07-24">libsdformat 3.0.0 (2015-07-24)</h3>
+<p class="rubric" id="libsdformat-3-0-0-2015-07-24">libsdformat 3.0.0 (2015-07-24)</p>
 <ol class="arabic simple">
 <li><p>Added battery to SDF</p>
 <ul class="simple">
@@ -5512,7 +5944,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-2-x">libsdformat 2.x</h2>
+<p class="rubric" id="libsdformat-2-x">libsdformat 2.x</p>
 <ol class="arabic simple">
 <li><p>rename cfm_damping –&gt; implicit_spring_damper</p>
 <ul class="simple">
@@ -5698,8 +6130,8 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="libsdformat-1-4">libsdformat 1.4</h2>
-<h3 class="rubric" id="libsdformat-1-4-8-2013-09-06">libsdformat 1.4.8 (2013-09-06)</h3>
+<p class="rubric" id="libsdformat-1-4">libsdformat 1.4</p>
+<p class="rubric" id="libsdformat-1-4-8-2013-09-06">libsdformat 1.4.8 (2013-09-06)</p>
 <ol class="arabic simple">
 <li><p>Fix inertia transformations when reducing fixed joints in URDF</p>
 <ul class="simple">
@@ -5718,7 +6150,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-1-4-7-2013-08-22">libsdformat 1.4.7 (2013-08-22)</h3>
+<p class="rubric" id="libsdformat-1-4-7-2013-08-22">libsdformat 1.4.7 (2013-08-22)</p>
 <ol class="arabic simple">
 <li><p>Direct console messages to std_err</p>
 <ul class="simple">
@@ -5726,7 +6158,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </ul>
 </li>
 </ol>
-<h3 class="rubric" id="libsdformat-1-4-6-2013-08-20">libsdformat 1.4.6 (2013-08-20)</h3>
+<p class="rubric" id="libsdformat-1-4-6-2013-08-20">libsdformat 1.4.6 (2013-08-20)</p>
 <ol class="arabic simple">
 <li><p>Add tags for GPS sensor and sensor noise</p>
 <ul class="simple">
@@ -5762,7 +6194,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
 </li>
 <li><p>Various bug, style and test fixes</p></li>
 </ol>
-<h3 class="rubric" id="libsdformat-1-4-5-2013-07-23">libsdformat 1.4.5 (2013-07-23)</h3>
+<p class="rubric" id="libsdformat-1-4-5-2013-07-23">libsdformat 1.4.5 (2013-07-23)</p>
 <ol class="arabic simple">
 <li><p>Deprecated Gazebo’s internal SDF code</p></li>
 <li><p>Use templatized Get functions for retrieving values from SDF files</p></li>
@@ -5794,8 +6226,8 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -5805,7 +6237,7 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
@@ -5817,8 +6249,8 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
       
         <div class="footer-item"><p> Brought to you by <a href="https://openrobotics.org">Open Robotics</a>. </p>
 <p> Except where otherwise noted, the gazebosim.org web pages are licensed under <a
-    href="https://creativecommons.org/licenses/by/3.0/us/">Creative Commons
-    Attribution 3.0</a>. </p></div>
+    href="https://creativecommons.org/licenses/by/4.0/us/">Creative Commons
+    Attribution 4.0</a>. </p></div>
       
     </div>
   
@@ -5827,7 +6259,8 @@ of an <code class="docutils literal notranslate"><span class="pre">imu</span></c
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

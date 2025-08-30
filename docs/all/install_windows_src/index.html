@@ -8,7 +8,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Source Installation on Windows 10 or 11 &#8212; Gazebo harmonic documentation</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKS50SX85K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JKS50SX85K');
+    </script>
+    
+    <title>Source Installation on Windows 10 or 11 &#8212; Gazebo ionic documentation</title>
   
   
   
@@ -16,42 +25,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=12e630a0" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=173bdbe0" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=173ad40a"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/documentation_options.js?v=0b151d4f"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'install_windows_src';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://addisu.taddese.com/docs/docs/harmonic/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'harmonic';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://addisu.taddese.com/docs/docs/ionic/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'ionic';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
-    <link rel="canonical" href="https://addisu.taddese.com/docs/docs/latestinstall_windows_src/" />
+    <link rel="canonical" href="https://addisu.taddese.com/docs/docs/latest/install_windows_src/" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -59,6 +72,7 @@
     <link rel="prev" title="Source Installation on macOS" href="../install_osx_src/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="ionic" />
   </head>
   
   
@@ -74,19 +88,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search/"
       method="get">
@@ -94,7 +97,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -102,8 +104,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +142,8 @@
       
     
     
-    <img src="../_static/gazebo_horz_pos.svg" class="logo__image only-light" alt="Gazebo harmonic documentation - Home"/>
-    <script>document.write(`<img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark" alt="Gazebo harmonic documentation - Home"/>`);</script>
+    <img src="../_static/gazebo_horz_pos.svg" class="logo__image only-light" alt="Gazebo ionic documentation - Home"/>
+    <img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark pst-js-only" alt="Gazebo ionic documentation - Home"/>
   
   
 </a></div>
@@ -180,29 +182,21 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
       
@@ -213,15 +207,11 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -238,36 +228,30 @@ document.write(`
   <div class="banner d-flex flex-column-reverse flex-sm-row">
     <div>
       <div class="d-none d-sm-block">
-        <span class="d-inline fs-2">Docs / Gazebo Harmonic</span>
-        
-          <span class="badge bg-primary fs-4 fw-light ms-2">LTS</span>
+        <span class="d-inline fs-2">Docs / Gazebo Ionic</span>
         
       </div>
-      <span>Supported Sep, 2023 to Sep, 2028</span>
+      <span>Supported Sep, 2024 to Sep, 2026</span>
     </div><div class="gz-version-switcher">
   <span class="fs-4 fw-light pe-2">Release:</span>
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div></div>
+</div></div></div>
 </div>
 
     </header>
@@ -278,7 +262,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -318,15 +303,11 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
         
@@ -363,7 +344,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../fuel_insert/">Model Insertion from Fuel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hotkeys/">Keyboard Shortcuts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spawn_urdf/">Spawn URDF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros2_integration/">ROS 2 integration via bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_overview/">ROS 2 integration overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_launch_gazebo/">Launch Gazebo from ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_integration/">Use ROS 2 to interact with Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros2_spawn_model/">Use ROS 2 to spawn a Gazebo model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ros2_interop/">ROS 2 interoperability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ros_gz_project_template_guide/">ROS 2 integration template</a></li>
 </ul>
@@ -372,11 +356,16 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../ros2_gz_vendor_pkgs/">ROS 2 Gazebo Vendor Packages</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../install_gz11_side_by_side/">Installing Gazebo11 side by side with new Gazebo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../migrating_gazebo_classic_ros2_packages/">Migration from ROS 2 Gazebo Classic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_gazebo_in_ci/">Continuous Integration For Gazebo Packages</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gazebo_classic_migration/">Gazebo Classic Migration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install_gz11_side_by_side/">Installing Gazebo11 side by side with new Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migrating_gazebo_classic_ros2_packages/">Migration from ROS 2 Gazebo Classic</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../roadmap/">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../release-features/">Release Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../releases/">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance/">Governance</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../development/">Development</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/">Contributing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ci/">Continuous Integration</a></li>
@@ -397,23 +386,24 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../fuel_fair_use/">What is Fair Use</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects_using_gazebo/">Projects using Gazebo</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../library_reference_nav/">Library Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/cmake/3">cmake</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/common/5">common</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/fuel_tools/9">fuel_tools</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/gui/8">gui</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/launch/7">launch</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/math/7">math</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/msgs/10">msgs</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/physics/7">physics</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/plugin/2">plugin</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/rendering/8">rendering</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sensors/8">sensors</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sim/8">sim</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/cmake/4">cmake</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/common/6">common</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/fuel_tools/10">fuel_tools</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/gui/9">gui</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/launch/8">launch</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/math/8">math</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/msgs/11">msgs</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/physics/8">physics</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/plugin/3">plugin</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/rendering/9">rendering</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sensors/9">sensors</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sim/9">sim</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/tools/2">tools</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/transport/13">transport</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/utils/2">utils</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sdformat/14">sdformat</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/transport/14">transport</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/utils/3">utils</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://gazebosim.org/api/sdformat/15">sdformat</a></li>
 </ul>
 </details></li>
 </ul>
@@ -423,9 +413,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -443,8 +438,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -454,9 +447,9 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../install/" class="nav-link">Gazebo Harmonic</a></li>
+    <li class="breadcrumb-item"><a href="../install/" class="nav-link">Gazebo Ionic</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Source...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Source Installation on Windows 10 or 11</span></li>
   </ul>
 </nav>
 </div>
@@ -478,10 +471,10 @@ WARNING: Current Windows support is experimental.
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="source-installation-on-windows-10-or-11">
 <h1>Source Installation on Windows 10 or 11<a class="headerlink" href="#source-installation-on-windows-10-or-11" title="Link to this heading">#</a></h1>
-<p>OGRE2 rendering capabilities are not currently supported in Windows, and Gazebo GUI
+<p>OGRE2 rendering capabilities are supported in Windows, and Gazebo GUI
 works in a limited fashion. These functionalities correspond to the currently
 building packages <code class="docutils literal notranslate"><span class="pre">gz-rendering</span></code> and <code class="docutils literal notranslate"><span class="pre">gz-sim</span></code>, respectively. The packages will build,
-but you can expect runtime failures when using their functionalities.</p>
+without any failures when using their functionalities.</p>
 <blockquote>
 <div><p><strong>NOTE</strong>
 You should be able to use <code class="docutils literal notranslate"><span class="pre">ogre</span></code> as a rendering engine instead of the default <code class="docutils literal notranslate"><span class="pre">ogre2</span></code>.
@@ -490,30 +483,46 @@ Just append <code class="docutils literal notranslate"><span class="pre">--rende
 <section id="install-dependencies">
 <h2>Install dependencies<a class="headerlink" href="#install-dependencies" title="Link to this heading">#</a></h2>
 <ol class="arabic">
-<li><p>Install a conda distribution. As Gazebo uses all dependencies from the conda-forge channel,
-we suggest to install miniforge following <a class="reference external" href="https://github.com/conda-forge/miniforge#windows">the official miniforge installation docs</a>
-You will likely want to check the box to add <code class="docutils literal notranslate"><span class="pre">conda</span></code> to your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>
-during the installation process so that you won’t have to do this step manually.</p></li>
+<li><p>If you do not have the conda package manager installed in your system, install a conda distribution.
+As Gazebo uses all dependencies from the conda-forge channel, we suggest to install miniforge following <a class="reference external" href="https://github.com/conda-forge/miniforge#windows">the official miniforge installation docs</a> by executing the following commands in a “Command Prompt” terminal:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>curl.exe -L -O https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe
+start /wait &quot;&quot; Miniforge3-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniforge3
+%UserProfile%\Miniforge3\condabin\conda init
+%UserProfile%\Miniforge3\condabin\conda config --set auto_activate_base false
+del Miniforge3-Windows-x86_64.exe
+</pre></div>
+</div>
+<p>If you followed this step correctly, you should be able to access <code class="docutils literal notranslate"><span class="pre">conda</span></code> in any new “Command Prompt” terminal you open.
+To verify that, check that if you open a new terminal and execute <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span></code>, the output begins with:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>  active environment : None
+         shell level : 0
+  [..]
+</pre></div>
+</div>
+</li>
 <li><p>Install <a class="reference external" href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2019 or 2022</a>.
 The Community version is free for students, open-source developers, and personal
 development. Check “Desktop development with C++” in the Workloads tab,
 check “MFC and ATL support”, and uncheck “C++ Cmake Tools.” We will install
 cmake via Conda. All other checkboxes can be left unchecked.</p></li>
 <li><p>Open a Visual Studio Command Prompt (search for “x64 Native Tools Command Prompt
-for VS” in the Windows search field near the Windows button). Optionally,
+for VS” in the Windows search field near the Windows button) or Developer PowerShell
+for VS (search for “developer powershell”). Optionally,
 right-click and pin to the task bar for quick access in the future.</p>
-<p>If you did not add Conda to your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable during Conda installation,
-you may need to navigate to the location of <code class="docutils literal notranslate"><span class="pre">condabin</span></code> in order to use the <code class="docutils literal notranslate"><span class="pre">conda</span></code> command.
-To find <code class="docutils literal notranslate"><span class="pre">condabin</span></code>, search for “Anaconda Prompt” in the Windows search field near the
-Windows button, open it, run <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">conda</span></code>, and look for a line containing the directory <code class="docutils literal notranslate"><span class="pre">condabin</span></code>.</p>
+<p>If you chose PowerShell, you need to do a few steps to be able to use Conda and Gazebo in it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>init<span class="w"> </span>powershell
+<span class="c1"># Restart the PowerShell</span>
+Set-ExecutionPolicy<span class="w"> </span>-ExecutionPolicy<span class="w"> </span>Unrestricted<span class="w"> </span>-Scope<span class="w"> </span>CurrentUser
+</pre></div>
+</div>
 </li>
-<li><p>Navigate to your <code class="docutils literal notranslate"><span class="pre">condabin</span></code>, if necessary, and then create and activate a Conda environment:</p>
+<li><p>Create and activate a Conda environment:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>gz-ws
 conda<span class="w"> </span>activate<span class="w"> </span>gz-ws
 </pre></div>
 </div>
 <p>Once you have activated an environment, a prefix like <code class="docutils literal notranslate"><span class="pre">(gz-ws)</span></code> will be prepended to
-your prompt, and you can use the <code class="docutils literal notranslate"><span class="pre">conda</span></code> command outside of the <code class="docutils literal notranslate"><span class="pre">condabin</span></code> directory.</p>
+your prompt.</p>
 <p>You can use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span> <span class="pre">--envs</span></code> to see all of your environments.</p>
 <p>To speed up conda installations, also set the following to use libmamba solver.
 Older conda installations may need to do <a class="reference external" href="https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community">additional steps</a>.</p>
@@ -535,8 +544,8 @@ knows it is a path and not a name.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>cmake<span class="w"> </span>git<span class="w"> </span>vcstool<span class="w"> </span>curl<span class="w"> </span>pkg-config<span class="w"> </span>^
 colcon-common-extensions<span class="w"> </span>dartsim<span class="w"> </span>eigen<span class="w"> </span>freeimage<span class="w"> </span>gdal<span class="w"> </span>gts<span class="w"> </span>^
 glib<span class="w"> </span>dlfcn-win32<span class="w"> </span>ffmpeg<span class="w"> </span>ruby<span class="w"> </span>tinyxml2<span class="w"> </span>tinyxml<span class="w"> </span>^
-libprotobuf<span class="w"> </span>urdfdom<span class="w"> </span>zeromq<span class="w"> </span>cppzmq<span class="w"> </span><span class="nv">ogre</span><span class="o">=</span><span class="m">1</span>.10<span class="w"> </span>ogre-next<span class="w"> </span>jsoncpp<span class="w"> </span>^
-libzip<span class="w"> </span>qt<span class="w"> </span>pybind11<span class="w"> </span>--channel<span class="w"> </span>conda-forge
+protobuf<span class="w"> </span>urdfdom<span class="w"> </span>zeromq<span class="w"> </span>cppzmq<span class="w"> </span><span class="nv">ogre</span><span class="o">=</span><span class="m">1</span>.10<span class="w"> </span>ogre-next<span class="w"> </span>jsoncpp<span class="w"> </span>^
+libzip<span class="w"> </span>qt<span class="w"> </span>pybind11<span class="w"> </span>boost<span class="w"> </span>--channel<span class="w"> </span>conda-forge
 </pre></div>
 </div>
 <p>This can take tens of minutes (or less when using libmamba solver).</p>
@@ -551,12 +560,12 @@ mkdir<span class="w"> </span>src
 </li>
 <li><p>Then clone the repositories</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># CMD</span>
-curl<span class="w"> </span>-sk<span class="w"> </span>https://raw.githubusercontent.com/gazebo-tooling/gazebodistro/master/collection-harmonic.yaml<span class="w"> </span>-o<span class="w"> </span>collection-harmonic
-vcs<span class="w"> </span>import<span class="w"> </span>src<span class="w"> </span>&lt;<span class="w"> </span>collection-harmonic
+curl<span class="w"> </span>-sk<span class="w"> </span>https://raw.githubusercontent.com/gazebo-tooling/gazebodistro/master/collection-ionic.yaml<span class="w"> </span>-o<span class="w"> </span>collection-ionic
+vcs<span class="w"> </span>import<span class="w"> </span>src<span class="w"> </span>&lt;<span class="w"> </span>collection-ionic
 
 <span class="c1"># PowerShell</span>
-curl<span class="w"> </span>https://raw.githubusercontent.com/gazebo-tooling/gazebodistro/master/collection-harmonic.yaml<span class="w"> </span>-o<span class="w"> </span>collection-harmonic
-vcs<span class="w"> </span>import<span class="w"> </span>--input<span class="w"> </span>collection-harmonic<span class="w"> </span>src
+curl<span class="w"> </span>https://raw.githubusercontent.com/gazebo-tooling/gazebodistro/master/collection-ionic.yaml<span class="w"> </span>-o<span class="w"> </span>collection-ionic
+vcs<span class="w"> </span>import<span class="w"> </span>--input<span class="w"> </span>collection-ionic<span class="w"> </span>src
 </pre></div>
 </div>
 </li>
@@ -573,7 +582,7 @@ recognized by <code class="docutils literal notranslate"><span class="pre">colco
 <p><code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">graph</span></code> should list the Gazebo libraries with an
 <a class="reference external" href="https://colcon.readthedocs.io/en/released/reference/verb/graph.html#example-output">interdependency diagram</a>.
 If that is the case, then you are ready to build the whole set of libraries:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span>build<span class="w"> </span>--cmake-args<span class="w"> </span>-DBUILD_TESTING<span class="o">=</span>OFF<span class="w"> </span>--merge-install<span class="w"> </span>--packages-up-to<span class="w"> </span>gz-sim8<span class="w"> </span>gz-tools2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span>build<span class="w"> </span>--cmake-args<span class="w"> </span>-DBUILD_TESTING<span class="o">=</span>OFF<span class="w"> </span>-DSKIP_SWIG<span class="o">=</span>ON<span class="w"> </span>--merge-install<span class="w"> </span>--packages-up-to<span class="w"> </span>gz-sim9<span class="w"> </span>gz-tools2
 </pre></div>
 </div>
 <p>Tests are turned off as they are not currently supported on Windows.</p>
@@ -592,23 +601,27 @@ If that is the case, then you are ready to build the whole set of libraries:</p>
 <h2>Using the workspace<a class="headerlink" href="#using-the-workspace" title="Link to this heading">#</a></h2>
 <p>The workspace needs to be sourced every time a new terminal is used (
 and Conda environment activated before that).</p>
-<p>Run the following command to source the workspace:</p>
+<p>The overall instructions for setting up a new terminal to use the built
+workspace are:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># CMD</span>
+conda<span class="w"> </span>activate<span class="w"> </span>gz-ws
 call<span class="w"> </span>install<span class="se">\s</span>etup.bat
 
 <span class="c1"># PowerShell</span>
+conda<span class="w"> </span>activate<span class="w"> </span>gz-ws
 .<span class="se">\i</span>nstall<span class="se">\s</span>etup.ps1
 </pre></div>
 </div>
-<p>This is the end of the source install instructions; head back to the <a class="reference external" href="/docs/all/getstarted">Getting started</a>
-page to start using Gazebo!</p>
-<blockquote>
-<div><p><strong>NOTE</strong>
-As Gazebo GUI is not yet working, running <code class="docutils literal notranslate"><span class="pre">gz</span> <span class="pre">sim</span></code> will not work. You can run only the server with</p>
-<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>gz sim -s -v
+<p>You should now be able to launch gazebo:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Launch server in one terminal </span>
+gz<span class="w"> </span>sim<span class="w"> </span>-s
+
+<span class="c1"># In separate terminal, launch gui</span>
+gz<span class="w"> </span>sim<span class="w"> </span>-g
 </pre></div>
 </div>
-</div></blockquote>
+<p>This is the end of the source install instructions; head back to the <a class="reference internal" href="../getstarted/"><span class="doc std std-doc">Getting started</span></a>
+page to start using Gazebo!</p>
 <blockquote>
 <div><p><strong>NOTE</strong>
 If your username contains spaces (which is quite common on Windows), you will probably get errors
@@ -622,11 +635,7 @@ to something else:</p>
 <section id="gazebo-gui-workaround">
 <h3>Gazebo GUI workaround<a class="headerlink" href="#gazebo-gui-workaround" title="Link to this heading">#</a></h3>
 <p>Although running <code class="docutils literal notranslate"><span class="pre">gz</span> <span class="pre">sim</span></code> without arguments is not supported on Windows,
-and <code class="docutils literal notranslate"><span class="pre">gz</span> <span class="pre">sim</span> <span class="pre">-g</span></code> is also not supported, there is a workaround you can apply
-to be able to launch <code class="docutils literal notranslate"><span class="pre">gz</span> <span class="pre">sim</span> <span class="pre">-g</span></code> on Windows.</p>
-<blockquote>
-<div><p>Manually comment <a class="reference external" href="https://github.com/gazebosim/gz-sim/blob/gz-sim7_7.5.0/src/cmd/cmdsim.rb.in#L497-L501">these lines</a> and <a class="reference external" href="https://github.com/gazebosim/gz-sim/blob/gz-sim7_7.5.0/src/cmd/cmdsim.rb.in#L558-L562">these lines</a> in file <code class="docutils literal notranslate"><span class="pre">install\lib\ruby\gz\cmdsim8.rb</span></code>.</p>
-</div></blockquote>
+the <code class="docutils literal notranslate"><span class="pre">gz</span> <span class="pre">sim</span> <span class="pre">-g</span></code> command is  supported, and you can use it to launch the graphical interface on Windows.</p>
 <p>This should allow you to run the GUI in a separate console, connecting to the server running in another console.</p>
 </section>
 </section>
@@ -659,7 +668,7 @@ conda<span class="w"> </span>remove<span class="w"> </span>--all<span class="w">
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
-<p>See <a class="reference external" href="/docs/harmonic/troubleshooting#windows">Troubleshooting</a></p>
+<p>See <a class="reference internal" href="../troubleshooting/#windows"><span class="std std-ref">Troubleshooting</span></a></p>
 </section>
 </section>
 
@@ -674,7 +683,8 @@ conda<span class="w"> </span>remove<span class="w"> </span>--all<span class="w">
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -700,7 +710,7 @@ conda<span class="w"> </span>remove<span class="w"> </span>--all<span class="w">
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/gazebosim/docs/edit/master/harmonic/install_windows_src.md">
+    <a href="https://github.com/gazebosim/docs/edit/master/ionic/install_windows_src.md">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -725,8 +735,8 @@ conda<span class="w"> </span>remove<span class="w"> </span>--all<span class="w">
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -736,7 +746,7 @@ conda<span class="w"> </span>remove<span class="w"> </span>--all<span class="w">
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
@@ -748,8 +758,8 @@ conda<span class="w"> </span>remove<span class="w"> </span>--all<span class="w">
       
         <div class="footer-item"><p> Brought to you by <a href="https://openrobotics.org">Open Robotics</a>. </p>
 <p> Except where otherwise noted, the gazebosim.org web pages are licensed under <a
-    href="https://creativecommons.org/licenses/by/3.0/us/">Creative Commons
-    Attribution 3.0</a>. </p></div>
+    href="https://creativecommons.org/licenses/by/4.0/us/">Creative Commons
+    Attribution 4.0</a>. </p></div>
       
     </div>
   
@@ -758,7 +768,8 @@ conda<span class="w"> </span>remove<span class="w"> </span>--all<span class="w">
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

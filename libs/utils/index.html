@@ -8,6 +8,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKS50SX85K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JKS50SX85K');
+    </script>
+    
     <title>utils &#8212; Gazebo  documentation</title>
   
   
@@ -16,36 +25,39 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=12e630a0" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/gazebo.css?v=173bdbe0" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=187304be"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'utils/index';</script>
-    <link rel="canonical" href="https://addisu.taddese.com/docs/libsutils/" />
+    <link rel="canonical" href="https://addisu.taddese.com/docs/libs/utils/" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -53,6 +65,7 @@
     <link rel="prev" title="transport" href="../transport/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -68,19 +81,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search/"
       method="get">
@@ -88,7 +90,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -96,8 +97,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -133,7 +134,7 @@
     
     
     <img src="../_static/gazebo_horz_pos.svg" class="logo__image only-light" alt="Gazebo  documentation - Home"/>
-    <script>document.write(`<img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark" alt="Gazebo  documentation - Home"/>`);</script>
+    <img src="../_static/gazebo_horz_neg.svg" class="logo__image only-dark pst-js-only" alt="Gazebo  documentation - Home"/>
   
   
 </a></div>
@@ -172,29 +173,21 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
       
@@ -205,15 +198,11 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -240,7 +229,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -280,15 +270,11 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item"><a class="btn btn-outline-secondary" href="https://app.gazebosim.org">APP</a></div>
         
@@ -324,9 +310,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -344,8 +335,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -354,7 +343,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">utils</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">utils</span></li>
   </ul>
 </nav>
 </div>
@@ -375,13 +364,13 @@ document.write(`
 <h1>utils<a class="headerlink" href="#utils" title="Link to this heading">#</a></h1>
 <ul class="gz-libs-lists simple">
 <li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils"><svg version="4.0.0.63c5cb3" width="2.0em" height="2.0em" class="sd-material-icon sd-material-icon-code" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg> Source Code</a></p></li>
-<li><p><a class="reference external" href="https://gazebosim.org/api/utils/2"><svg version="4.0.0.63c5cb3" width="2.0em" height="2.0em" class="sd-material-icon sd-material-icon-description" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"></path></svg> API &amp; Tutorials</a></p></li>
+<li><p><a class="reference external" href="https://gazebosim.org/api/utils/3"><svg version="4.0.0.63c5cb3" width="2.0em" height="2.0em" class="sd-material-icon sd-material-icon-description" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"></path></svg> API &amp; Tutorials</a></p></li>
 </ul>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 Readme</label><div class="sd-tab-content docutils">
-<h1 class="rubric" id="gazebo-utils-classes-and-functions-for-robot-applications">Gazebo Utils : Classes and functions for robot applications</h1>
+<p class="rubric" id="gazebo-utils-classes-and-functions-for-robot-applications">Gazebo Utils : Classes and functions for robot applications</p>
 <p><strong>Maintainer:</strong> addisu AT openrobotics DOT org</p>
 <p><a class="reference external" href="https://github.com/gazebosim/gz-utils/issues"><img alt="GitHub open issues" src="https://img.shields.io/github/issues-raw/gazebosim/gz-utils.svg" /></a>
 <a class="reference external" href="https://github.com/gazebosim/gz-utils/pulls"><img alt="GitHub open pull requests" src="https://img.shields.io/github/issues-pr-raw/gazebosim/gz-utils.svg" /></a>
@@ -395,45 +384,45 @@ Readme</label><div class="sd-tab-content docutils">
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Test coverage</p></td>
-<td><p><a class="reference external" href="https://codecov.io/gh/gazebosim/gz-utils/tree/gz-utils2"><img alt="codecov" src="https://codecov.io/gh/gazebosim/gz-utils/tree/gz-utils2/graph/badge.svg" /></a></p></td>
+<td><p><a class="reference external" href="https://app.codecov.io/gh/gazebosim/gz-utils/tree/gz-utils3"><img alt="codecov" src="https://codecov.io/gh/gazebosim/gz-utils/branch/gz-utils3/graph/badge.svg" /></a></p></td>
 </tr>
-<tr class="row-odd"><td><p>Ubuntu Jammy</p></td>
-<td><p><a class="reference external" href="https://build.osrfoundation.org/job/gz_utils-ci-gz-utils2-jammy-amd64"><img alt="Build Status" src="https://build.osrfoundation.org/buildStatus/icon?job=gz_utils-ci-gz-utils2-jammy-amd64" /></a></p></td>
+<tr class="row-odd"><td><p>Ubuntu Noble</p></td>
+<td><p><a class="reference external" href="https://build.osrfoundation.org/job/gz_utils-ci-gz-utils3-noble-amd64"><img alt="Build Status" src="https://build.osrfoundation.org/buildStatus/icon?job=gz_utils-ci-gz-utils3-noble-amd64" /></a></p></td>
 </tr>
 <tr class="row-even"><td><p>Homebrew</p></td>
-<td><p><a class="reference external" href="https://build.osrfoundation.org/job/gz_utils-ci-gz-utils2-homebrew-amd64"><img alt="Build Status" src="https://build.osrfoundation.org/buildStatus/icon?job=gz_utils-ci-gz-utils2-homebrew-amd64" /></a></p></td>
+<td><p><a class="reference external" href="https://build.osrfoundation.org/job/gz_utils-ci-gz-utils3-homebrew-amd64"><img alt="Build Status" src="https://build.osrfoundation.org/buildStatus/icon?job=gz_utils-ci-gz-utils3-homebrew-amd64" /></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Windows</p></td>
-<td><p><a class="reference external" href="https://build.osrfoundation.org/job/gz_utils-2-win/"><img alt="Build Status" src="https://build.osrfoundation.org/job/gz_utils-2-win/badge/icon" /></a></p></td>
+<td><p><a class="reference external" href="https://build.osrfoundation.org/job/gz_utils-3-clowin/"><img alt="Build Status" src="https://build.osrfoundation.org/job/gz_utils-3-clowin/badge/icon" /></a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p>Gazebo Utils, a component of <a class="reference external" href="https://gazebosim.org">Gazebo</a>, provides general purpose
 classes and functions designed for robotic applications.</p>
-<h1 class="rubric" id="table-of-contents">Table of Contents</h1>
-<p><a class="reference external" href="#features">Features</a></p>
-<p><a class="reference external" href="#install">Install</a></p>
-<p><a class="reference external" href="#usage">Usage</a></p>
-<p><a class="reference external" href="#documentation">Documentation</a></p>
-<p><a class="reference external" href="#testing">Testing</a></p>
-<p><a class="reference external" href="#folder-structure">Folder Structure</a></p>
-<p><a class="reference external" href="#code-of-conduct">Code of Conduct</a></p>
-<p><a class="reference external" href="#code-of-contributing">Contributing</a></p>
-<p><a class="reference external" href="#versioning">Versioning</a></p>
-<p><a class="reference external" href="#license">License</a></p>
-<h1 class="rubric" id="features">Features</h1>
+<p class="rubric" id="table-of-contents">Table of Contents</p>
+<p><a class="reference internal" href="#features">Features</a></p>
+<p><a class="reference internal" href="#install">Install</a></p>
+<p><a class="reference internal" href="#usage">Usage</a></p>
+<p><a class="reference internal" href="#documentation">Documentation</a></p>
+<p><a class="reference internal" href="#testing">Testing</a></p>
+<p><a class="reference internal" href="#folder-structure">Folder Structure</a></p>
+<p><a class="reference internal" href="#code-of-conduct">Code of Conduct</a></p>
+<p><a class="reference internal" href="#code-of-contributing"><span class="xref myst">Contributing</span></a></p>
+<p><a class="reference internal" href="#versioning">Versioning</a></p>
+<p><a class="reference internal" href="#license">License</a></p>
+<p class="rubric" id="features">Features</p>
 <p>Gazebo Utils provides a wide range of functionality, including:</p>
 <ul class="simple">
 <li><p>A helper class to implement the PIMPL pattern</p></li>
 <li><p>A command line parsing utility (vendored <a class="reference external" href="https://github.com/CLIUtils/CLI11/">CLI11</a>)</p></li>
 <li><p>Macros to suppress warnings</p></li>
 </ul>
-<h1 class="rubric" id="install">Install</h1>
+<p class="rubric" id="install">Install</p>
 <p>See the <a class="reference external" href="https://gazebosim.org/api/utils/2/install.html">installation tutorial</a>.</p>
-<h1 class="rubric" id="usage">Usage</h1>
-<p>Please refer to the <a class="reference external" href="https://github.com/gazebosim/gz-utils/blob/main/examples/">examples directory</a>.</p>
-<h1 class="rubric" id="documentation">Documentation</h1>
+<p class="rubric" id="usage">Usage</p>
+<p>Please refer to the <a class="reference external" href="https://github.com/gazebosim/gz-utils/blob/gz-utils3/examples/">examples directory</a>.</p>
+<p class="rubric" id="documentation">Documentation</p>
 <p>API and tutorials can be found at <a class="reference external" href="https://gazebosim.org/libs/utils">https://gazebosim.org/libs/utils</a>.</p>
 <p>You can also generate the documentation from a clone of this repository by following these steps.</p>
 <ol class="arabic">
@@ -458,7 +447,7 @@ classes and functions designed for robotic applications.</p>
 </div>
 </li>
 </ol>
-<h1 class="rubric" id="testing">Testing</h1>
+<p class="rubric" id="testing">Testing</p>
 <p>Follow these steps to run tests and static code analysis in your clone of this repository.</p>
 <ol class="arabic">
 <li><p>Follow the <a class="reference external" href="https://gazebosim.org/api/utils/2/install.html#source-install">source install instruction</a>.</p></li>
@@ -473,7 +462,7 @@ classes and functions designed for robotic applications.</p>
 </div>
 </li>
 </ol>
-<h1 class="rubric" id="folder-structure">Folder Structure</h1>
+<p class="rubric" id="folder-structure">Folder Structure</p>
 <p>Refer to the following table for information about important directories and files in this repository.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>gz-utils
 ├── cli                      Gazebo CLI component. Vendored from https://github.com/CLIUtils/CLI11/
@@ -489,20 +478,20 @@ classes and functions designed for robotic applications.</p>
 └── CMakeLists.txt           CMake build script.
 </pre></div>
 </div>
-<h1 class="rubric" id="contributing">Contributing</h1>
+<p class="rubric" id="contributing">Contributing</p>
 <p>Please see
 <a class="reference external" href="https://gazebosim.org/docs/all/contributing">CONTRIBUTING.md</a>.</p>
-<h1 class="rubric" id="code-of-conduct">Code of Conduct</h1>
+<p class="rubric" id="code-of-conduct">Code of Conduct</p>
 <p>Please see
 <a class="reference external" href="https://github.com/gazebosim/gz-utils/blob/main/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a></p>
-<h1 class="rubric" id="versioning">Versioning</h1>
+<p class="rubric" id="versioning">Versioning</p>
 <p>This library uses <a class="reference external" href="https://semver.org/">Semantic Versioning</a>.
 Additionally, this library is part of the
 <a class="reference external" href="https://gazebosim.org">Gazebo project</a> which periodically
 releases a versioned set of compatible and complimentary libraries. See the
 <a class="reference external" href="https://gazebosim.org">Gazebo website</a> for version and
 release information.</p>
-<h1 class="rubric" id="license">License</h1>
+<p class="rubric" id="license">License</p>
 <p>This library is licensed under
 <a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>.
 See also the
@@ -512,8 +501,180 @@ file.</p>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 Changelog</label><div class="sd-tab-content docutils">
-<h2 class="rubric" id="gazebo-utils-2-x">Gazebo Utils 2.x</h2>
-<h2 class="rubric" id="gazebo-utils-2-2-0-2023-11-08">Gazebo Utils 2.2.0 (2023-11-08)</h2>
+<p class="rubric" id="gazebo-utils-3-x">Gazebo Utils 3.x</p>
+<p class="rubric" id="gazebo-utils-3-1-1-2025-02-12">Gazebo Utils 3.1.1 (2025-02-12)</p>
+<ol class="arabic simple">
+<li><p>ci.yml: run cppcheck, cpplint on noble</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/166">Pull request #166</a></p></li>
+</ul>
+</li>
+<li><p>Add ExtraTestMacros target</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/164">Pull request #164</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="gazebo-utils-3-1-0-2024-11-15">Gazebo Utils 3.1.0 (2024-11-15)</p>
+<ol class="arabic simple">
+<li><p>Build Gazebo Utils with bzlmod</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/128">Pull request #128</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/157">Pull request #157</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/159">Pull request #159</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/160">Pull request #160</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/162">Pull request #162</a></p></li>
+</ul>
+</li>
+<li><p>Add bzlmod CI</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/153">Pull request #153</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/158">Pull request #158</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/156">Pull request #156</a></p></li>
+</ul>
+</li>
+<li><p>Add expectations to subprocess test</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/155">Pull request #155</a></p></li>
+</ul>
+</li>
+<li><p>Fix logging source location</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/150">Pull request #150</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="gazebo-utils-3-0-0-2024-09-25">Gazebo Utils 3.0.0 (2024-09-25)</p>
+<ol class="arabic simple">
+<li><p><strong>Baseline:</strong> this includes all changes from 2.2.0 and earlier.</p></li>
+<li><p>Add EoL and use SetConsoleSinkLevel in example</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/148">Pull request #148</a></p></li>
+</ul>
+</li>
+<li><p>Catch spdlog exception thrown when creating file</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/145">Pull request #145</a></p></li>
+</ul>
+</li>
+<li><p>Include file name in log format</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/144">Pull request #144</a></p></li>
+</ul>
+</li>
+<li><p>Update logger level and flush_on values</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/142">Pull request #142</a></p></li>
+</ul>
+</li>
+<li><p>Use common formatter for console and file sinks</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/141">Pull request #141</a></p></li>
+</ul>
+</li>
+<li><p>Logger updates</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/139">Pull request #139</a></p></li>
+</ul>
+</li>
+<li><p>Update badges to point to gz-utils3 branch</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/137">Pull request #137</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/138">Pull request #138</a></p></li>
+</ul>
+</li>
+<li><p>Update changelog and add prepare for prereleases</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/136">Pull request #136</a></p></li>
+</ul>
+</li>
+<li><p>Move spdlog::logger to gz-utils</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/134">Pull request #134</a></p></li>
+</ul>
+</li>
+<li><p>Require cmake version 3.22.1</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/132">Pull request #132</a></p></li>
+</ul>
+</li>
+<li><p>Add package.xml</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/125">Pull request #125</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/131">Pull request #131</a></p></li>
+</ul>
+</li>
+<li><p>bazel: build and test subprocess functionality</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/123">Pull request #123</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/124">Pull request #124</a></p></li>
+</ul>
+</li>
+<li><p>Update CI badges in README</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/120">Pull request #120</a></p></li>
+</ul>
+</li>
+<li><p>Use HIDE_SYMBOLS_BY_DEFAULT</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/115">Pull request #115</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/121">Pull request #121</a></p></li>
+</ul>
+</li>
+<li><p>Remove ignition</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/100">Pull request #100</a></p></li>
+</ul>
+</li>
+<li><p>Bumps in ionic: use gz-cmake4</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/111">Pull request #111</a></p></li>
+</ul>
+</li>
+<li><p>Infrastructure</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/112">Pull request #112</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/119">Pull request #119</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/129">Pull request #129</a></p></li>
+</ul>
+</li>
+<li><p>⬆️  Bump main to 3.0.0~pre1</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/76">Pull request #76</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="gazebo-utils-2-x">Gazebo Utils 2.x</p>
+<p class="rubric" id="gazebo-utils-2-2-1-2025-01-30">Gazebo Utils 2.2.1 (2025-01-30)</p>
+<ol class="arabic simple">
+<li><p>Add package.xml</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/125">Pull request #125</a></p></li>
+</ul>
+</li>
+<li><p>bazel: build and test subprocess functionality</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/123">Pull request #123</a></p></li>
+</ul>
+</li>
+<li><p>Lint</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/124">Pull request #124</a></p></li>
+</ul>
+</li>
+<li><p>Update CI badges in README</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/120">Pull request #120</a></p></li>
+</ul>
+</li>
+<li><p>Infrastructure</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/131">Pull request #131</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gazebosim/gz-utils/pull/119">Pull request #119</a></p></li>
+</ul>
+</li>
+</ol>
+<p class="rubric" id="gazebo-utils-2-2-0-2023-11-08">Gazebo Utils 2.2.0 (2023-11-08)</p>
 <ol class="arabic simple">
 <li><p>Make the single argument constructor inherit the env</p>
 <ul class="simple">
@@ -546,7 +707,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="gazebo-utils-2-1-0-2023-09-26">Gazebo Utils 2.1.0 (2023-09-26)</h2>
+<p class="rubric" id="gazebo-utils-2-1-0-2023-09-26">Gazebo Utils 2.1.0 (2023-09-26)</p>
 <ol class="arabic simple">
 <li><p>Documentation fixes</p>
 <ul class="simple">
@@ -592,7 +753,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="gazebo-utils-2-0-0-2022-09-22">Gazebo Utils 2.0.0 (2022-09-22)</h2>
+<p class="rubric" id="gazebo-utils-2-0-0-2022-09-22">Gazebo Utils 2.0.0 (2022-09-22)</p>
 <ol class="arabic simple">
 <li><p>Improve install instructions</p>
 <ul class="simple">
@@ -643,8 +804,8 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="gazebo-utils-1-x">Gazebo Utils 1.x</h2>
-<h2 class="rubric" id="gazebo-utils-1-5-1-2022-12-15">Gazebo Utils 1.5.1 (2022-12-15)</h2>
+<p class="rubric" id="gazebo-utils-1-x">Gazebo Utils 1.x</p>
+<p class="rubric" id="gazebo-utils-1-5-1-2022-12-15">Gazebo Utils 1.5.1 (2022-12-15)</p>
 <ol class="arabic simple">
 <li><p>Add missing config.hh include to gz headers</p>
 <ul class="simple">
@@ -652,7 +813,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="gazebo-utils-1-5-0-2022-12-08">Gazebo Utils 1.5.0 (2022-12-08)</h2>
+<p class="rubric" id="gazebo-utils-1-5-0-2022-12-08">Gazebo Utils 1.5.0 (2022-12-08)</p>
 <ol class="arabic simple">
 <li><p>Ignition to Gazebo header migration.</p>
 <ul class="simple">
@@ -665,7 +826,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="gazebo-utils-1-4-1-2022-11-17">Gazebo Utils 1.4.1 (2022-11-17)</h2>
+<p class="rubric" id="gazebo-utils-1-4-1-2022-11-17">Gazebo Utils 1.4.1 (2022-11-17)</p>
 <ol class="arabic simple">
 <li><p>Include <functional> in FormatterFwd.</p>
 <ul class="simple">
@@ -683,7 +844,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="gazebo-utils-1-4-0-2022-03-29">Gazebo Utils 1.4.0 (2022-03-29)</h2>
+<p class="rubric" id="gazebo-utils-1-4-0-2022-03-29">Gazebo Utils 1.4.0 (2022-03-29)</p>
 <ol class="arabic simple">
 <li><p>Enable cpplint</p>
 <ul class="simple">
@@ -711,7 +872,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="gazebo-utils-1-3-0-2022-02-24">Gazebo Utils 1.3.0 (2022-02-24)</h2>
+<p class="rubric" id="gazebo-utils-1-3-0-2022-02-24">Gazebo Utils 1.3.0 (2022-02-24)</p>
 <ol class="arabic simple">
 <li><p>Fix inline namespace issue with clang6</p>
 <ul class="simple">
@@ -724,7 +885,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="gazebo-utils-1-2-0-2022-01-28">Gazebo Utils 1.2.0 (2022-01-28)</h2>
+<p class="rubric" id="gazebo-utils-1-2-0-2022-01-28">Gazebo Utils 1.2.0 (2022-01-28)</p>
 <ol class="arabic simple">
 <li><p>Enable cpplint on focal</p>
 <ul class="simple">
@@ -747,7 +908,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="gazebo-utils-1-1-0-2021-09-02">Gazebo Utils 1.1.0 (2021-09-02)</h2>
+<p class="rubric" id="gazebo-utils-1-1-0-2021-09-02">Gazebo Utils 1.1.0 (2021-09-02)</p>
 <ol class="arabic simple">
 <li><p>More complete bazel implementation</p>
 <ul class="simple">
@@ -765,7 +926,7 @@ Changelog</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 </ol>
-<h2 class="rubric" id="gazebo-utils-1-0-0-2021-03-30">Gazebo Utils 1.0.0 (2021-03-30)</h2>
+<p class="rubric" id="gazebo-utils-1-0-0-2021-03-30">Gazebo Utils 1.0.0 (2021-03-30)</p>
 <ol class="arabic simple">
 <li><p>Add basic support for bazel build system.</p>
 <ul class="simple">
@@ -823,8 +984,8 @@ Changelog</label><div class="sd-tab-content docutils">
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -834,7 +995,7 @@ Changelog</label><div class="sd-tab-content docutils">
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
@@ -846,8 +1007,8 @@ Changelog</label><div class="sd-tab-content docutils">
       
         <div class="footer-item"><p> Brought to you by <a href="https://openrobotics.org">Open Robotics</a>. </p>
 <p> Except where otherwise noted, the gazebosim.org web pages are licensed under <a
-    href="https://creativecommons.org/licenses/by/3.0/us/">Creative Commons
-    Attribution 3.0</a>. </p></div>
+    href="https://creativecommons.org/licenses/by/4.0/us/">Creative Commons
+    Attribution 4.0</a>. </p></div>
       
     </div>
   
@@ -856,7 +1017,8 @@ Changelog</label><div class="sd-tab-content docutils">
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>
