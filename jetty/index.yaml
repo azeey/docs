@@ -18,10 +18,12 @@ pages:
   - name: release_notes
     title: Release Notes
     file: release_notes.md
+    section: get_started
   - name: install
     title: Install
     file: install.md
     description: Jetty installation instructions
+    section: get_started
     children:
       - name: install_ubuntu
         title: Binary Ubuntu Install
@@ -53,59 +55,89 @@ pages:
     title: Feature Comparison
     file: comparison.md
     description: A list of features present in Gazebo-classic and the status of their migration to Gazebo.
+
   - name: tutorials
     title: Tutorials
     file: tutorials.md
+    section: tutorials
+  - name: basic_tutorials
+    title: Basic tutorials
+    section: tutorials
     children:
       - name: building_robot
         title: Building your own robot
         file: building_robot.md
+        section: tutorials
       - name: moving_robot
         title: Moving the robot
         file: moving_robot.md
+        section: tutorials
       - name: sdf_worlds
         title: SDF worlds
         file: sdf_worlds.md
+        section: tutorials
       - name: sensors
         title: Sensors
         file: sensors.md
+        section: tutorials
       - name: actors
         title: Actors
         file: actors.md
+        section: tutorials
+  - name: gui_tutorials
+    title: GUI tutorials
+    section: tutorials
+    children:
       - name: gui
         title: Understanding the GUI
         file: GUI_tutorial.md
+        section: tutorials
       - name: manipulating_models
         title: Manipulating Models
         file: Manipulating_models.md
+        section: tutorials
       - name: fuel_insert
         title: Model Insertion from Fuel
         file: Model_insertion_fuel.md
+        section: tutorials
       - name: hotkeys
         title: Keyboard Shortcuts
         file: hotkeys.md
         description: Gazebo keyboard shortcuts
-      - name: spawn_urdf
-        title: Spawn URDF
-        file: spawn_urdf.md
-      - name: ros2_overview
-        title: ROS 2 integration overview
-        file: ros2_overview.md
-      - name: ros2_launch_gazebo
-        title: Launch Gazebo from ROS 2
-        file: ros2_launch_gazebo.md
-      - name: ros2_integration
-        title: Use ROS 2 to interact with Gazebo
-        file: ros2_integration.md
-      - name: ros2_sim_interfaces
-        title: Use ROS 2 Simulation Interfaces to Interact with Gazebo
-        file: ros2_sim_interfaces.md
-      - name: ros2_spawn_model
-        title: Use ROS 2 to spawn a Gazebo model
-        file: ros2_spawn_model.md  
-      - name: ros2_interop
-        title: ROS 2 interoperability
-        file: ros2_interop.md
-      - name: ros_gz_project_template_guide
-        title: ROS 2 integration template
-        file: ros_gz_project_template_guide.md
+        section: tutorials
+  - name: ros_tutorials
+    title: ROS Integration
+    section: tutorials
+    children:
+    - name: spawn_urdf
+      title: Spawn URDF
+      file: spawn_urdf.md
+      section: tutorials
+    - name: ros2_overview
+      title: ROS 2 integration overview
+      file: ros2_overview.md
+      section: tutorials
+    - name: ros2_launch_gazebo
+      title: Launch Gazebo from ROS 2
+      file: ros2_launch_gazebo.md
+      section: tutorials
+    - name: ros2_integration
+      title: Use ROS 2 to interact with Gazebo
+      file: ros2_integration.md
+      section: tutorials
+    - name: ros2_sim_interfaces
+      title: Use ROS 2 Simulation Interfaces to Interact with Gazebo
+      file: ros2_sim_interfaces.md
+      section: tutorials
+    - name: ros2_spawn_model
+      title: Use ROS 2 to spawn a Gazebo model
+      file: ros2_spawn_model.md  
+      section: tutorials
+    - name: ros2_interop
+      title: ROS 2 interoperability
+      file: ros2_interop.md
+      section: tutorials
+    - name: ros_gz_project_template_guide
+      title: ROS 2 integration template
+      file: ros_gz_project_template_guide.md
+      section: tutorials

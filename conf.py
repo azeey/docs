@@ -73,7 +73,8 @@ def create_file_rename_map(nav_yaml_pages, release):
     prefix = f"{release}/" if release is not None else ""
 
     for page in nav_yaml_pages:
-        file_name_map[page["name"]] = f"{prefix}{page['file']}"
+        if "file" in page:
+            file_name_map[page["name"]] = f"{prefix}{page['file']}"
 
         children = page.get("children")
         if children:

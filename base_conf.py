@@ -94,6 +94,7 @@ html_theme_options = {
     "check_switcher": False,
     # We have our own version, so we disable the one from the theme.
     "show_version_warning_banner": False,
+    "show_nav_level": 1,
 }
 html_sidebars = {"**": ["gz-sidebar-nav"]}
 

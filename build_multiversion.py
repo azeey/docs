@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from collections import defaultdict
 from pathlib import Path
 from string import Template
 import argparse
@@ -21,6 +22,7 @@ import json
 import os
 import requests
 import shutil
+import textwrap
 import sys
 import subprocess
 import yaml
@@ -35,6 +37,15 @@ def _combine_nav(common_nav, release_nav):
         combined.insert(i + 1, item)
     return combined
 
+def _create_sectioned_pages(sections, pages):
+    sectioned_pages = defaultdict(list)
+    section_ids = [section["id"] for section in sections]
+    for page in pages:
+        section = page.get("section", "default")
+        if section not in section_ids:
+            raise RuntimeError(f"Unknown section id {section}")
+        sectioned_pages[section].append(page)
+    return sectioned_pages
 
 def copy_pages(pages, root_src_dir, dst):
     for page in pages:
@@ -117,41 +128,72 @@ def generate_sources(gz_nav_yaml, root_src_dir, tmp_dir, gz_release):
             return new_path
         return file_path
 
-    toc_directives = ["{toctree}", ":hidden:", ":maxdepth: 1", ":titlesonly:"]
-
     with open(version_tmp_dir / "index.yaml") as f:
         version_nav_yaml = yaml.safe_load(f)
         combined_nav = _combine_nav(gz_nav_yaml["pages"], version_nav_yaml["pages"])
+        sectioned_pages = _create_sectioned_pages(gz_nav_yaml["sections"], combined_nav)
 
         nav_md = []
+        index_toc ="# Index\n\n"
         # TODO(azeey) Make this recursive so multiple levels of
         # 'children' can be supported.
-        for page in combined_nav:
-            file_url = page["name"]
-            file_path = page["file"]
+        for section in gz_nav_yaml["sections"]:
+            index_toc += textwrap.dedent(f"""\
+            ```{{toctree}}
+            :hidden:
+            :maxdepth: 1
+            :titlesonly:
+            :caption: {section["title"]}
+            """)
 
-            children = page.get("children")
-            nav_md.append(f"{page['title']} <{page['name']}>")
-            new_file_path = handle_file_url_rename(file_path, file_url)
+            maybe_hidden = ":hidden:"
+            for page in sectioned_pages[section["id"]]:
+                file_url = page["name"]
 
-            if children:
-                child_md = []
-                for child in children:
-                    file_url = child["name"]
-                    file_path = child["file"]
-                    handle_file_url_rename(file_path, file_url)
-                    child_md.append(f"{child['title']} <{file_url}>")
+                children = page.get("children")
+                index_toc += f"{page['title']} <{page['name']}>\n"
+                if "file" in page:
+                    file_path = page["file"]
+                    new_file_path = handle_file_url_rename(file_path, file_url)
+                else:
+                    new_file_path = f"{file_url}.md"
+                    maybe_hidden = ""
+                    with open(version_tmp_dir / new_file_path, "w") as ind_f:
+                        ind_f.write(f"# {page['title']}\n")
 
-                with open(version_tmp_dir / new_file_path, "a") as ind_f:
-                    # Include {toctree} for children below the .md text
-                    ind_f.write("\n```") 
-                    ind_f.write("\n".join(toc_directives) + "\n")
-                    ind_f.writelines("\n".join(child_md) + "\n")
-                    ind_f.write("```\n")
+                if children:
+                    child_md = []
+                    for child in children:
+                        file_url = child["name"]
+                        file_path = child["file"]
+                        handle_file_url_rename(file_path, file_url)
+                        child_md.append(f"{child['title']} <{file_url}>")
+
+                    with open(version_tmp_dir / new_file_path, "a") as ind_f:
+                        # Include {toctree} for children below the .md text
+                        ind_f.write(textwrap.dedent(f"""
+                            ```{{toctree}}
+                            :maxdepth: 1
+                            :titlesonly:
+                            {maybe_hidden}
+                            """))
+                        ind_f.write("\n".join(child_md))
+                        ind_f.write("\n```\n")
+
+            index_toc += "```\n"
 
         library_reference_nav = "library_reference_nav"
         libraries = release_info["libraries"]
         if libraries:
+            index_toc += textwrap.dedent(f"""\
+            ```{{toctree}}
+            :hidden:
+            :maxdepth: 1
+            :titlesonly:
+            :caption: API Reference
+            {library_reference_nav}
+            ```
+            """)
             nav_md.append(library_reference_nav)
             # Add Library Reference
             with open(version_tmp_dir / f"{library_reference_nav}.md", "w") as ind_f:
@@ -162,7 +204,7 @@ def generate_sources(gz_nav_yaml, root_src_dir, tmp_dir, gz_release):
                     ind_f.write(
                         f"{library['name']} <https://gazebosim.org/api/{library['name']}/{library['version']}>\n"
                     )
-                ind_f.write("```\n\n")
+                ind_f.write("```\n")
 
         with open(version_tmp_dir / "index.md", "w") as ind_f:
             ind_f.write(
@@ -173,11 +215,7 @@ myst:
 ---
 """
             )
-            ind_f.write("# Index\n\n")
-            ind_f.write("```")
-            ind_f.write("\n".join(toc_directives) + "\n")
-            ind_f.writelines("\n".join(nav_md) + "\n")
-            ind_f.write("```\n\n")
+            ind_f.write(index_toc)
 
 
 def get_preferred_release(releases: dict):

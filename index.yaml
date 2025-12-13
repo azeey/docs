@@ -14,11 +14,23 @@
 #    be displayed on the website's left side bar.
 #
 #    c. "file:" The markdown file that contains the page's content.
+
+sections:
+  - id: get_started
+    title: Get Started
+  - id: tutorials
+    title: Tutorials
+  - id: how_to
+    title: How to Guide
+  - id: default
+    title: Other
+
 pages:
   - name: getstarted
     title: Get Started
     file: get_started.md
     description: Getting started with Gazebo.
+    section: get_started
 
   # --> This is where menu items from index.yaml specific to the selected release is inserted
 
@@ -26,6 +38,7 @@ pages:
     title: ROS/Gazebo Installation
     file: ros_installation.md
     description: Ros and Gazebo options and combinations
+    section: get_started
     children:
       - name: ros2_gz_vendor_pkgs
         title: ROS 2 Gazebo Vendor Packages
@@ -35,10 +48,12 @@ pages:
     title: Continuous Integration For Gazebo Packages
     file: setup_gazebo_in_ci.md
     description: Instruction on using setup-gazebo
+    section: get_started
   - name: gazebo_classic_migration
     title: Gazebo Classic Migration
     file: gazebo_classic_migration.md
     description: Guides for migrating from Gazebo Classic to the new Gazebo
+    section: get_started
     children:
     - name: install_gz11_side_by_side
       title: Installing Gazebo11 side by side with new Gazebo
